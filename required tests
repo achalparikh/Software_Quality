@@ -1,0 +1,31 @@
+Tests for LOGIN:
+
+check loin can not be performed if insde a current session
+check login operates after a log out  
+check valid type of account
+check name validity if standard account 
+check name does not get asked if admin account 
+check valid bank account files are read for the standard account
+check valid bank account files are read for admin account
+check other files are not accessed  
+check no other transactions are allowed before a valid login
+check only unprivilaged transations are made in a standard mode
+check privilaged transactions are not valid in standard mode
+check all transactions are accepted for admin account 
+
+Tests for WITHDRAWAL:
+check account holders name is asked during a transaction when in admin mode 
+check account holders name is not asked during a transaction when in standard mode
+check that the withdrawal amount is >0 (borderline tests) 
+check that the withdrwal amount is divisible by 5
+check that the withdrawal amount is less than or equal to 500 (borderline tests)
+check there is enough balance in the account before the withdrawal is made 
+check that user cant withdraw multiple amounts totalling more than 500 
+check that the deduction fees incurs before the withdrawal 
+check the user is sent back to the withdraw page if invalid input is inputted (check in this case no fees incurs)
+check that the balance after the greater than or equal to 0.00 after the withdrawal  
+
+
+Tests for TRANSFER:
+
+Tests for PAYBILL:
