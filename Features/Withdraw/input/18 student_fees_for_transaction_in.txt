@@ -1,0 +1,8 @@
+login 
+standard 
+STUDENT
+withdraw
+25
+withdraw
+25
+logout

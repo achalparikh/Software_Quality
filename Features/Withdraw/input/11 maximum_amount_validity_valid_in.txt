@@ -1,0 +1,6 @@
+login
+standard 
+ACHAL PARIKH
+withdraw 
+500
+logout

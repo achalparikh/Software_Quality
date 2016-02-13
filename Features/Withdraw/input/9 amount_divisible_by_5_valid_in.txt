@@ -1,0 +1,6 @@
+login 
+standard
+STEVE ROGERS
+withdraw
+125
+logout

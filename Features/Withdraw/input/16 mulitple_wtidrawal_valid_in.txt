@@ -1,0 +1,8 @@
+login
+standard 
+BRUCE BANNER
+withdraw
+250
+withdraw 
+250
+logout

@@ -1,0 +1,6 @@
+login
+standard
+BLACK WIDOW
+withdraw
+25
+logout

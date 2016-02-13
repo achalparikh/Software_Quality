@@ -1,0 +1,6 @@
+login
+standard 
+clark kent 
+withdraw
+400
+logout
