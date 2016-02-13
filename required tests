@@ -14,6 +14,7 @@ check privilaged transactions are not valid in standard mode
 check all transactions are accepted for admin account 
 
 Tests for WITHDRAWAL:
+
 check account holders name is asked during a transaction when in admin mode 
 check account holders name is not asked during a transaction when in standard mode
 check that the withdrawal amount is >0 (borderline tests) 
@@ -25,7 +26,30 @@ check that the deduction fees incurs before the withdrawal
 check the user is sent back to the withdraw page if invalid input is inputted (check in this case no fees incurs)
 check that the balance after the greater than or equal to 0.00 after the withdrawal  
 
-
 Tests for TRANSFER:
 
+check if the account holders name is correct when transaction occurs in admin mode (check valid and invalid)
+in standard mode bank account should be valid with the current user (check valid and invalid) 
+check if the account from which the money is being transfered is valid (check valid and invalid) 
+check if the account number where the money is being transffered is valid (check valid and invalid) 
+check if the amount being transfered is in the first account (check valid and invalid) 
+check if the amount is greater than 0.00(boundry test) 
+check if the amount is less than or equal to 1000.00 (boundry test) 
+check if the balance after the fees occurs is valid for transfer. (check student and non student)
+both account should be atleast have 0.00 after the transaction 
+check if the transaction details are being saved on the transaction file 
+
+
 Tests for PAYBILL:
+
+in admin mode, ask the account holders name
+in standard mode ask the account number (check if it is a valid account) 
+check bank holder name validity in standard mode 
+check if the company the bill is being paid too is valid (check all + invalid test) 
+check if there is enough money in the account before payment (after 0.05 us deducted for student and 0.10 deducted for non student in standard mode)
+check no fees is deducted in admin mode 
+check that the account balance is atleast 0.00 after the transation
+check if the transaction is being saved in the transaction file
+check that the amount being paid is greater than 0.00 and less than or equal to 2000.00 per comapany (boundry tests)
+ 
+
