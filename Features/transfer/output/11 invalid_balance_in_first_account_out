@@ -1,3 +1,8 @@
-LOGIN SUCCESSFUL AS ACHAL PARIKH
-ACCOUNT 00001 DOES NOT HAVE A VALID BALANCE TO TRANSFER 2000000000000.00
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: transfer - enter user:
+Transferring in "ACHAL PARIKH" - enter FROM account number:
+Transferring from 00001 - enter TO account number:
+Transferring to 00011 - enter amount:
+ERROR: Maximum amount of 1000.00 exceeded. Try again
+You are now logged out
