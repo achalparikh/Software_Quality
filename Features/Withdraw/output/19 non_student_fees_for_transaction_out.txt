@@ -4,5 +4,6 @@ You are now logged in as "BLACK WIDOW"
 COMMAND: withdraw - enter amount:
 Withdrawal of 25.00 - complete!
 COMMAND: withdraw - enter amount:
-ERROR: Withdrawal limit of 25.00 exceeded due to extra fees. Try again
+ALERT: 0.10 fee will be added.
+ERROR: Withdrawal limit of 25.00 exceeded. Try again
 You are now logged out
