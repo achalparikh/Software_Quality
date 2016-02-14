@@ -1,1 +1,2 @@
-LOGIN SUCCESSFUL AS admin user
+You are now logged in as an admin
+You are now logged out
