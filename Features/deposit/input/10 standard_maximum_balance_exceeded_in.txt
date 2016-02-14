@@ -1,0 +1,6 @@
+login 
+TONY STARK
+deposit  
+00009
+1
+logout

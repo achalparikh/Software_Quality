@@ -1,0 +1,7 @@
+login 
+standard 
+THOR ODINSON
+deposit 
+00010
+5.00
+logout
