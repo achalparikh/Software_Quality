@@ -1,3 +1,8 @@
-LOGIN SUCCESSFUL AS ACHAL PARIKH
-ACCOUNT 00001 HAS VALID BALANCE TO TRANSFER 100.00
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: transfer - enter user:
+Transferring in "ACHAL PARIKH" - enter FROM account number:
+Transferring from 00001 - enter TO account number:
+Transferring to 00011 - enter amount:
+Transfer of 100.00 - complete!
+You are now logged out
