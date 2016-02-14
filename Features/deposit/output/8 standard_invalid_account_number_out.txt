@@ -1,3 +1,7 @@
-LOGIN SUCCESSFUL AS ACHAL PARIKH
-ACCOUNT NUMBER 00002 IS NOT VALID FOR ACHAL PARIKH 
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "ACHAL PARIKH" 
+COMMAND: deposit - enter account number:
+Depositing to "ACHAL PARIKH" - enter account number:
+ERROR: Account number "00002" does not exist. Try again
+You are now logged out 
