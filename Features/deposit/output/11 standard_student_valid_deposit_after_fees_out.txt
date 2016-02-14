@@ -1,5 +1,8 @@
-LOGIN SUCCESSFUL AS ACHAL PARIKH
-00001 IS VALID ACCOUNT FOR ACHAL PARIKH
-5.00 IS VALID FOR DEPOSIT
-4.95 WILL BE DEPOSITED INTO THE ACCOUNT
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name: 
+You are now logged in as "ACHAL PARIKH"
+COMMAND: deposit - enter account number:
+Depositing to 00001 - enter amount:
+ALERT: 0.05 student fee will be deducted.
+Deposit of 4.95 - complete!
+You are now logged out
