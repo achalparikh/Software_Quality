@@ -1,5 +1,5 @@
 Enter user type - "standard" or "admin":
 You are now logged in as an admin
 COMMAND: withdraw
-Withdrawing from "ACHAL PARIKH"
+Withdrawing from "ACHAL PARIKH" - enter amount:
 You are now logged out
