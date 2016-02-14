@@ -1,3 +1,6 @@
-LOGIN SUCCESSFUL AS admin
-CANNOT WITHDRAW 500.00 FROM ACCOUNT 00011. ACCOUNT BALANCE WILL BE LESS THAN 0.00
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: withdraw - enter user:
+Withdrawing from "STUDENT" - enter amount:
+ERROR: Withdrawal limit of 50.00 exceeded. Try again
+You are now logged out
