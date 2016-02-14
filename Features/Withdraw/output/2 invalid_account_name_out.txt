@@ -1,3 +1,5 @@
-LOGIN AS admin SUCCESSFUL 
-INVALID ACCOUNT HOLDER NAME 
-LOG OUT SUCCESSFUL 
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: withdraw
+ERROR: User "CLARK KENT" does not exist. Try again
+You are now logged out
