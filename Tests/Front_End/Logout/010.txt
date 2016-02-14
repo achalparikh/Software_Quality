@@ -3,6 +3,7 @@ admin
 logout
 deposit
 00001
-0.01
+500.00
 login
+admin
 logout

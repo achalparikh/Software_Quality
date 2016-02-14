@@ -1,13 +1,13 @@
 login
 admin
-delete
+changeplan
 John Doe
-00001
-delete
-John Doe
-00003
+00012
 logout
 login
 standard
 John Doe
+withdraw
+00012
+500.00
 logout

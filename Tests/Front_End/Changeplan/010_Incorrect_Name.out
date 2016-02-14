@@ -1,0 +1,9 @@
+Login to start:
+Enter type of account: "standard" or "admin"
+You are now logged in as "John Doe"
+Enter a command:
+Enter an account holder:
+Error, user Jeff Doe does not match any accounts.
+Enter a command:
+Error, invalid command, please enter a command:
+You are now logged out

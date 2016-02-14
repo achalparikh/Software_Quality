@@ -1,7 +1,7 @@
 login
 standard
-John Doe 
-enable
 John Doe
-00003
+changeplan
+John Doe
+00012
 logout

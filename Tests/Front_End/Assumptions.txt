@@ -1,0 +1,4 @@
+Assumed:
+- create account fails if holder's name is too long instead of taking the first 20 characters
+
+- transaction file output appends to the file rather than creating a new file every logout

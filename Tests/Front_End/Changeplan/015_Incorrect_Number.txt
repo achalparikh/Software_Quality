@@ -1,6 +1,6 @@
 login
 admin
-enable
+changeplan
 John Doe
-00003
+00013
 logout

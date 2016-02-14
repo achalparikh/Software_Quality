@@ -2,8 +2,8 @@ login
 admin
 disable
 John Doe
-00001
+00003
 deposit
-00001
-0.01
+00003
+500.00
 logout
