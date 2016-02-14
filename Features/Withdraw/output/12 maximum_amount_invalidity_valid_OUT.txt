@@ -1,3 +1,6 @@
-LOGIN SUCCESSFUL AS ACHAL PARIKH
-INVALID AMOUNT ENTERED. 505.00 EXCEEDS MAXIMUM LIMIT OF WITHDRAWAL IN THIS SESSION. ENTER AMOUNT LESS THAN OR EQUAL TO 500.00
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "ACHAL PARIKH"
+COMMAND: withdraw - enter amount:
+ERROR: Withdrawal limit of 500.00 exceeded. Try again
+You are now logged out
