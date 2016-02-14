@@ -1,3 +1,6 @@
-LOGIN SUCCESSFUL AS ADMIN
-00002 IS NOT A VALID ACCOUNT NUMBER FOR ACHAL PARIKH
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":  
+You are now logged in as an admin  
+COMMAND: paybill - enter user:  
+Paying bill for "ACHAL PARIKH" - enter account number: 
+ERROR: Account number "00002" does not exist. Try again
+You are now logged out
