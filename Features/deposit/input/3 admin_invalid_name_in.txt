@@ -1,6 +1,5 @@
 login
 admin
-deposit
 deposit 
 CLARK KENT
 logout
