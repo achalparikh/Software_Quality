@@ -1,4 +1,3 @@
 login 
-admin 
-ACHAL PARIKH
+admin
 logout
