@@ -1,3 +1,5 @@
+Enter user type - "standard" or "admin":
+Logging in as standard user - enter name:
 You are now logged in as "ACHAL PARIKH"
-Account balance: 10000000
-Account type: Student
+You are now logged out
+ 
