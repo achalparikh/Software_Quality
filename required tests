@@ -40,14 +40,15 @@ check if the transaction details are being saved on the transaction file
 
 Tests for PAYBILL:
 
-in admin mode, ask the account holders name
-in standard mode ask the account number (check if it is a valid account) 
-check bank holder name validity in standard mode 
-check if the company the bill is being paid too is valid (check all + invalid test) 
-check if there is enough money in the account before payment (after 0.05 us deducted for student and 0.10 deducted for non student in standard mode)
-check no fees is deducted in admin mode 
-check that the account balance is atleast 0.00 after the transation
+	in admin mode, ask the account holders name
+	DO ALL ADMIN TESTS
+	in standard mode ask the account number (check if it is a valid account) 
+	check bank holder name validity in standard mode 
+	check if the company the bill is being paid too is valid (check all + invalid test) 
+	check if there is enough money in the account before payment (after 0.05 us deducted for student and 0.10 deducted for non student in standard mode)
+	check no fees is deducted in admin mode 
+	check that the account balance is atleast 0.00 after the transation
 check if the transaction is being saved in the transaction file
-check that the amount being paid is greater than 0.00 and less than or equal to 2000.00 per comapany (boundry tests)
+	check that the amount being paid is greater than 0.00 and less than or equal to 2000.00 per comapany (boundry tests)
  
 
