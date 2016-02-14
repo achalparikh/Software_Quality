@@ -1,1 +1,1 @@
-INVALID TYPE OF ACCOUNT TYPE. PLEASE ENTER standard OR admin
+ERROR: invalid account type. Enter "standard" or "admin":
