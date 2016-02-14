@@ -1,1 +1,1 @@
-INVALID INPUT. ADMIN DOES NOT NEED TO PROVIDE AN IDENTIFIER
+ERROR: User identifier not required for admin
