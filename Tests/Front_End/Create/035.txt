@@ -1,0 +1,6 @@
+login
+admin
+create
+Jeff Doe
+100000.00
+logout

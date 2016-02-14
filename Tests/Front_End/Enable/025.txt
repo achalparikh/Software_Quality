@@ -1,0 +1,9 @@
+login
+admin
+disable
+John Doe
+00001
+deposit
+00001
+0.01
+logout

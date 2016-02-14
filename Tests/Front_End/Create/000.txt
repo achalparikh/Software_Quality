@@ -1,0 +1,6 @@
+login
+admin
+create
+Jeff Doe
+0.00
+logout

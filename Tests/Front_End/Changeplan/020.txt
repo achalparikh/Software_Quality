@@ -1,0 +1,13 @@
+login
+admin
+changeplan
+John Doe
+00001
+logout
+login
+standard
+John Doe
+withdraw
+00001
+500.00 (from account with just enough money to handle student rate)
+logout

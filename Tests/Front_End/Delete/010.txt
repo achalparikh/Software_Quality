@@ -1,0 +1,6 @@
+login
+admin
+delete
+Jeff Doe
+00001
+logout
