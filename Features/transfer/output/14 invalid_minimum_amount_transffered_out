@@ -5,4 +5,4 @@ COMMAND: transfer - enter FROM account number:
 Transferring from 00001 - enter TO account number: 
 Transferring to 00002 - enter amount:
 ERROR: You cannot transfer a negative amount. Try again
-You have been logged out
+You are now logged out
