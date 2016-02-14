@@ -2,5 +2,5 @@ login
 standard
 BLACK WIDOW
 withdraw
-25
+25.00
 logout

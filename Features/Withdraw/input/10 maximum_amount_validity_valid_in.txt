@@ -2,5 +2,5 @@ login
 standard 
 ACHAL PARIKH
 withdraw 
-495
+495.00
 logout

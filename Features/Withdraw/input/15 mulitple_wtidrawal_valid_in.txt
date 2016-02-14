@@ -2,7 +2,7 @@ login
 standard 
 BRUCE BANNER
 withdraw
-250
+250.00
 withdraw 
-245
+245.00
 logout

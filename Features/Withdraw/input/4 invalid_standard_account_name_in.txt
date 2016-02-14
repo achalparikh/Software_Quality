@@ -2,5 +2,5 @@ login
 standard 
 clark kent 
 withdraw
-400
+400.00
 logout

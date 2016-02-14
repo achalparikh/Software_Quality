@@ -1,4 +1,5 @@
 Tests for LOGIN:
+/*change input values for valid tests to 5.00*/
 
 check loin can not be performed if insde a current session
 check login operates after a log out  
@@ -13,10 +14,7 @@ check only unprivilaged transations are made in a standard mode
 check privilaged transactions are not valid in standard mode
 check all transactions are accepted for admin account 
 
-Tests for WITHDRAWAL:
-
-check account holders name is asked during a transaction when in admin mode 
-check account holders name is not asked during a transaction when in standard mode
+Tests for WITHDRAWAL:@ not asked during a transaction when in standard mode
 check that the withdrawal amount is >0 (borderline tests) 
 check that the withdrwal amount is divisible by 5
 check that the withdrawal amount is less than or equal to 500 (borderline tests)
@@ -28,15 +26,15 @@ check that the balance after the greater than or equal to 0.00 after the withdra
 
 Tests for TRANSFER:
 
-check if the account holders name is correct when transaction occurs in admin mode (check valid and invalid)
-in standard mode bank account should be valid with the current user (check valid and invalid) 
-check if the account from which the money is being transfered is valid (check valid and invalid) 
-check if the account number where the money is being transffered is valid (check valid and invalid) 
-check if the amount being transfered is in the first account (check valid and invalid) 
-check if the amount is greater than 0.00(boundry test) 
-check if the amount is less than or equal to 1000.00 (boundry test) 
-check if the balance after the fees occurs is valid for transfer. (check student and non student)
-both account should be atleast have 0.00 after the transaction 
+		check if the account holders name is correct when transaction occurs in admin mode (check valid and invalid)
+		in standard mode bank account should be valid with the current user (check valid and invalid) 
+		check if the account from which the money is being transfered is valid (check valid and invalid) 
+		check if the account number where the money is being transffered is valid (check valid and invalid) 
+		check if the amount being transfered is in the first account (check valid and invalid) 
+		check if the amount is greater than 0.00(boundry test) 
+		check if the amount is less than or equal to 1000.00 (boundry test) 
+		check if the balance after the fees occurs is valid for transfer. (check student and non student)(standard mode/admin mode)
+		both account should be atleast have 0.00 after the transaction 
 check if the transaction details are being saved on the transaction file 
 
 

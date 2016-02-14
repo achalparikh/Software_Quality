@@ -2,5 +2,5 @@ login
 standard
 STEVE ROGERS
 withdraw
-122
+122.00
 logout

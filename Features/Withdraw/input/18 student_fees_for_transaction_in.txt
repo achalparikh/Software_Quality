@@ -2,7 +2,7 @@ login
 standard 
 STUDENT
 withdraw
-25
+25.00
 withdraw
-25
+25.00
 logout
