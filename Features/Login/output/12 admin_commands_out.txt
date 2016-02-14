@@ -1,4 +1,5 @@
-You are now logged in as "admin"
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
 COMMAND: Withdraw
 COMMAND: Transfer
 COMMAND: Paybill
@@ -6,4 +7,5 @@ COMMAND: Deposit
 COMMAND: Create
 COMMAND: Delete
 COMMAND: Disable
+COMMAND: Changeplan
 You are now logged out
