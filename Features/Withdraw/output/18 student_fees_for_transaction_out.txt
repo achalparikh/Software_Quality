@@ -1,4 +1,8 @@
-LOGIN SUCCESSFUL AS STUDENT
-25.00 IS A VALID AMOUNT FOR WITHDRAWAL.
-25.00 IS NOT A VALID AMOUNT FOR WITHDRAWAL. INSUFFICIENT BALANCE: 24.95
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "STUDENT"
+COMMAND: withdraw - enter amount:
+Withdrawal of 25.00 - complete!
+COMMAND: withdraw - enter amount:
+ERROR: Withdrawal limit of 50.00 exceeded due to student fees. Try again
+You are now logged out
