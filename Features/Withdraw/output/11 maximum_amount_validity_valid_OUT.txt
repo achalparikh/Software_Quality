@@ -3,5 +3,5 @@ Logging in as standard user - enter name:
 You are now logged in as "ACHAL PARIKH"
 COMMAND: withdraw - enter amount:
 Withdrawal of 500.00 - complete!
-ALERT: Empty balance
+ALERT: Maximum amount withdrawn
 You are now logged out
