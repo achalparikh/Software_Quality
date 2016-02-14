@@ -1,4 +1,8 @@
-LOGIN SUCCESSFUL AS BRUCE BANNER
-250.00 IS A VALID AMOUNT FOR WITHDRAWAL
-280.00 IS A INVALID AMOUNT FOR WITHDRAWAL. AMOUNT EXCEEDS TOTAL WITHDRAWAL LIMIT.
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "BRUCE BANNER"
+COMMAND: withdraw - enter amount:
+Withdrawal of 250.00 - complete!
+COMMAND: withdraw - enter amount:
+ERROR: Withdrawal limit of 500.00 exceeded. Try again
+You are now logged out
