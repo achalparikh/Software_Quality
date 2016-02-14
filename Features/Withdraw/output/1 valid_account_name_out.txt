@@ -1,4 +1,5 @@
-LOGIN AS admin SUCCESSFUL 
-ACCOUNT HOLDER NAME: ACHAL PARIKH
-TRANSACTION: WITHDRAW
-LOG OUT SUCCESSFUL 
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: withdraw
+Withdrawing from "ACHAL PARIKH"
+You are now logged out
