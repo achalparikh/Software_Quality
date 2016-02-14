@@ -1,1 +1,1 @@
-LOGIN SUCCESSFUL as standard USER
+Logging in as standard user - enter name:
