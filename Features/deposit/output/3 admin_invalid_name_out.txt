@@ -1,3 +1,5 @@
-LOGIN SUCCESSFUL AS ADMIN
-CLARK KENT IS NOT A VALID ACCOUNT FOR DEPOSIT
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: deposit - enter user:
+ERROR: User "CLARK KENT" does not exist. Try again
+You are now logged out
