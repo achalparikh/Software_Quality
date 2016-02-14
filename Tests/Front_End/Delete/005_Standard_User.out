@@ -1,0 +1,10 @@
+Login to start:
+Enter type of account: "standard" or "admin"
+Logging in as standard user - enter name:
+You are now logged in as "John Doe"
+Enter a command:
+Error, standard users cannot use the 'delete' transaction
+Enter a command:
+Error, invalid command, enter a command:
+Error, invalid command, enter a command:
+You are now logged out

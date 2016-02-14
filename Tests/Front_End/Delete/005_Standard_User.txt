@@ -1,6 +1,7 @@
 login
-admin
+standard
+John Doe
 delete
 John Doe
-00001
+00012
 logout

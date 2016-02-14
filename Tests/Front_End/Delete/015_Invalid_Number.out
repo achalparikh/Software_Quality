@@ -1,0 +1,9 @@
+Login to start:
+Enter type of account: "standard" or "admin"
+You are now logged in as an admin
+Enter a command:
+Enter an account holder:
+Enter an account number belonging to the account holder:
+Error, account number 00013 does not match any accounts held by John Doe
+Enter a command:
+You are now logged out

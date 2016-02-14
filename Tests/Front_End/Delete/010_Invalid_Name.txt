@@ -1,6 +1,6 @@
 login
 admin
 delete
-John Doe
-00002
+Jeff Doe
+00012
 logout

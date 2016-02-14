@@ -1,0 +1,17 @@
+Login to start:
+Enter type of account: "standard" or "admin"
+You are now logged in as an admin
+Enter a command:
+Enter an account holder:
+Enter an account number belonging to the account holder:
+Account "00012" deleted
+Enter a command:
+Enter an account holder:
+Enter an account number belonging to the account holder:
+Account "00014" deleted
+Enter a command:
+You are now logged out
+Login to start:
+Enter type of account: "standard" or "admin"
+Logging in as standard user - enter name:
+ERROR: User "BRUCE WAYNE" does not exist. Try again
