@@ -1,1 +1,2 @@
 ERROR: You are currently in an active session. Log out first
+You are now logged out
