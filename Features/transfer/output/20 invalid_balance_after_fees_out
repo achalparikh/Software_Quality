@@ -1,4 +1,9 @@
-LOGIN SUCCESSFUL AS STUDENT
-ACCOUNT 00011 IS VALID FOR STUDENT
-INVALID AMOUNT 500.00 CAN NOT BE TRANSFERED. INSUFFICIENT BALANCE BECAUSE OF INTERNAL FEES. 
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":  
+Logging in as standard user - enter name: 
+You are now logged in as "STUDENT" 
+COMMAND: transfer - enter FROM account number: 
+Transferring from 00011 - enter TO account number:   
+Transferring to 00002 - enter amount:
+ALERT: 5.00 student fee will be deducted. 
+ERROR: You cannot withdraw that amount as your funds are insufficient. Try again
+You are now logged out
