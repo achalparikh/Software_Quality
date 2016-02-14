@@ -2,5 +2,5 @@ Enter user type - "standard" or "admin":
 Logging in as standard user - enter name:
 You are now logged in as "BLACK WIDOW"
 COMMAND: withdraw - enter amount:
-Withdrawing 25.00 - complete!
+Withdrawal of 25.00 - complete!
 You are now logged out
