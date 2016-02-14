@@ -1,3 +1,5 @@
-LOGIN SUCCESSFUL AS ADMIN
-ACHAL PARIKH IS A VALID ACCOUNT NAME FOR TRANSFER
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: transfer - enter FROM user:
+Transferring from "ACHAL PARIKH" - enter FROM account:
+You are now logged out
