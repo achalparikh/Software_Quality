@@ -1,3 +1,6 @@
-LOGIN SUCCESSFUL AS ADMIN 
-ACCOUNT NUMBER 00002 IS NOT VALID FOR ACHAL PARIKH
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: transfer - enter user:
+Transferring in "ACHAL PARIKH" - enter FROM account number:
+ERROR: Account number "00002" does not exist. Try again
+You are now logged out
