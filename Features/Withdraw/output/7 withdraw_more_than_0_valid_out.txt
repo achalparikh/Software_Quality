@@ -1,3 +1,6 @@
-LOGIN SUCCESSFUL AS BLACK WIDOW 
-WITHDRAWAL OF 10.00 SUCCESSFUL
-LOG OUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "BLACK WIDOW"
+COMMAND: withdraw - enter amount:
+Withdrawal of 10.00 - complete! 
+You are now logged out
