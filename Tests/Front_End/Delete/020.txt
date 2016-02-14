@@ -1,0 +1,13 @@
+login
+admin
+delete
+John Doe
+00001
+logout
+login
+standard
+John Doe
+deposit
+00001
+500.00
+logout

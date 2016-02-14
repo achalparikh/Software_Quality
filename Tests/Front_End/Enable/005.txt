@@ -1,0 +1,7 @@
+login
+standard
+John Doe 
+enable
+John Doe
+00001
+logout
