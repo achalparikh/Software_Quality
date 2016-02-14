@@ -4,6 +4,5 @@ You are now logged in as "THOR ODINSON"
 COMMAND: paybill - enter account number: 
 Paying bill from 00010 - enter payee:   
 Paying bill to "TV" - enter amount:  
-ALERT: 10.00 fee will be added. 
-ERROR: Maximum amount of 500.00 exceeded. Try again 
+Payment of 500.00 - complete!
 You are now logged out
