@@ -1,5 +1,5 @@
 Enter user type - "standard" or "admin": 
 Logging in as standard user - enter name:
 You are now logged in as "ACHAL PARIKH"
-ERROR: Account number 00002 does not exist. Try again
+ERROR: Account number "00002" does not exist. Try again
 You are now logged out
