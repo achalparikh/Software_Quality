@@ -4,5 +4,5 @@ COMMAND: paybill - enter user:
 Paying bill for "ACHAL PARIKH" - enter account number:  
 Paying bill from 00001 - enter payee:  
 Paying bill to "TV" - enter amount:  
-ERROR: You cannot pay an amount of zero. Try again
+ERROR: You cannot pay a negative amount. Try again
 You are now logged out
