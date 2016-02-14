@@ -1,4 +1,9 @@
-LOGIN SUCCESSFUL AS admin
-25.00 IS VALID AMOUNT FOR WITHDRAWAL IN ACCOUNT 00006
-25.00 IS VALID AMOUNT FOR WITHDRAWAL IN ACCOUNT 00006
-LOG OUT SUCCESSFUL 
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: withdraw - enter user:
+Withdrawing from "BLACK WIDOW" - enter amount:
+Withdrawal of 25.00 - complete!
+COMMAND: withdraw - enter user:
+Withdrawing from "BLACK WIDOW" - enter amount:
+Withdrawal of 25.00 - complete!
+You are now logged out

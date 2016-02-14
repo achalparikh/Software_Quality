@@ -1,6 +1,6 @@
 login
 standard 
-clark kent 
+CLARK KENT
 withdraw
 400.00
 logout

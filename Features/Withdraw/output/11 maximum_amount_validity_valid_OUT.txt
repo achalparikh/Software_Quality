@@ -1,3 +1,7 @@
-LOGIN SUCCESSFUL AS ACHAL PARIKH
-500.00 IS VALID AMOUNT FOR WITHDRAWAL
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "ACHAL PARIKH"
+COMMAND: withdraw - enter amount:
+Withdrawal of 500.00 - complete!
+ALERT: Withdrawal limit reached
+You are now logged out

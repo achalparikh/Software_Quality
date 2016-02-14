@@ -1,3 +1,6 @@
-LOGIN SUCCESSFUL AS BLACK WIDOW 
-INVALID AMOUNT ENTERED FOR WITHDRAWAL 0.00, PLEASE ENTER AMOUNT GREATER THAN 0.00
-LOG OUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "BLACK WIDOW"
+COMMAND: withdraw - enter amount:
+ERROR: You cannot withdraw an amount of zero. Try again
+You are now logged out

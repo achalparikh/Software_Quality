@@ -1,3 +1,6 @@
-LOGIN SUCCESSFUL AS admin
-50.00 IS A VALID AMOUNT FOR WITHDRAWAL FROM ACCOUNT 00011
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: withdraw - enter user:
+Withdrawing from "STUDENT" - enter amount:
+Withdrawal of 50.00 - complete!
+You are now logged out

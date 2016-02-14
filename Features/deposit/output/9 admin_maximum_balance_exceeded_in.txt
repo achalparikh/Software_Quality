@@ -1,4 +1,7 @@
-LOGIN SUCCESSFUL AS ADMIN
-ACCOUNT 00009 IS VALID FOR TONY STARK 
-INVALID DEPOSIT. MAXIMUM ACCOUNT BALANCE EXCEEDED 
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: deposit - enter user:
+Depositing to "TONY STARK" - enter account number:
+Depositing to 00009 - enter amount:
+ERROR: Maximum balance exceeded. Try again
+You are now logged out

@@ -1,4 +1,8 @@
-LOGIN SUCCESSFUL AS BRUCE BANNER
-250.00 IS A VALID AMOUNT FOR WITHDRAWAL
-245 IS A VALID AMOUNT FOR WITHDRAWAL
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "BRUCE BANNER"
+COMMAND: withdraw - enter amount:
+Withdrawal of 250.00 - complete!
+COMMAND: withdraw - enter amount:
+Withdrawal of 245.00 - complete!
+You are now logged out

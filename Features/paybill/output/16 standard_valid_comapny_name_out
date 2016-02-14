@@ -1,3 +1,8 @@
-LOGIN SUCCESSFUL AS ACHAL PARIKH
-100.00 IS VALID PAYMENT TO BRIGHT LIGHT ELECTRIC COMPANY
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":  
+Logging in as standard user - enter name: 
+You are now logged in as "ACHAL PARIKH"
+COMMAND: paybill - enter account number: 
+Paying bill from 00001 - enter payee: 
+Paying bill to "EC" - enter amount: 
+Payment of 100.00 - complete! 
+You are now logged out

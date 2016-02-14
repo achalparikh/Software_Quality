@@ -1,3 +1,5 @@
-LOGIN SUCCESSFUL AS ADMIN
-ACHAL PARIKH IS A VALID ACCOUNT FOR DEPOSIT
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: deposit - enter user:
+Depositing to "ACHAL PARIKH" - enter account number:
+You are now logged out

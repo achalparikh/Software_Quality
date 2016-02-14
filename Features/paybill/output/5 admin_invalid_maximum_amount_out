@@ -1,4 +1,8 @@
-LOGIN SUCCESSFUL AS ADMIN
-ACCOUNT NUMBER 00001 IS VALID FOR ACHAL PARIKH
-INVALID INPUT 2001.00, AMOUNT EXCEEDS MAXIMUM ALLOWED PAYMENT
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":  
+You are now logged in as an admin  
+COMMAND: paybill - enter user:  
+Paying bill for "ACHAL PARIKH" - enter account number: 
+Paying bill from 00001 - enter payee: 
+Paying bill to "TV" - enter amount: 
+ERROR: Maximum amount of 2000.00 exceeded. Try again
+You are now logged out

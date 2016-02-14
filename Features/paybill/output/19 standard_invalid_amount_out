@@ -1,3 +1,8 @@
-LOGIN SUCCESSFUL AS ACHAL PARIKH
-2100.00 IS VALID PAYMENT FOR LOW DEFINITION TV INC.
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":   
+Logging in as standard user - enter name:  
+You are now logged in as "ACHAL PARIKH" 
+COMMAND: paybill - enter account number:  
+Paying bill from 00001 - enter payee:  
+Paying bill to "TV" - enter amount:  
+ERROR: Maximum amount of 2000.00 exceeded. Try again
+You are now logged out

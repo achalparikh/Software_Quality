@@ -1,3 +1,6 @@
-LOGIN AS BLACK WIDOW SUCCESSFUL
-25.00 is VALID AMOUNT FOR WITHDRAWAL
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "BLACK WIDOW"
+COMMAND: withdraw - enter amount:
+Withdrawal of 25.00 - complete!
+You are now logged out

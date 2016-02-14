@@ -1,3 +1,6 @@
-LOGIN SUCCESSFUL AS TONY STARK
-WITHDRAW OF 400.00 IS VALID
-LOGOUT SUCCESSFUL 
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "TONY STARK"
+COMMAND: withdraw - enter amount:
+Withdrawal of 400.00 - complete!
+You are now logged out 

@@ -1,5 +1,7 @@
-LOGIN SUCCESSFUL AS ADMIN
-00010 IS VALID ACCOUNT FOR THOR ODINSON
-5.00 IS VALID FOR DEPOSIT
-5.00 WILL BE DEPOSITED INTO THE ACCOUNT
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: deposit - enter user:
+Depositing to "THOR ODINSON" - enter account number:
+Depositing to 00010 - enter amount:
+Deposit of 6.00 - complete!
+You are now logged out

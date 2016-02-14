@@ -1,3 +1,6 @@
-LOGIN AS BLACK WIDOW SUCCESSFUL
-500.00 IS NOT A VALID AMOUNT. INSUFFICIENT FUNDS IN THE ACCOUNT
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "BLACK WIDOW"
+COMMAND: withdraw - enter amount:
+ERROR: You cannot withdraw that amount as your funds are insufficient. Try again
+You are now logged out
