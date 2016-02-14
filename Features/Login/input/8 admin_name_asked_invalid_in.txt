@@ -1,4 +1,10 @@
 login 
+<<<<<<< HEAD
 admin 
 A
 logout
+=======
+admin
+ACHAL PARIKH
+logout
+>>>>>>> 299a7831f48ed07a3ac10f2908d273070f081efb

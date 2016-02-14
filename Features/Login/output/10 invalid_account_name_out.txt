@@ -1,2 +1,2 @@
-LOGIN SUCCESSFUL
-INVALID ACCOUNT HOLDER NAME. NO ACCOUNT EXISTS UNDER CLARK KENT.
+Logging in as standard user
+ERROR: There is no account with the name "CLARK KENT".
