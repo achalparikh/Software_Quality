@@ -1,1 +1,2 @@
-ERROR: Account "BRUCE WAYNE" does not exist. Try again:
+ERROR: Account "BRUCE WAYNE" does not exist. Try again
+You are now logged out
