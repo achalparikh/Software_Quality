@@ -1,4 +1,9 @@
-LOGIN SUCCESSFUL AS ACHAL PARIKH
-ACCOUNT 00001 IS VALID FOR ACHAL PARIKH
-1000 IS A VALID AMOUNT FOR TRANSFER
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":    
+Logging in as standard user - enter name:    
+You are now logged in as "ACHAL PARIKH" 
+COMMAND: transfer - enter FROM account number: 
+Transferring from 00001 - enter TO account number:   
+Transferring to 00002 - enter amount:  
+Transfer of 1000.00 - complete!
+ALERT: Transfer limit reached
+You are now logged out

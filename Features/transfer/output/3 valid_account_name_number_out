@@ -1,3 +1,6 @@
-LOGIN SUCCESSFUL AS ACHAL PARIKH
-00001 IS VALID ACCOUNT FOR ACHAL PARIKH
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name: 
+You are now logged in as "ACHAL PARIKH"
+COMMAND: transfer - enter FROM account number:
+Transferring from 00001 - enter TO account number:
+You are now logged out

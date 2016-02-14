@@ -1,4 +1,8 @@
-LOGIN SUCCESSFUL AS admin
-00001 IS A VALID ACCOUNT FOR ACHAL PARIKH 
-100.00 CAN BE TRANSFERED TO 00011
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin": 
+You are now logged in as an admin 
+COMMAND: transfer - enter user: 
+Transferring in "ACHAL PARIKH" - enter FROM account number: 
+Transferring from 00001 - enter TO account number: 
+Transferring to 00011 - enter amount: 
+Transfer of 100.00 - complete! 
+You are now logged out
