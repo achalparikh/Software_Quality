@@ -1,4 +1,9 @@
 login 
+<<<<<<< HEAD
+admin 
+A
+logout
+login
 admin
 ACHAL PARIKH
 logout

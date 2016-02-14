@@ -1,2 +1,4 @@
-Logging in as standard user
-ERROR: There is no account with the name "CLARK KENT".
+Enter user type - "standard" or "admin":
+Logging in as standard user - enter name:
+ERROR: User "CLARK KENT" does not exist. Try again:
+You are now logged out

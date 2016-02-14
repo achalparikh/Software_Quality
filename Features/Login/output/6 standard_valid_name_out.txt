@@ -1,1 +1,4 @@
-STANDARD USER ACHAL PARIKH IS A VALID ACCOUNT HOLDER
+Enter user type - "standard" or "admin":
+Logging in as standard user - enter name:
+You are now logged in as "ACHAL PARIKH"
+You are now logged out

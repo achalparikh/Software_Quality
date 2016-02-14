@@ -1,1 +1,9 @@
-INVALID INPUT. ADMIN DOES NOT NEED TO PROVIDE AN IDENTIFIER
+Enter user type - "standard" or "admin": 
+ERROR: invalid account type. Enter "standard" or "admin": 
+You are now logged in as an admin
+ERROR: no name required for admin user
+You are now logged out
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+ERROR: no name required for admin user
+You are now logged out

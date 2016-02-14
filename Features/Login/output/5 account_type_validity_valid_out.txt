@@ -1,1 +1,3 @@
-LOGIN SUCCESSFUL AS admin user
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+You are now logged out

@@ -6,3 +6,5 @@ ERROR: Not logged in
 ERROR: Not logged in
 ERROR: Not logged in
 ERROR: Not logged in
+Enter user type - "standard" or "admin":
+You are now logged out

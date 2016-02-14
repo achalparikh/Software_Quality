@@ -1,0 +1,7 @@
+login
+admin
+deposit 
+ACHAL PARIKH
+00001
+6.00
+logout
