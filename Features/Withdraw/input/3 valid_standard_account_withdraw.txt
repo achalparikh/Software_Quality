@@ -2,5 +2,5 @@ login
 standard 
 TONY STARK
 withdraw
-400
+400.00
 LOGOUT

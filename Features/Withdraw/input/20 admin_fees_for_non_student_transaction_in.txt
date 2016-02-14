@@ -2,8 +2,8 @@ login
 admin
 withdraw
 BLACK WIDOW
-25
+25.00
 withdraw
 BLACK WIDOW
-25
+25.00
 logout

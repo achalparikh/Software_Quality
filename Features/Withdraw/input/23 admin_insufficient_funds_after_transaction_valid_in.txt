@@ -2,5 +2,5 @@ login
 admin 
 withdraw 
 STUDENT 
-50
+50.00
 logout
