@@ -1,1 +1,1 @@
-ERROR "YOU ARE CURRENTLY IN AN ACTIVE SESSION. LOG OUT TO LOG IN AGAIN" 
+ERROR: You are currently in an active session. Log out first. 
