@@ -4,5 +4,6 @@ You are now logged in as "STUDENT"
 COMMAND: withdraw - enter amount:
 Withdrawal of 25.00 - complete!
 COMMAND: withdraw - enter amount:
-ERROR: Withdrawal limit of 50.00 exceeded due to student fees. Try again
+ALERT: 5.00 student fee will be added.
+ERROR: Withdrawal limit of 50.00 exceeded. Try again
 You are now logged out
