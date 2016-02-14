@@ -1,3 +1,8 @@
-LOGIN SUCCESSFUL AS ADMIN
-500.00 IS A VALID AMOUNT FOR PAYMENT TO LOW DEFINATION TV COMAPANY
-LOGOUT SUCCESSFUL
+1 Enter user type - "standard" or "admin":    
+You are now logged in as an admin    
+COMMAND: paybill - enter user:    
+Paying bill for "THOR ODINSON" - enter account number:   
+Paying bill from 00010 - enter payee:   
+Paying bill to "TV" - enter amount:   
+Payment of 500.00 - complete!  
+You are now logged out
