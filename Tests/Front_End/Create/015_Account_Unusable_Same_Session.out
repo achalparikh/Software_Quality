@@ -6,8 +6,8 @@ Enter an account holder:
 Enter a balance for the new account:
 Account for "Jeff Doe" with account number 00013 created successfully
 Enter a command:
+Enter an account holder:
+Enter an account number belonging to the account holder:
 Error, account 00013 cannot perform any transactions for the remainder of the day
 Enter a command:
-Error, invalid command, please enter a command:
-Error, invalid command, please enter a command:
 You are now logged out

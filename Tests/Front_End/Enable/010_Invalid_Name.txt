@@ -1,0 +1,6 @@
+login
+admin 
+enable
+Jeff Doe
+00014
+logout

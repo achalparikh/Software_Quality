@@ -1,9 +1,0 @@
-login
-admin
-disable
-John Doe
-00001
-deposit
-00001
-500.00
-logout

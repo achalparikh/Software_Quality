@@ -1,0 +1,13 @@
+login 
+admin 
+disable 
+John Doe 
+00012
+logout
+login
+standard
+John Doe
+deposit
+00012
+500.00
+logout

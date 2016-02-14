@@ -1,0 +1,13 @@
+login
+admin
+enable
+John Doe
+00014
+logout
+login
+standard
+John Doe
+deposit
+00014
+500.00
+logout

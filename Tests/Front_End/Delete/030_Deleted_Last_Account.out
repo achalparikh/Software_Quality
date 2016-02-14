@@ -14,4 +14,4 @@ You are now logged out
 Login to start:
 Enter type of account: "standard" or "admin"
 Logging in as standard user - enter name:
-ERROR: User "BRUCE WAYNE" does not exist. Try again
+ERROR: User "John Doe" does not exist. Try again

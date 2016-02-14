@@ -1,6 +1,0 @@
-login
-admin
-disable
-Jeff Doe
-00001
-logout

@@ -1,7 +1,0 @@
-login
-standard
-John Doe 
-enable
-John Doe
-00003
-logout

@@ -4,14 +4,10 @@ You are now logged in as an admin
 Enter a command:
 Enter an account holder:
 Enter an account number belonging to the account holder:
-Account "00012" deleted
+Account "00012" enabled
 Enter a command:
-You are now logged out
-Login to start:
-Enter type of account: "standard" or "admin"
-Logging in as standard user - enter name:
-You are now logged in as "John Doe"
-Enter a command:
+Enter an account holder:
 Enter an account number belonging to the account holder:
-Error, account 00012 does not currently exist and cannot perform any transactions
+Deposited $500.00 to account "00012"
+Enter a command:
 You are now logged out
