@@ -1,4 +1,8 @@
-LOGIN SUCCESSFUL AS admin
-ACCOUNT 00011 IS VALID FOR STUDENT
-500.00 CAN BE TRANSFERED
-LOGOUT SUCCESSFUL
+Enter user type - "standard" or "admin":  
+You are now logged in as an admin  
+COMMAND: transfer - enter user:  
+Transferring in "STUDENT" - enter FROM account number:  
+Transferring from 00011 - enter TO account number:  
+Transferring to 00002 - enter amount:  
+Transfer of 500.00 - complete!
+You are now logged out
