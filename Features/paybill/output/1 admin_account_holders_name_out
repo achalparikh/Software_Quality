@@ -1,3 +1,5 @@
-LOGIN SUCCESSFUL AS ADMIN
-ACCOUNT NAME ACHAL PARIKH IS VALID FOR PAYBILL
-LOGOUT SUCCESSFUL 
+Enter user type - "standard" or "admin":
+You are now logged in as an admin
+COMMAND: paybill - enter user:
+Paying bill for "ACHAL PARIKH" - enter number:
+You are now logged out
