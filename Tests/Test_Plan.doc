@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\deff0\uc1
 {\fonttbl
-{\f0\fnil\fcharset0\fprq0\fttruetype Liberation Sans;}
-{\f1\fnil\fcharset0\fprq0\fttruetype Times New Roman;}
+{\f0\fnil\fcharset0\fprq0\fttruetype Times New Roman;}
+{\f1\fnil\fcharset0\fprq0\fttruetype Liberation Sans;}
 {\f2\fnil\fcharset0\fprq0\fttruetype Courier New;}}
 {\colortbl
 \red0\green0\blue0;
@@ -25,7 +25,7 @@
 {\s5\tx1584\sbasedon29\snext28 Chapter Heading;}
 {\s35\fi-431\li720 Square List;}
 {\s11\fi-431\li720 Dashed List;}
-{\s22\sb440\sa60\f0\fs24\b\sbasedon28\snext28 Heading 3;}
+{\s22\sb440\sa60\f1\fs24\b\sbasedon28\snext28 Heading 3;}
 {\s37\fi-431\li720 Tick List;}
 {\s24\fi-431\li720 Heart List;}
 {\s40\fi-431\li720\sbasedon32 Upper Roman List;}
@@ -33,11 +33,11 @@
 {\s16\fi-288\li288\fs20\sbasedon28 Footnote;}
 {\s19\fi-431\li720 Hand List;}
 {\s18\fs20\sbasedon28 Footnote Text;}
-{\s20\sb440\sa60\f0\fs34\b\sbasedon28\snext28 Heading 1;}
-{\s21\sb440\sa60\f0\fs28\b\sbasedon28\snext28 Heading 2;}
-{\s10\qc\sb240\sa120\f0\fs32\b\sbasedon28\snext28 Contents Header;}
-{\s23\sb440\sa60\f0\fs24\b\sbasedon28\snext28 Heading 4;}
-{\s28\f1\fs24 Normal;}
+{\s20\sb440\sa60\f1\fs34\b\sbasedon28\snext28 Heading 1;}
+{\s21\sb440\sa60\f1\fs28\b\sbasedon28\snext28 Heading 2;}
+{\s10\qc\sb240\sa120\f1\fs32\b\sbasedon28\snext28 Contents Header;}
+{\s23\sb440\sa60\f1\fs24\b\sbasedon28\snext28 Heading 4;}
+{\s28\f0\fs24 Normal;}
 {\s26\fi-431\li720\sbasedon32 Lower Case List;}
 {\s2\li1440\ri1440\sa120\sbasedon28 Block Text;}
 {\s33\f2\sbasedon28 Plain Text;}
@@ -50,4 +50,6 @@
 {\s13\fi-288\li288\sbasedon28 Endnote;}}
 \kerning0\cf0\ftnbj\fet2\ftnstart1\ftnnar\aftnnar\ftnstart1\aftnstart1\aenddoc\revprop3{\*\rdf}{\info\uc1{\author Stewart}}\deftab720\viewkind1\paperw12240\paperh15840\margl1440\margr1440\widowctrl
 \sectd\sbknone\colsx360\pgncont\ltrsect
-\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs24\lang4105{\*\listtag0}\par}}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs24\lang4105{\*\listtag0}\abinodiroverride\ltrch \tab Tests for the front end are organized into directories by transaction they are testing. Within each directory the tests are named with a 3 digit number followed by the name of the test (named in test cases table) and an extension: .trn for the transaction output files, .out for the terminal output files, and .txt for the terminal input files.}{\s28\f0\fs24\lang4105{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs24\lang4105{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs24\lang4105{\*\listtag0}\abinodiroverride\ltrch \tab Tests will be run using a linux bash file. Each directory will have it\uc1\u8217\'92s tests run in a loop by the preceding 3 digit number. The terminal output will be piped into a file and a diff between the terminal output and the .out file, as well as the .trn files, will determine if the program ran as expected.}{\s28\f0\fs24\lang4105{\*\listtag0}\par}}
