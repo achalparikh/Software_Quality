@@ -1,0 +1,6 @@
+login 
+admin
+withdraw
+JACK
+25.00
+logout

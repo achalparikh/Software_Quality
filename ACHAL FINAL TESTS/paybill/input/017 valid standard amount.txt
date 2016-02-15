@@ -1,0 +1,8 @@
+login 
+standard
+ACHAL PARIKH
+paybill
+00001
+EC
+1999.00
+logout

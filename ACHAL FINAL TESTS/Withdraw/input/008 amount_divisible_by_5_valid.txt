@@ -1,0 +1,6 @@
+login 
+standard
+ACHAL PARIKH
+withdraw
+125.00
+logout

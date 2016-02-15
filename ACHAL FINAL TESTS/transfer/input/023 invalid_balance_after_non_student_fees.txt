@@ -1,0 +1,8 @@
+login 
+standard
+THOR OSDINSON
+transfer
+00010
+00002
+500.00
+logout

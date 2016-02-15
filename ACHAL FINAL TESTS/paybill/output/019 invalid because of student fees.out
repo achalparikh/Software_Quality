@@ -1,0 +1,9 @@
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "Student"
+COMMAND: paybill - enter account number:
+Paying bill from 00001 - enter payee:  
+Paying bill to "TV" - enter amount: 
+ALERT: 5.00 student fee will be added.
+ERROR: Maximum amount of 50.00 exceeded. Try again
+You are now logged out

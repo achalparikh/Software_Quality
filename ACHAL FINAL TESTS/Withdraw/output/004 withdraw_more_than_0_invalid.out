@@ -1,0 +1,6 @@
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "BLACK WIDOW"
+COMMAND: withdraw - enter amount:
+ERROR: You cannot withdraw a negative amount. Try again
+You are now logged out

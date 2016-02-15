@@ -1,0 +1,8 @@
+login 
+admin
+paybill
+CLARK KENT
+00001
+TV
+0.00
+logout
