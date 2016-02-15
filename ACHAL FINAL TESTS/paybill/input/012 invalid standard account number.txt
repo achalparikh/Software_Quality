@@ -1,0 +1,6 @@
+login 
+standard
+ACHAL PARIKH
+paybill
+00002
+logout

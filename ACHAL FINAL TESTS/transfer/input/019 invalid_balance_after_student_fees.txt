@@ -1,0 +1,8 @@
+login 
+standard
+STUDENT
+transfer
+00011
+00002
+500.00
+logout

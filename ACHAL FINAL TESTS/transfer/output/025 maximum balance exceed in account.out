@@ -1,0 +1,8 @@
+Enter user type - "standard" or "admin":   
+Logging in as standard user - enter name:  
+You are now logged in as "THOR ODINSON"  
+COMMAND transfer - enter FROM account number:  
+Transferring from 00001 - enter TO account number:  
+Transferring to 00009 - enter amount:
+ERROR: You cannot transfer second account is completely full. Try again  
+You are now logged out

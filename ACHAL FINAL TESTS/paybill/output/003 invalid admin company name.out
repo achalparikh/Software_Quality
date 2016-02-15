@@ -1,0 +1,7 @@
+Enter user type - "standard" or "admin":  
+You are now logged in as an admin  
+COMMAND: paybill - enter user:  
+Paying bill for "ACHAL PARIKH" - enter account number: 
+Paying bill from 00001 - enter payee: 
+ERROR: Company "aa" does not exist. Try again
+You are now logged out

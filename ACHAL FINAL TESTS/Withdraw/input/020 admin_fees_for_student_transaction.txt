@@ -1,0 +1,6 @@
+login 
+admin
+withdraw
+STUDENT
+50.00
+logout

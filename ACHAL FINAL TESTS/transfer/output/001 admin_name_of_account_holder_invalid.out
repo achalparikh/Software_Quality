@@ -1,0 +1,5 @@
+Enter user type - "standard" or "admin": 
+You are now logged in as an admin 
+COMMAND: transfer - enter user: 
+ERROR: User "lala llaa" does not exist. Try again
+You are now logged out 
