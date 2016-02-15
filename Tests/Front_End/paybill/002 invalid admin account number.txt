@@ -1,0 +1,8 @@
+login 
+admin
+paybill
+ACHAL PARIKH
+00002
+EC
+100.00
+logout

@@ -1,0 +1,9 @@
+Enter user type - "standard" or "admin":   
+Logging in as standard user - enter name:   
+You are now logged in as "ACHAL PARIKH"  
+COMMAND: transfer - enter FROM account number:  
+Transferring from 00001 - enter TO account number:  
+Transferring to 00002 - enter amount:
+ALEART: a fee of 0.05 will be deducted  
+Transfer of 1.00 - complete! 
+You are now logged out

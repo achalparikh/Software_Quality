@@ -1,0 +1,6 @@
+login 
+admin 
+transfer
+ACHAL PARIKH
+00001
+logout

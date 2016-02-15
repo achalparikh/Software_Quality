@@ -1,0 +1,8 @@
+login
+admin 
+paybill
+STUDENT
+00011
+TV
+500.00
+logout

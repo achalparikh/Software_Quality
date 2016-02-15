@@ -1,0 +1,8 @@
+login 
+standard
+ACHAL PARIKH
+paybill
+00001
+TV
+2100.00
+logout
