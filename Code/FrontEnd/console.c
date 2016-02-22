@@ -86,6 +86,7 @@ class Session{
 	void deposit(){
 		float val;
 		string num, str_val, name;
+		// admin users have extra information they must provide
 		if(admin){
 			printf("COMMAND: deposit - enter user:\n");
 			getline(cin, name);
@@ -96,21 +97,27 @@ class Session{
 			}
 			printf("Depositing to \"%s\" - enter account number:\n", name.c_str());
 		} else {
+			// standard users can only deposit into their own accounts
+			name = user;
 			printf("COMMAND: deposit - enter account number:\n");
 		}
+		// account number
 		getline(cin, num);
 		if(!validNumber(num, name)){
 			printf("ERROR: Account number \"%s\" is not valid. Try again\n", num.c_str());
 			return;
 		}
 		printf("Depositing to \"%s\" - enter amount:\n", num.c_str());
+		// amount of deposit
 		getline(cin, str_val);
 		val = stof(str_val);
-		if(val >= 1){
+		// maximum deposit
+		if(val >= 1000.00){
 			printf("ERROR: Maximum balance exceeded. Try again\n");
 			return;
 		}
 
+		// create successful transaction code
 		createTransaction("04", name, num, val, "");
 
 		return;
