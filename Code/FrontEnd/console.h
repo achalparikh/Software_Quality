@@ -82,7 +82,7 @@ class Session{
 	 * Deletes account
 	 * Admin only
 	 */
-	void delete();
+	void deleteAccount();
 
 	/**
 	 * Enables disabled account

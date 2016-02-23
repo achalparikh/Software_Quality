@@ -61,37 +61,21 @@ void Session::input(){
 		if(command.compare("deposit") == 0){
 			deposit();
 		} else if(command.compare("withdraw") == 0){
-/**
- *			withdraw();
- */
+			withdraw();
 		} else if(command.compare("create") == 0){
-/**
- *			create();
- */
+			create();
 		} else if(command.compare("delete") == 0){
-/**
- *			delete();
- */
+			deleteAccount();
 		} else if(command.compare("enable") == 0){
-/**
- *			enable();
- */
+			enable();
 		} else if(command.compare("disable") == 0){
-/**
- *			disable();
- */
+			disable();
 		} else if(command.compare("paybill") == 0){
-/**
- *			paybill();
- */
+			paybill();
 		} else if(command.compare("transfer") == 0){
-/**
- *			transfer();
- */
+			transfer();
 		} else if(command.compare("changeplan") == 0){
-/**
- *			changeplan();
- */
+			changeplan();
 		} else {
 			printf("Error, unrecognized command\n");
 		}
@@ -207,7 +191,12 @@ void Session::deposit(){
 	 * amount of deposit
 	 */
 	getline(cin, str_val);
-	val = stof(str_val);
+	if(str_val.find_first_not_of(".0123456789") == string::npos){
+		val = stof(str_val);
+	} else {
+		printf("Error: \"%s\" is not a valid number\n", str_val.c_str());
+		return;
+	}
 	/**
 	 * maximum deposit
 	 */
@@ -236,25 +225,37 @@ void Session::withdraw(){}
 void Session::create(){
 	if(admin){} else {
 		printf("Error, standard users cannot use the 'create' transaction\n");
+		return;
 	}
+
+	return;
 }
 
-void Session::delete(){
+void Session::deleteAccount(){
 	if(admin){} else {
 		printf("Error, standard users cannot use the 'delete' transaction\n");
+		return;
 	}
+	
+	return;
 }
 
 void Session::enable(){
 	if(admin){} else {
 		printf("Error, standard users cannot use the 'enable' transaction\n");
+		return;
 	}
+	
+	return;
 }
 
 void Session::disable(){
 	if(admin){} else {
 		printf("Error, standard users cannot use the 'disable' transaction\n");
+		return;
 	}
+	
+	return;
 }
 
 void Session::paybill(){}
@@ -264,7 +265,10 @@ void Session::transfer(){}
 void Session::changeplan(){
 	if(admin){} else {
 		printf("Error, standard users cannot use the 'changeplan' transaction\n");
+		return;
 	}
+	
+	return;
 }
  
 void Session::logout(){
