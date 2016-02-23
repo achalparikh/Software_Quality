@@ -230,6 +230,42 @@ void Session::deposit(){
 
 	return;
 }
+
+void Session::withdraw(){}
+
+void Session::create(){
+	if(admin){} else {
+		printf("Error, standard users cannot use the 'create' transaction\n");
+	}
+}
+
+void Session::delete(){
+	if(admin){} else {
+		printf("Error, standard users cannot use the 'delete' transaction\n");
+	}
+}
+
+void Session::enable(){
+	if(admin){} else {
+		printf("Error, standard users cannot use the 'enable' transaction\n");
+	}
+}
+
+void Session::disable(){
+	if(admin){} else {
+		printf("Error, standard users cannot use the 'disable' transaction\n");
+	}
+}
+
+void Session::paybill(){}
+
+void Session::transfer(){}
+
+void Session::changeplan(){
+	if(admin){} else {
+		printf("Error, standard users cannot use the 'changeplan' transaction\n");
+	}
+}
  
 void Session::logout(){
 	createTransaction("00", "", "00000", 0.0, "  ");

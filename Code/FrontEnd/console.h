@@ -68,7 +68,53 @@ class Session{
 	void deposit();
 
 	/**
-	 * prints trans_str to transaction file
+	 * Withdraws money from account
+	 */
+	void withdraw();
+
+	/**
+	 * Create new account which can't be used until next day
+	 * Admin only
+	 */
+	void create();
+
+	/**
+	 * Deletes account
+	 * Admin only
+	 */
+	void delete();
+
+	/**
+	 * Enables disabled account
+	 * Admin only
+	 */
+	void enable();
+
+	/**
+	 * Disables account
+	 * Admin only
+	 */
+	void disable();
+
+	/**
+	 * Pays bill
+	 */
+	void paybill();
+
+	/**
+	 * Transfer money to another account
+	 */
+	void transfer();
+
+	/**
+	 * Change account plan between student and normal
+	 * Admin only
+	 */
+	void changeplan();
+
+	/**
+	 * Prints trans_str to transaction file
+	 * Leaves current session
 	 */
 	void logout();
 
