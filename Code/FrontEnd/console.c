@@ -310,6 +310,9 @@ class Session{
  * Reads input until a valid login is called
  */
 int main(int argc, const char* argv[]){
+	/** 
+	 * load bank account file to accounts vector
+	 */
 	ifstream bankAccounts("currentBankAccountsFile");
 	if(bankAccounts.is_open()){
 		for(string accountLine; getline(bankAccounts, accountLine); ){
