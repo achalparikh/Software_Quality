@@ -51,7 +51,7 @@ class Session{
 		 * name will be less than or equal to 20 characters
 		 */
 		trans_str += name;
-		for (int i=name.length(); i<=21; i++){
+		for (int i=name.length(); i<=20; i++){
 			trans_str += " ";
 		}
 
