@@ -1,5 +1,6 @@
 /**
- * Front end terminal
+ * Front end terminal takes command line input to perform transactions
+ * Outputs transaction logs to the transaction.trn file
  */
 
 #include <stdio.h>
