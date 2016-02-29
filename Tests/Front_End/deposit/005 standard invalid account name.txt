@@ -3,3 +3,4 @@ standard
 CLARK KENT 
 deposit 
 logout
+quit

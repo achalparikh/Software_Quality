@@ -4,3 +4,4 @@ ACHAL PARIKH
 paybill
 00002
 logout
+quit

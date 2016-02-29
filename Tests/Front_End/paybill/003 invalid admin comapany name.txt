@@ -6,3 +6,4 @@ ACHAL PARIKH
 aa
 100.00
 logout
+quit

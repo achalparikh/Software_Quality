@@ -6,3 +6,4 @@ THOR ODINSON
 TV
 500.00
 logout
+quit

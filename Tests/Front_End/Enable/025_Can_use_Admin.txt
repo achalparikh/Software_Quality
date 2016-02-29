@@ -8,3 +8,4 @@ John Doe
 00014
 500.00
 logout
+quit

@@ -2,3 +2,4 @@ login
 admin 
 A
 logout
+quit

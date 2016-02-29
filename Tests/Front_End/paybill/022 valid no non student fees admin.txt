@@ -6,3 +6,4 @@ STUDENT
 TV
 500.00
 logout
+quit

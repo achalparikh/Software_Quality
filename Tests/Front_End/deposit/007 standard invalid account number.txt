@@ -4,3 +4,4 @@ ACHAL PARIKH
 deposit 
 00002
 logout
+quit

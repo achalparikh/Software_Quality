@@ -6,3 +6,4 @@ transfer
 00011
 2000000000000.00
 logout
+quit

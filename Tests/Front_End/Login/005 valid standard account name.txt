@@ -2,3 +2,4 @@ login
 standard 
 ACHAL PARIKH
 logout
+quit

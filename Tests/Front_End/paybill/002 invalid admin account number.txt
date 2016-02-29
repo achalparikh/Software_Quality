@@ -6,3 +6,4 @@ ACHAL PARIKH
 EC
 100.00
 logout
+quit

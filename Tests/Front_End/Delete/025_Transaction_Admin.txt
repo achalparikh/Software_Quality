@@ -7,3 +7,4 @@ deposit
 00012
 500.00
 logout
+quit

@@ -4,3 +4,4 @@ disable
 John Doe
 00013
 logout
+quit

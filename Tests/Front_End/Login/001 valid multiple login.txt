@@ -5,3 +5,4 @@ logout
 login
 admin
 logout
+quit

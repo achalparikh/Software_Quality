@@ -6,3 +6,4 @@ STUDENT
 00002
 600.00
 logout
+quit

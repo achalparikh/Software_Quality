@@ -3,3 +3,4 @@ admin
 paybill
 ACHAL PARIKH
 logout
+quit

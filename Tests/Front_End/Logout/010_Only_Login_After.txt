@@ -7,3 +7,4 @@ deposit
 login
 admin
 logout
+quit

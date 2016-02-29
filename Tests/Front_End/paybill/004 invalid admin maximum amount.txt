@@ -6,3 +6,4 @@ ACHAL PARIKH
 TV
 2001.00
 logout
+quit

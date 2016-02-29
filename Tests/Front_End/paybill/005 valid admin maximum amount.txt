@@ -6,3 +6,4 @@ ACHAL PARIKH
 TV
 2000.00
 logout
+quit

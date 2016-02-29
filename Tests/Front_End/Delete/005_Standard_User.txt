@@ -5,3 +5,4 @@ delete
 John Doe
 00012
 logout
+quit

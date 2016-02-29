@@ -3,3 +3,4 @@ admin
 transfer
 ACHAL PARIKH
 logout
+quit

@@ -1,0 +1,10 @@
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name:
+You are now logged in as "BRUCE BANNER"
+COMMAND: withdraw - enter amount:
+ALERT: 0.10 non student fee will be deducted. 
+Withdrawal of 250.00 - complete!
+COMMAND: withdraw - enter amount:
+ALERT: 0.10 non student fee will be deducted. 
+Withdrawal of 245.00 - complete!
+You are now logged out

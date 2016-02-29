@@ -1,3 +1,4 @@
 login 
 jajdfhsdf 
 logout
+quit

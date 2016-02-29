@@ -5,3 +5,4 @@ enable
 John Doe
 00014
 logout
+quit

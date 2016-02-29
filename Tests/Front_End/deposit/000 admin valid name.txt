@@ -3,3 +3,4 @@ admin
 deposit
 ACHAL PARIKH
 logout
+quit

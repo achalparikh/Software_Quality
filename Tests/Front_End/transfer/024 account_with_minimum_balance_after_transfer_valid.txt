@@ -6,3 +6,4 @@ transfer
 00011
 1000
 logout
+quit

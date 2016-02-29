@@ -6,3 +6,4 @@ paybill
 TV
 490.90
 logout
+quit

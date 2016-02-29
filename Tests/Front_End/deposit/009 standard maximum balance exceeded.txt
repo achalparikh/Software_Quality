@@ -5,3 +5,4 @@ deposit
 00009
 1.00
 logout
+quit

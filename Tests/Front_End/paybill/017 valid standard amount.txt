@@ -6,3 +6,4 @@ paybill
 EC
 1999.00
 logout
+quit

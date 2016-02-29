@@ -2,3 +2,4 @@ login
 admin
 1idh
 logout
+quit

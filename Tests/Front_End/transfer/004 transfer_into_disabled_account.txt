@@ -6,3 +6,4 @@ transfer
 00007
 100.00
 logout
+quit

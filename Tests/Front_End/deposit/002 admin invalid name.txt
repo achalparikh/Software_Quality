@@ -3,3 +3,4 @@ admin
 deposit 
 CLARK KENT
 logout
+quit

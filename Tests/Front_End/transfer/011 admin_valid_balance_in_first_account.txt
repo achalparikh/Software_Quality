@@ -6,3 +6,4 @@ ACHAL PARIKH
 00011
 100.00
 logout
+quit

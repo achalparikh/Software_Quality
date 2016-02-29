@@ -1,0 +1,6 @@
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name: 
+ERROR: User "CLARK KENT" does not exist. Try again 
+ERROR: Not logged in
+ERROR: Not logged in
+You are now logged out

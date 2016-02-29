@@ -4,3 +4,4 @@ delete
 Jeff Doe
 00012
 logout
+quit

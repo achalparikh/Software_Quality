@@ -6,3 +6,4 @@ CLARK KENT
 TV
 0.00
 logout
+quit

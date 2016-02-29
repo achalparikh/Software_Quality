@@ -4,3 +4,4 @@ transfer
 ACHAL PARIKH
 00001
 logout
+quit

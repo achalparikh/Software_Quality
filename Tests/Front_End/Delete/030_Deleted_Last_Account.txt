@@ -11,3 +11,4 @@ login
 standard
 John Doe
 logout
+quit

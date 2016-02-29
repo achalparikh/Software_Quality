@@ -6,3 +6,4 @@ ACHAL PARIKH
 TV
 1999.00
 logout
+quit

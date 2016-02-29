@@ -4,3 +4,4 @@ create
 John Doe
 0.00
 logout
+quit

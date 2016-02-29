@@ -6,3 +6,4 @@ paybill
 TV
 2100.00
 logout
+quit
