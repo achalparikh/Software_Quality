@@ -6,3 +6,7 @@ login 007
 login 008
 paybill 011
 paybill 013
+paybill 019
+transfer 000
+transfer 002
+withdraw 003
