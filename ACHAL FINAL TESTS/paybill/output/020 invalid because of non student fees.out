@@ -1,8 +1,12 @@
-Enter user type - "standard" or "admin":  
-Logging in as standard user - enter name: 
-You are now logged in as "THOR ODINSON" 
-COMMAND: paybill - enter account number: 
-Paying bill from 00010 - enter payee:   
-Paying bill to "TV" - enter amount:  
-Payment of 500.00 - complete!
+Login to start:
+Enter user type - "standard" or "admin":
+Logging in as standard user - enter name:
+You are now logged in as "THOR ODINSON"
+COMMAND: paybill - enter account number:
+Paying bill from 00010 - enter payee:
+Paying bill to "TV" - enter amount:
+ALERT: 0.10 non student fees will be added.
+ERROR: Insufficient funds. Try again
+Enter a command:
 You are now logged out
+Login to start:
