@@ -1,9 +1,13 @@
-Enter user type - "standard" or "admin":  
-Logging in as standard user - enter name: 
-You are now logged in as "STUDENT" 
-COMMAND: transfer - enter FROM account number: 
-Transferring from 00011 - enter TO account number:   
+Login to start:
+Enter user type - "standard" or "admin":
+Logging in as standard user - enter name:
+You are now logged in as "STUDENT"
+Enter a command:
+COMMAND: transfer - enter FROM account number:
+Transferring from 00011 - enter TO account number:
 Transferring to 00002 - enter amount:
-ALERT: 0.05 student fee will be deducted. 
+ALERT: 0.05 student fee will be deducted.
 Transfer of 60.00 - complete!
+Enter a command:
 You are now logged out
+Login to start:

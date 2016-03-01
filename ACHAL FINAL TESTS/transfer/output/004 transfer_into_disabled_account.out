@@ -1,7 +1,11 @@
-Enter user type - "standard" or "admin": 
-Logging in as standard user - enter name: 
+Login to start:
+Enter user type - "standard" or "admin":
+Logging in as standard user - enter name:
 You are now logged in as "ACHAL PARIKH"
+Enter a command:
 COMMAND: transfer - enter FROM account number:
 Transferring from 00001 - enter TO account number:
 ERROR: Account number "00007" is disabled. Try again
+Enter a command:
 You are now logged out
+Login to start:
