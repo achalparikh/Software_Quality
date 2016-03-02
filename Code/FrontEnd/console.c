@@ -5,25 +5,9 @@
 
 #include "console.h"
 
-/**
- * Strings containing bank account information
- */
-vector<string> accounts;
-
 int main(int argc, const char* argv[]){
-	/** 
-	 * load bank account file to accounts vector
-	 */
-	ifstream bankAccounts("currentBankAccountsFile");
-	if(bankAccounts.is_open()){
-		for(string accountLine; getline(bankAccounts, accountLine); ){
-			accounts.push_back(accountLine);
-		}
-	} else {
-		printf("Bank accounts file could not be opened.\n");
-		return 0;
-	}
-
+	Files *file = new Files("currentBankAccountsFile", "transactions.trn");
+	Accounts *account = new Accounts(file);
 	string input = "";
 	printf("Login to start:\n");
 	getline(cin, input);
@@ -33,16 +17,22 @@ int main(int argc, const char* argv[]){
 	 */
 	while(input.compare("quit") != 0){
 		if(input.compare("login") == 0){
-			Session session;
-			session.login();
+			Session *session = new Session(account, file);
+			session->login();
+			delete(session);
 		} else {
 			printf("ERROR: Not logged in\n");
 		}
 		printf("Login to start:\n");
-		getline(cin, input);
+		if(!getline(cin, input)){
+			printf("End of file, terminating console.\n");
+			break;
+		}
 		input = lower(input);
 	}
 
+	delete(file);
+	delete(account);
 	return 0;
 }
 
@@ -57,7 +47,7 @@ void Session::input(){
 	printf("Enter a command:\n");
 	getline(cin, command);
 	command = lower(command);
-	while(command.compare("logout") != 0){
+	while(command.compare("logout") != 0 || command.compare("quit") != 0){
 		if(command.compare("deposit") == 0){
 			deposit();
 		} else if(command.compare("withdraw") == 0){
@@ -80,7 +70,10 @@ void Session::input(){
 			printf("Error, unrecognized command\n");
 		}
 		printf("Enter a command:\n");
-		getline(cin, command);
+		if(getline(cin, command)){
+			printf("End of file, logging out.\n");
+			break;
+		}
 		command = lower(command);
 	}
 
@@ -89,75 +82,8 @@ void Session::input(){
 	return;
 }
 
-bool Session::validHolder(string name){
-	string account;
-	for(int i=0; i<accounts.size(); i++){
-		account = accounts.at(i).substr(6,name.length());
-		if(account.compare(name) == 0){
-			return true;
-		}
-	}
-
-	return false;
-}
-
-bool Session::validNumber(string num, string holder){
-	string account;
-	for(int i=0; i<accounts.size(); i++){
-		account = accounts.at(i).substr(0,holder.length()+6);
-		if(account.substr(6).compare(holder) == 0 && 
-			account.substr(0, 5).compare(num) == 0){
-			return true;
-		}
-	}
-
-	return false;
-}
-
-void Session::createTransaction(string code, string name, string num, float val, string misc){
-	/**
-	 * Transaction code is only ever going to be length 2
-	 */
-	trans_str += code + " ";
-	
-	/**
-	 * name will be less than or equal to 20 characters
-	 */
-	trans_str += name;
-	for (int i=name.length(); i<=20; i++){
-		trans_str += " ";
-	}
-
-	/**
-	 * num is a string of length 5
-	 */
-	trans_str += num + " ";
-
-	/**
-	 * val is a float
-	 * convert to string of length 8
-	 * or fill with 8 "0"s
-	 */
-	if(code.compare("06") == 0 || code.compare("07") == 0 || 
-		code.compare("08") == 0 || code.compare("09") == 0){
-		trans_str += "00000000 ";
-	} else {
-		char str_c[8];
-		sprintf(str_c, "%07.2f", val);
-		string str(str_c);
-		trans_str += str + " ";
-	}
-
-	/**
-	 * misc is a string of length 2
-	 */
-	trans_str += misc + "\n";
-
-	return;
-}
-
 void Session::deposit(){
-	float val, balance;
+	float val;
 	string num, str_val, name;
 	/**
 	 * admin users have extra information they must provide
@@ -165,7 +91,7 @@ void Session::deposit(){
 	if(admin){
 		printf("COMMAND: deposit - enter user:\n");
 		getline(cin, name);
-		if(!validHolder(name)){
+		if(!account->validHolder(name)){
 			printf("ERROR: User \"%s\" does not exist. Try again\n", 
 				name.c_str());
 			return;
@@ -182,7 +108,7 @@ void Session::deposit(){
 	 * account number
 	 */
 	getline(cin, num);
-	if(!validNumber(num, name)){
+	if(!account->validNumber(num, name)){
 		printf("ERROR: Account number \"%s\" is not valid. Try again\n", num.c_str());
 		return;
 	}
@@ -200,22 +126,15 @@ void Session::deposit(){
 	/**
 	 * maximum deposit
 	 */
-	for(int i=0; i<accounts.size(); i++){
-		if(accounts.at(i).substr(6, name.length()).compare(name) == 0 &&
-			accounts.at(i).substr(0, 5).compare(num) == 0){
-			balance = stof(accounts.at(i).substr(31, 8));
-			break;
-		}
-	}
-	if(val + balance >= 100000.00){
+	if(account->checkAmount(val, true, name, num)){
 		printf("ERROR: Maximum balance exceeded. Try again\n");
 		return;
 	}
-
+	
 	/**
 	 * create successful transaction code
 	 */
-	createTransaction("04", name, num, val, "  ");
+	this->file->createTransaction("04", name, num, val, "  ");
 
 	return;
 }
@@ -272,16 +191,14 @@ void Session::changeplan(){
 }
  
 void Session::logout(){
-	createTransaction("00", "", "00000", 0.0, "  ");
-
-	ofstream transfile;
-	transfile.open("transactions.trn", ios_base::app);
-	transfile << trans_str;
-
+	this->file->createTransaction("00", "", "00000", 0.0, "  ");
+	this->file->writeTransactions();
+	printf("You are now logged out\n");
 	return;
 }
 
 void Session::login(){
+
 	printf("Enter type of account: \"standard\" or \"admin\"\n");
 	getline(cin, command);
 	command = lower(command);
@@ -304,7 +221,7 @@ void Session::login(){
 		/**
 		 * Return to login if invalid user name
 		 */
-		if(!validHolder(command)){
+		if(!account->validHolder(command)){
 			printf("ERROR: User \"%s\" does not exist. Try again\n", command.c_str());
 			return;
 		}
@@ -322,9 +239,9 @@ void Session::login(){
 	}
 
 	if(admin){
-		createTransaction("10", this->user, "00000", 0.0, "A ");
+		this->file->createTransaction("10", this->user, "00000", 0.0, "A ");
 	} else {
-		createTransaction("10", this->user, "00000", 0.0, "S ");
+		this->file->createTransaction("10", this->user, "00000", 0.0, "S ");
 	}
 	input();
 

@@ -1,18 +1,16 @@
-#ifndef CONSOLE_H_
-#define CONSOLE_H_
+#pragma once
 #include <stdio.h>
 #include <stdlib.h>
 #include "iostream"
 #include "string"
-#include "fstream"
 #include "vector"
-#endif
+#include "accounts.h"
+#include "files.h"
 
 using namespace std;
 
 /**
- * @param name of text file to use as command input 
- * or nothing (if intended for terminal)
+ * @param name of bank accounts file and name of transaction file
  * 
  * Loads the accounts into memory
  * Reads input until a valid login is called
@@ -34,33 +32,13 @@ class Session{
 	bool admin;
 	string user;
 	string command;
-	string trans_str = "";
+	Files *file;
+	Accounts *account;
 
 	/** 
 	 * Reads in commands to perform transactions
 	 */
 	void input();
-
-	/**
-	 * @param account holder name to be validated
-	 * 
-	 * Validates account holder name
-	 */
-	bool validHolder(string name);
-
-	/**
-	 * @param account number and account holder to validate
-	 * 
-	 * Validates account number matches account holder
-	 */
-	bool validNumber(string num, string holder);
-
-	/**
-	 * @param 5 components of the transaction file lines
-	 * 
-	 * adds transactions to the session's transaction string (trans_str)
-	 */
-	void createTransaction(string code, string name, string num, float val, string misc);
 
 	/**
 	 * Deposits money into account.
@@ -113,12 +91,13 @@ class Session{
 	void changeplan();
 
 	/**
-	 * Prints trans_str to transaction file
 	 * Leaves current session
 	 */
 	void logout();
 
   public:
+  	Session(Accounts *newAccount, Files *newFile){account = newAccount; file = newFile;}
+
 	/**
 	 * Login to session 
 	 */

@@ -11,6 +11,7 @@ EXE = console
 debug: CFLAGS += -O0 -g3
 debug: $(EXE)
 
+
 banker : banker.o
 	$(CC) $(CFLAGS) $^ $(LIBS) -o $@ 
 
