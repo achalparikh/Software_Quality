@@ -1,5 +1,5 @@
 login
-standard 
+standard
 Student
 paybill
 00001

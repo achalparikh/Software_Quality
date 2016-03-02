@@ -5,7 +5,7 @@ deposit
 create
 delete
 disable
-changeplan 
+changeplan
 login
 logout
 quit

@@ -1,5 +1,5 @@
 login
-admin 
+admin
 enable
 John Doe
 00013

@@ -1,7 +1,7 @@
-Enter user type - "standard" or "admin":   
-Logging in as standard user - enter name:  
-You are now logged in as "ACHAL PARIKH" 
-COMMAND: paybill - enter account number:  
-Paying bill from 00001 - enter payee:  
-ERROR: Company "AC" does not exist. Try again  
+Enter user type - "standard" or "admin":  
+Logging in as standard user - enter name: 
+You are now logged in as "ACHAL PARIKH"
+COMMAND: paybill - enter account number: 
+Paying bill from 00001 - enter payee: 
+ERROR: Company "AC" does not exist. Try again 
 You are now logged out

@@ -1,5 +1,5 @@
 login
-standard 
+standard
 CLARK KENT
 withdraw
 400.00

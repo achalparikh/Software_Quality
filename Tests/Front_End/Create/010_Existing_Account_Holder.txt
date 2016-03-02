@@ -1,5 +1,5 @@
 login
-admin 
+admin
 create
 John Doe
 0.00

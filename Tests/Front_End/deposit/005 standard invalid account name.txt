@@ -1,6 +1,6 @@
 login
 standard
-CLARK KENT 
-deposit 
+CLARK KENT
+deposit
 logout
 quit

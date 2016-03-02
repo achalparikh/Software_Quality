@@ -1,7 +1,7 @@
-login 
+login
 admin
 paybill
-THOR ODINSON 
+THOR ODINSON
 00010
 TV
 500.00

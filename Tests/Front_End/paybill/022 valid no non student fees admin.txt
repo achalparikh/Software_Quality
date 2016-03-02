@@ -1,5 +1,5 @@
 login
-admin 
+admin
 paybill
 STUDENT
 00011

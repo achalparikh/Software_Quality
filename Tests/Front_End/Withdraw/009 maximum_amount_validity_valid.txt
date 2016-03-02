@@ -1,6 +1,6 @@
 login
-standard 
+standard
 ACHAL PARIKH
-withdraw 
+withdraw
 495.00
 logout

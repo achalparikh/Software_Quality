@@ -1,5 +1,5 @@
-login 
-admin 
+login
+admin
 A
 logout
 quit

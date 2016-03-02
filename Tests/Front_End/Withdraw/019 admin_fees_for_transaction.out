@@ -2,10 +2,10 @@ Enter user type - "standard" or "admin":
 You are now logged in as an admin
 COMMAND: withdraw - enter user:
 Withdrawing from "BLACK WIDOW" - enter amount:
-ALERT: 0.05 student fee will be deducted. 
+ALERT: 0.05 student fee will be deducted.
 Withdrawal of 25.00 - complete!
 COMMAND: withdraw - enter user:
-ALERT: 0.05 student fee will be deducted. 
+ALERT: 0.05 student fee will be deducted.
 Withdrawing from "BLACK WIDOW" - enter amount:
 Withdrawal of 25.00 - complete!
 You are now logged out

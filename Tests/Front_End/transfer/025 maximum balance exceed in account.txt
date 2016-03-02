@@ -1,7 +1,7 @@
-login 
-standard 
-ACHAL PARIKH 
-transfer 
+login
+standard
+ACHAL PARIKH
+transfer
 00001
 00009
 500.00

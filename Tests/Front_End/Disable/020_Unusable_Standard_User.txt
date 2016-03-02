@@ -1,7 +1,7 @@
-login 
-admin 
-disable 
-John Doe 
+login
+admin
+disable
+John Doe
 00012
 logout
 login

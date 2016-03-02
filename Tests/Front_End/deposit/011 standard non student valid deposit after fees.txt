@@ -1,7 +1,7 @@
-login 
-standard 
+login
+standard
 THOR ODINSON
-deposit 
+deposit
 00010
 5.00
 logout

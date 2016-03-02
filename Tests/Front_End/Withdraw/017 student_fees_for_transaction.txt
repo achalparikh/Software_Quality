@@ -1,5 +1,5 @@
-login 
-standard 
+login
+standard
 STUDENT
 withdraw
 25.00

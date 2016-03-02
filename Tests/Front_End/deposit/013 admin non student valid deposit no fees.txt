@@ -1,6 +1,6 @@
 login
 admin
-deposit 
+deposit
 THOR ODINSON
 00010
 6.00

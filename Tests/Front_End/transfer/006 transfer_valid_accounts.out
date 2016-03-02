@@ -1,8 +1,8 @@
-Enter user type - "standard" or "admin":  
-Logging in as standard user - enter name:  
-You are now logged in as "ACHAL PARIKH" 
-COMMAND: transfer - enter FROM account number: 
-Transferring from 00001 - enter TO account number: 
+Enter user type - "standard" or "admin": 
+Logging in as standard user - enter name: 
+You are now logged in as "ACHAL PARIKH"
+COMMAND: transfer - enter FROM account number:
+Transferring from 00001 - enter TO account number:
 Transferring to 00011 - enter amount:
 Transfer of 100.00 - complete!
 You are now logged out

@@ -1,6 +1,6 @@
 login
 admin
-deposit 
+deposit
 ACHAL PARIKH
 00001
 500.00

@@ -1,5 +1,5 @@
-login 
-standard 
+login
+standard
 JACK
 withdraw
 25.00

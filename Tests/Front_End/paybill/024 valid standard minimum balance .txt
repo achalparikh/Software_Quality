@@ -1,6 +1,6 @@
 login
 standard
-THOR ODINSON 
+THOR ODINSON
 paybill
 00010
 TV

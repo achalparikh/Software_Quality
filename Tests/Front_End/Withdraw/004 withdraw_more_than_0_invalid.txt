@@ -1,6 +1,6 @@
-login 
-standard 
-BLACK WIDOW 
-withdraw 
+login
+standard
+BLACK WIDOW
+withdraw
 -1
-logout 
+logout

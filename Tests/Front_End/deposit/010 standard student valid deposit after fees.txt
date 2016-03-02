@@ -1,7 +1,7 @@
-login 
-standard 
+login
+standard
 ACHAL PARIKH
-deposit 
+deposit
 00001
 5.00
 logout

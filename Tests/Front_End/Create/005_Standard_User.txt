@@ -1,6 +1,6 @@
 login
 standard
-John Doe 
+John Doe
 create
 Jeff Doe
 0.00

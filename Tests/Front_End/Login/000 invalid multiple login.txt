@@ -1,5 +1,5 @@
 login
-standard 
+standard
 login
 logout
 quit

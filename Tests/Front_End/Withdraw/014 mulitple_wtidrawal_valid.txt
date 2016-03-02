@@ -1,8 +1,8 @@
 login
-standard 
+standard
 BRUCE BANNER
 withdraw
 250.00
-withdraw 
+withdraw
 245.00
 logout

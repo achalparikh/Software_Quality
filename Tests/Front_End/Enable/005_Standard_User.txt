@@ -1,6 +1,6 @@
 login
 standard
-John Doe 
+John Doe
 enable
 John Doe
 00014

@@ -1,5 +1,5 @@
 login
-admin 
+admin
 enable
 Jeff Doe
 00014

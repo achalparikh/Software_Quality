@@ -1,8 +1,8 @@
-Enter user type - "standard" or "admin":   
-Logging in as standard user - enter name:   
+Enter user type - "standard" or "admin":  
+Logging in as standard user - enter name:  
 You are now logged in as "ACHAL PARIKH"
 COMMAND: transfer - enter FROM account number:
-Transferring from 00001 - enter TO account number:  
-Transferring to 00002 - enter amount: 
+Transferring from 00001 - enter TO account number: 
+Transferring to 00002 - enter amount:
 ERROR: Transfer limit of 1000.00 exceeded. Try again
 You are now logged out

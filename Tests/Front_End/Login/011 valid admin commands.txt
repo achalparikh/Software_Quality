@@ -3,10 +3,10 @@ admin
 withdraw
 transfer
 paybill
-deposit 
+deposit
 create
 delete
 disable
-changeplan 
+changeplan
 logout
 quit

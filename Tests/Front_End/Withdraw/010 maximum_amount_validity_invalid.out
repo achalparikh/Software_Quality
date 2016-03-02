@@ -1,6 +1,6 @@
-Enter user type - "standard" or "admin": 
+Enter user type - "standard" or "admin":
 Logging in as standard user - enter name:
 You are now logged in as "ACHAL PARIKH"
 COMMAND: withdraw - enter amount:
-ERROR: amount cannot be withdrawn. 
+ERROR: amount cannot be withdrawn.
 You are now logged out
