@@ -1,8 +1,12 @@
-Enter user type - "standard" or "admin":   
-Logging in as standard user - enter name:   
-You are now logged in as "ACHAL PARIKH"  
-COMMAND: transfer - enter FROM account number:  
-Transferring from 00001 - enter TO account number:  
-Transferring to 00002 - enter amount: 
-ERROR: You cannot transfer an amount of zero. Try again 
+Login to start:
+Enter user type - "standard" or "admin":
+Logging in as standard user - enter name:
+You are now logged in as "ACHAL PARIKH"
+Enter a command:
+COMMAND: transfer - enter FROM account number:
+Transferring from 00001 - enter TO account number:
+Transferring to 00002 - enter amount:
+ERROR: You cannot transfer an amount of zero. Try again
+Enter a command:
 You are now logged out
+Login to start:

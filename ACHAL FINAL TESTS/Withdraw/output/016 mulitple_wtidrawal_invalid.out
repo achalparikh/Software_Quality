@@ -1,9 +1,14 @@
-Enter user type - "standard" or "admin": 
+Login to start:
+Enter user type - "standard" or "admin":
 Logging in as standard user - enter name:
 You are now logged in as "BRUCE BANNER"
+Enter a command:
 COMMAND: withdraw - enter amount:
-ALERT: 0.10 non student fee will be deducted. 
+ALERT: 0.10 non student fee will be deducted.
 Withdrawal of 250.00 - complete!
+Enter a command:
 COMMAND: withdraw - enter amount:
 ERROR: Withdrawal limit of 500.00 exceeded. Try again
+Enter a command:
 You are now logged out
+Login to start:

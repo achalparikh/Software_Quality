@@ -1,6 +1,10 @@
-Enter user type - "standard" or "admin": 
+Login to start:
+Enter user type - "standard" or "admin":
 Logging in as standard user - enter name:
 You are now logged in as "BLACK WIDOW"
+Enter a command:
 COMMAND: withdraw - enter amount:
 ERROR: You cannot withdraw an amount of zero. Try again
+Enter a command:
 You are now logged out
+Login to start:

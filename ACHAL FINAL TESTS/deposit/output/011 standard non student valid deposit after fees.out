@@ -1,8 +1,12 @@
+Login to start:
 Enter user type - "standard" or "admin": 
 Logging in as standard user - enter name: 
 You are now logged in as "THOR ODINSON"
+Enter a command:
 COMMAND: deposit - enter account number:
 Depositing to 00010 - enter amount:
 ALERT: 0.10 fee will be deducted.
 Deposit of 4.90 - complete!
+Enter a command:
 You are now logged out
+Login to start:
