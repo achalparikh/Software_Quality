@@ -13,3 +13,5 @@ for t in "Login" "Logout" "deposit" "Withdraw" "paybill" "transfer" "Changeplan"
 		touch transactions.trn
 	done
 done
+rm out.out
+rm transactions.trn
