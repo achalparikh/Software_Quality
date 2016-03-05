@@ -30,7 +30,7 @@ int main(int argc, const char* argv[]){
 		}
 		input = lower(input);
 	}
-	account->testAccounts();
+	//account->testAccounts();
 
 	delete(file);
 	delete(account);
