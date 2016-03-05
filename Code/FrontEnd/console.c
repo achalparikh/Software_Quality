@@ -30,6 +30,7 @@ int main(int argc, const char* argv[]){
 		}
 		input = lower(input);
 	}
+	account->testAccounts();
 
 	delete(file);
 	delete(account);
@@ -47,7 +48,7 @@ void Session::input(){
 	printf("Enter a command:\n");
 	getline(cin, command);
 	command = lower(command);
-	while(command.compare("logout") != 0 || command.compare("quit") != 0){
+	while(command.compare("logout") != 0){
 		if(command.compare("deposit") == 0){
 			deposit();
 		} else if(command.compare("withdraw") == 0){
@@ -70,7 +71,7 @@ void Session::input(){
 			printf("Error, unrecognized command\n");
 		}
 		printf("Enter a command:\n");
-		if(getline(cin, command)){
+		if(!getline(cin, command)){
 			printf("End of file, logging out.\n");
 			break;
 		}
@@ -126,7 +127,7 @@ void Session::deposit(){
 	/**
 	 * maximum deposit
 	 */
-	if(account->checkAmount(val, true, name, num)){
+	if(account->checkAmount(val, true, name, num, admin)){
 		printf("ERROR: Maximum balance exceeded. Try again\n");
 		return;
 	}
@@ -135,25 +136,133 @@ void Session::deposit(){
 	 * create successful transaction code
 	 */
 	this->file->createTransaction("04", name, num, val, "  ");
+	printf("Deposit of %.2f - complete!\n", val);
 
 	return;
 }
 
-void Session::withdraw(){}
-
-void Session::create(){
-	if(admin){} else {
-		printf("Error, standard users cannot use the 'create' transaction\n");
+void Session::withdraw(){
+	float val;
+	string num, str_val, name;
+	/**
+	 * admin users have extra information they must provide
+	 */
+	if(admin){
+		printf("COMMAND: withdraw - enter user:\n");
+		getline(cin, name);
+		if(!account->validHolder(name)){
+			printf("ERROR: User \"%s\" does not exist. Try again\n", 
+				name.c_str());
+			return;
+		}
+		printf("Withdrawing from \"%s\" - enter account number:\n", name.c_str());
+	} else {
+		/**
+		 * standard users can only withdraw from their own accounts
+		 */
+		name = user;
+		printf("COMMAND: withdraw - enter account number:\n");
+	}
+	/**
+	 * account number
+	 */
+	getline(cin, num);
+	if(!account->validNumber(num, name)){
+		printf("ERROR: Account number \"%s\" is not valid. Try again\n", num.c_str());
 		return;
 	}
+	printf("Withdrawing from \"%s\" - enter amount:\n", num.c_str());
+	/**
+	 * amount of withdraw
+	 */
+	getline(cin, str_val);
+	if(str_val.find_first_not_of(".0123456789") == string::npos){
+		val = stof(str_val);
+	} else {
+		printf("Error: \"%s\" is not a valid number\n", str_val.c_str());
+		return;
+	}
+	if(((int) val) % 5 != 0){
+		printf("ERROR: You cannot withdraw an amount not divisible by 5. Try again\n");
+		return;
+	}
+	if(val > 500.00){
+		printf("ERROR: amount cannot be withdrawn.\n");
+		return;
+	}
+	/**
+	 * maximum withdraw
+	 */
+	if(account->checkAmount(val, false, name, num, admin)){
+		printf("ERROR: Minimum balance exceeded. Try again\n");
+		return;
+	}
+	
+	/**
+	 * create successful transaction code
+	 */
+	this->file->createTransaction("01", name, num, val, "  ");
+	printf("Withdrawal of %.2f - complete!\n", val);
 
+	return;
+}
+
+void Session::create(){
+	if(admin){
+		float val;
+		string str_val;
+		string name, num;
+
+		printf("Enter an account holder:\n");
+		getline(cin, name);
+		if(name.length() >= 20){
+			printf("Error, account holder name too long, could not create account\n");
+			return;
+		}
+
+		printf("Enter a balance for the new account:\n");
+		getline(cin, str_val);
+		if(str_val.find_first_not_of(".0123456789") == string::npos){
+			val = stof(str_val);
+		} else {
+			printf("Error: \"%s\" is not a valid number\n", str_val.c_str());
+			return;
+		}
+		if(val >= 100000.00){
+			printf("Error, account balance too large, could not create account\n");
+			return;
+		}
+
+		num = account->newAccount(name, val);
+		file->createTransaction("05", name, num, val, "  ");
+		printf("Account for \"%s\" with account number %s created successfully\n", name.c_str(), num.c_str());
+	} else {
+		printf("Error, standard users cannot use the 'create' transaction\n");
+	}
 	return;
 }
 
 void Session::deleteAccount(){
-	if(admin){} else {
+	if(admin){
+		string name, num;
+
+		printf("Enter an account holder:\n");
+		getline(cin, name);
+		if(validHolder(name)){
+			printf("Error, user %s does not match any accounts\n", name.c_str());
+		}
+
+		printf("Enter an account number belonging to the account holder:\n");
+		getline(cin, num);
+		if(validNumber(num, name)){
+			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
+		}
+
+		printf("Account \"%s\" deleted\n", num.c_str());
+		file->createTransaction("06", name, num, 0.0, "  ");
+
+	} else {
 		printf("Error, standard users cannot use the 'delete' transaction\n");
-		return;
 	}
 	
 	return;

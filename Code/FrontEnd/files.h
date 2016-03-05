@@ -84,7 +84,9 @@ class Files{
 		ifstream bankAccounts(fileIn);
 		if(bankAccounts.is_open()){
 			for(string accountLine; getline(bankAccounts, accountLine); ){
-				accounts.push_back(accountLine);
+				if(accountLine.substr(0, 5).compare("00000") != 0){
+					accounts.push_back(accountLine);
+				}
 			}
 		} else {
 			printf("Bank accounts file could not be opened.\n");
