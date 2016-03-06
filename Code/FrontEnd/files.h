@@ -82,10 +82,15 @@ class Files{
 		 */
 		vector<string> accounts;
 		ifstream bankAccounts(fileIn);
+		int i = 0;
 		if(bankAccounts.is_open()){
 			for(string accountLine; getline(bankAccounts, accountLine); ){
 				if(accountLine.substr(0, 5).compare("00000") != 0){
+					while(accountLine.substr(0, 5).stoi() - 1 > i){
+						accounts.push_back("%05d                      D 00000.00 D", i++);
+					}
 					accounts.push_back(accountLine);
+					i++;
 				}
 			}
 		} else {

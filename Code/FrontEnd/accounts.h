@@ -39,7 +39,8 @@ class Accounts{
 		string account;
 		for(int i=0; i<this->accounts.size(); i++){
 			account = accounts.at(i).substr(6,name.length());
-			if(account.compare(name) == 0){
+			if(account.compare(name) == 0 && 
+				available((i + 1) + "").contains("exist") != 0){
 				return true;
 			}
 		}
@@ -129,21 +130,75 @@ class Accounts{
 		}
 		sprintf(temp, "%05d", (int) this->accounts.size() + 1);
 		num = string(temp);
-		sprintf(temp, "%s %s A %07.2f N", 
+		sprintf(temp, "%s %s A %07.2f C", 
 			num.c_str(), name.c_str(), val);
 		accountInfo = string(temp);
 		this->accounts.push_back(accountInfo);
 		return num;
 	}
 
+	/**
+	 * @param number of account to be deleted
+	 * 
+	 * Marks the account as deleted for future transactions
+	 */
 	void removeAccount(string num){
 		int accountNum = stoi(num);
 		this->accounts.at(accountNum-1).at(39) = 'D';
 	}
 
+	/**
+	 * @param number of account to verify if it is disabled, newly created, or deleted
+	 * @return returns string of reason the account can't be used or an empty string if it can
+	 *
+	 * Checks if the specified account is available for use
+	 */
+	string available(string num){
+		char reason[200];
+		int accountNum = stoi(num);
+		if(this->accounts.at(accountNum-1).at(39).compare("D")){
+			sprintf(reason, "Error, account %s does not currently exist and cannot perform any transactions", num.c_str());
+		} else if(this->accounts.at(accountNum-1).at(39).compare("C")){
+			sprintf(reason, "Error, account %s cannot perform any transactions for the remainder of the day", num.c_str());
+		} else if(this->accounts.at(accountNum-1).at(26).compare("D")){
+			sprintf(reason, "Error, account %s is currently disabled and cannot perform any transactions", num.c_str());
+		} else {
+			return "";
+		}
+		return string(reason)
+	}
+
+	/**
+	 * @param string number of the account to swap the plan of
+	 * 
+	 * Switches Normal plans to Student plans on account provided
+	 */
+	void switchPlan(string num){
+		int accountNum = stoi(num);
+		if(this->accounts.at(accountNum-1).at(39).compare('N') == 0){
+			this->accounts.at(accountNum-1).at(39) = 'S';
+		} else {
+			this->accounts.at(accountNum-1).at(39) = 'N';
+		}
+	}
+
 	void testAccounts(){
 		for(int i=0; i<this->accounts.size(); i++){
 			printf("%s\n", this->accounts.at(i).c_str());
+		}
+	}
+
+	/**
+	 * @param string number of account to enable/disable and which action it is performing
+	 * 
+	 * switches account to active or disabled
+	 */
+	void switchActive(string num, bool enable){
+		int accountNum = stoi(num);
+		if(enable){
+			this->accounts.at(accountNum-1).at(26) = 'A';
+		} else {
+			this->accounts.at(accountNum-1).at(26) = 'D';
 		}
 	}
 };

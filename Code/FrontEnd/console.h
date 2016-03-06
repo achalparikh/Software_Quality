@@ -34,6 +34,12 @@ class Session{
 	string command;
 	Files *file;
 	Accounts *account;
+	string payeeList[] = {"EC","CQ","TV"};
+
+	/**
+	 * handles standard input for transactions
+	 */
+	string standardInput();
 
 	/** 
 	 * Reads in commands to perform transactions
