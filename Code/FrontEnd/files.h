@@ -86,8 +86,10 @@ class Files{
 		if(bankAccounts.is_open()){
 			for(string accountLine; getline(bankAccounts, accountLine); ){
 				if(accountLine.substr(0, 5).compare("00000") != 0){
-					while(accountLine.substr(0, 5).stoi() - 1 > i){
-						accounts.push_back("%05d                      D 00000.00 D", i++);
+					while(stoi(accountLine.substr(0, 5)) - 1 > i){
+						char temp[50];
+						sprintf(temp, "%05d                      D 00000.00 D", i++);
+						accounts.push_back(string(temp));
 					}
 					accounts.push_back(accountLine);
 					i++;

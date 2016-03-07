@@ -94,7 +94,7 @@ void Session::deposit(){
 	if(admin){
 		printf("COMMAND: deposit - enter user:\n");
 		getline(cin, name);
-		if(!account->validHolder(name)){
+		if(name.compare("") == 0 || !account->validHolder(name)){
 			printf("ERROR: User \"%s\" does not exist. Try again\n", 
 				name.c_str());
 			return;
@@ -152,7 +152,7 @@ void Session::withdraw(){
 	if(admin){
 		printf("COMMAND: withdraw - enter user:\n");
 		getline(cin, name);
-		if(!account->validHolder(name)){
+		if(name.compare("") == 0 || !account->validHolder(name)){
 			printf("ERROR: User \"%s\" does not exist. Try again\n", 
 				name.c_str());
 			return;
@@ -250,13 +250,13 @@ void Session::deleteAccount(){
 
 		printf("Enter an account holder:\n");
 		getline(cin, name);
-		if(validHolder(name)){
+		if(name.compare("") == 0 || !account->validHolder(name)){
 			printf("Error, user %s does not match any accounts\n", name.c_str());
 		}
 
 		printf("Enter an account number belonging to the account holder:\n");
 		getline(cin, num);
-		if(validNumber(num, name)){
+		if(account->validNumber(num, name)){
 			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
 		}
 
@@ -276,19 +276,19 @@ void Session::enable(){
 
 		printf("Enter an account holder:\n");
 		getline(cin, name);
-		if(validHolder(name)){
+		if(name.compare("") == 0 || !account->validHolder(name)){
 			printf("Error, user %s does not match any accounts\n", name.c_str());
 		}
 
 		printf("Enter an account number belonging to the account holder:\n");
 		getline(cin, num);
-		if(validNumber(num, name)){
-			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str())
+		if(account->validNumber(num, name)){
+			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
 		}
 
 		printf("Account \"%s\" enabled\n", num.c_str());
-		account.switchActive(num, true);
-		file.createTransaction("09", name, num, 0.0, "  ");
+		account->switchActive(num, true);
+		file->createTransaction("09", name, num, 0.0, "  ");
 	} else {
 		printf("Error, standard users cannot use the 'enable' transaction\n");
 		return;
@@ -303,19 +303,19 @@ void Session::disable(){
 
 		printf("Enter an account holder:\n");
 		getline(cin, name);
-		if(validHolder(name)){
+		if(name.compare("") == 0 || !account->validHolder(name)){
 			printf("Error, user %s does not match any accounts\n", name.c_str());
 		}
 
 		printf("Enter an account number belonging to the account holder:\n");
 		getline(cin, num);
-		if(validNumber(num, name)){
-			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str())
+		if(account->validNumber(num, name)){
+			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
 		}
 
 		printf("Account \"%s\" disabled\n", num.c_str());
-		account.switchActive(num, false);
-		file.createTransaction("07", name, num, 0.0, "  ");
+		account->switchActive(num, false);
+		file->createTransaction("07", name, num, 0.0, "  ");
 	} else {
 		printf("Error, standard users cannot use the 'disable' transaction\n");
 		return;
@@ -333,7 +333,7 @@ void Session::paybill(){
 	if(admin){
 		printf("COMMAND: paybill - enter user:\n");
 		getline(cin, name);
-		if(!account->validHolder(name)){
+		if(name.compare("") == 0 || !account->validHolder(name)){
 			printf("ERROR: User \"%s\" does not exist. Try again\n", 
 				name.c_str());
 			return;
@@ -360,10 +360,10 @@ void Session::paybill(){
 	 * payee of bill
 	 */
 	getline(cin, payee);
-	for(int i=0; i<payeeList.size(); i++){
+	for(int i=0; i<sizeof(payeeList)/sizeof(string); i++){
 		if(payee.compare(payeeList[i]) == 0){
 			break;
-		} else if(i == payeeList.size() - 1){
+		} else if(i == sizeof(payeeList)/sizeof(string) - 1){
 			printf("ERROR: Company \"%s\" does not exist. Try again\n", payee.c_str());
 			return;
 		}
@@ -399,7 +399,80 @@ void Session::paybill(){
 	printf("Payment of %.2f - complete!\n", val);
 }
 
-void Session::transfer(){}
+void Session::transfer(){
+	float val;
+	string num1, num2, str_val, name;
+	/**
+	 * admin users have extra information they must provide
+	 */
+	if(admin){
+		printf("COMMAND: transfer - enter user:\n");
+		getline(cin, name);
+		if(name.compare("") == 0 || !account->validHolder(name)){
+			printf("ERROR: User \"%s\" does not exist. Try again\n", 
+				name.c_str());
+			return;
+		}
+		printf("Transfering in \"%s\" - enter FROM account number:\n", name.c_str());
+	} else {
+		/**
+		 * standard users can only deposit into their own accounts
+		 */
+		name = user;
+		printf("COMMAND: transfer - enter FROM account number:\n");
+	}
+	/**
+	 * account number
+	 */
+	getline(cin, num1);
+	if(!account->validNumber(num1, name)){
+		printf("ERROR: Account number \"%s\" is not valid. Try again\n", num1.c_str());
+		return;
+	}
+
+	printf("Transferring from %s - enter TO account number:\n", num1.c_str());
+	getline(cin, num2);
+	if(!account->validNumber(num2, "")){
+		printf("ERROR: Account number \"%s\" is not valid. Try again\n", num1.c_str());
+		return;
+	}
+
+	printf("Transferring to %s - enter amount:\n", num2.c_str());
+	/**
+	 * amount of deposit
+	 */
+	getline(cin, str_val);
+	if(str_val.find_first_not_of(".0123456789") == string::npos){
+		val = stof(str_val);
+	} else {
+		printf("Error: \"%s\" is not a valid number\n", str_val.c_str());
+		return;
+	}
+	/**
+	 * maximum withdraw
+	 */
+	if(account->checkAmount(val, false, name, num1, admin)){
+		printf("ERROR: Minimum balance exceeded. Try again\n");
+		return;
+	}
+
+	/**
+	 * maximum deposit
+	 */
+	if(account->checkAmount(val, true, name, num2, admin)){
+		printf("ERROR: Maximum balance exceeded. Try again\n");
+		return;
+	}
+	
+	/**
+	 * create successful transaction codes
+	 */
+	this->file->createTransaction("02", name, num1, val, "  ");
+	this->file->createTransaction("02", name, num2, val, "  ");
+	printf("Transfer of %.2f - complete!\n", val);
+
+	return;
+}
 
 void Session::changeplan(){
 	if(admin){
@@ -407,19 +480,19 @@ void Session::changeplan(){
 
 		printf("Enter an account holder:\n");
 		getline(cin, name);
-		if(validHolder(name)){
+		if(name.compare("") == 0 || !account->validHolder(name)){
 			printf("Error, user %s does not match any accounts\n", name.c_str());
 		}
 
 		printf("Enter an account number belonging to the account holder:\n");
 		getline(cin, num);
-		if(validNumber(num, name)){
-			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str())
+		if(account->validNumber(num, name)){
+			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
 		}
 
 		printf("Plan changed successfully\n");
-		account.switchPlan(num);
-		file.createTransaction("08", name, num, 0.0, "  ");
+		account->switchPlan(num);
+		file->createTransaction("08", name, num, 0.0, "  ");
 	} else {
 		printf("Error, standard users cannot use the 'changeplan' transaction\n");
 		return;
@@ -459,7 +532,7 @@ void Session::login(){
 		/**
 		 * Return to login if invalid user name
 		 */
-		if(!account->validHolder(command)){
+		if(command.compare("") == 0 || !account->validHolder(command)){
 			printf("ERROR: User \"%s\" does not exist. Try again\n", command.c_str());
 			return;
 		}

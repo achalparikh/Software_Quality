@@ -34,7 +34,7 @@ class Session{
 	string command;
 	Files *file;
 	Accounts *account;
-	string payeeList[] = {"EC","CQ","TV"};
+	string payeeList[3] = {"EC","CQ","TV"};
 
 	/**
 	 * handles standard input for transactions
