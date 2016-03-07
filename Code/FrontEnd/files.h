@@ -45,7 +45,8 @@ class Files{
 		 * or fill with 8 "0"s
 		 */
 		if(code.compare("06") == 0 || code.compare("07") == 0 || 
-			code.compare("08") == 0 || code.compare("09") == 0){
+			code.compare("08") == 0 || code.compare("09") == 0 ||
+			code.compare("10") == 0 || code.compare("00") == 0){
 			trans_str += "00000000 ";
 		} else {
 			char str_c[8];

@@ -4,7 +4,7 @@ for t in "Login" "Logout" "deposit" "Withdraw" "paybill" "transfer" "Changeplan"
 	for i in ../../Tests/Front_End/$t/*.txt
 	  do
 		echo "${i%.txt}"
-		cat "$i" | ./console curentBankAccountsFile transactions.trn > out.out
+		cat "$i" | ./console currentBankAccountsFile transactions.trn > out.out
 		diff out.out "${i%.txt}.out"
 		diff transactions.trn "${i%.txt}.trn"
 		rm out.out
