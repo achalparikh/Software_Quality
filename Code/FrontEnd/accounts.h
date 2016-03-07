@@ -39,8 +39,9 @@ class Accounts{
 		string account;
 		for(int i=0; i<this->accounts.size(); i++){
 			account = accounts.at(i).substr(6,name.length());
+			printf("%s, %d\n", (to_string(i+1)).c_str(), i+1);
 			if(account.compare(name) == 0 && 
-				available((i + 1) + "").find("exist") != 0){
+				available(to_string(i + 1)).find("exist") != 0){
 				return true;
 			}
 		}
@@ -177,6 +178,7 @@ class Accounts{
 			printf("Account number %s is too high\n", num.c_str());
 			return "";
 		}
+		printf("%d, %s\n", (int) this->accounts.at(accountNum-1).length(), this->accounts.at(accountNum-1).c_str());
 		if(this->accounts.at(accountNum-1).at(38) == 'D'){
 			sprintf(reason, "Error, account %s does not currently exist and cannot perform any transactions", num.c_str());
 		} else if(this->accounts.at(accountNum-1).at(38) == 'C'){
