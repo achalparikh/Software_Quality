@@ -4,6 +4,7 @@ disable
 John Doe
 00012
 deposit
+John Doe
 00012
 500.00
 logout
