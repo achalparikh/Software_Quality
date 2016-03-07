@@ -261,7 +261,7 @@ void Session::deleteAccount(){
 
 		printf("Enter an account number belonging to the account holder:\n");
 		getline(cin, num);
-		if(account->validNumber(num, name)){
+		if(!account->validNumber(num, name)){
 			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
 		}
 
@@ -287,7 +287,7 @@ void Session::enable(){
 
 		printf("Enter an account number belonging to the account holder:\n");
 		getline(cin, num);
-		if(account->validNumber(num, name)){
+		if(!account->validNumber(num, name)){
 			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
 		}
 
@@ -314,7 +314,7 @@ void Session::disable(){
 
 		printf("Enter an account number belonging to the account holder:\n");
 		getline(cin, num);
-		if(account->validNumber(num, name)){
+		if(!account->validNumber(num, name)){
 			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
 		}
 
@@ -491,7 +491,7 @@ void Session::changeplan(){
 
 		printf("Enter an account number belonging to the account holder:\n");
 		getline(cin, num);
-		if(account->validNumber(num, name)){
+		if(!account->validNumber(num, name)){
 			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
 		}
 

@@ -82,7 +82,7 @@ class Accounts{
 			if(this->accounts.at(i).substr(6, name.length()).compare(name) == 0 &&
 					this->accounts.at(i).substr(0, 5).compare(num) == 0){
 				balance = stof(this->accounts.at(i).substr(31, 8));
-				if(this->accounts.at(i).substr(39, 1).compare("S")){
+				if(this->accounts.at(i).substr(38, 1).compare("S")){
 					fee = 0.05;
 				} else {
 					fee = 0.10;
@@ -123,7 +123,7 @@ class Accounts{
 		string num;
 		string accountInfo;
 		for(int i=0; i<this->accounts.size(); i++){
-			if(this->accounts.at(i).at(39) == 'D'){
+			if(this->accounts.at(i).at(38) == 'D'){
 				sprintf(temp, "%05d", i + 1);
 				num = string(temp);
 				sprintf(temp, "%s %s A %07.2f N", 
@@ -156,7 +156,7 @@ class Accounts{
 		if(this->accounts.size() < accountNum){
 			printf("Account number %s is too high\n", num.c_str());
 		} else {
-			this->accounts.at(accountNum-1).at(39) = 'D';
+			this->accounts.at(accountNum-1).at(38) = 'D';
 		}
 	}
 
@@ -177,9 +177,9 @@ class Accounts{
 			printf("Account number %s is too high\n", num.c_str());
 			return "";
 		}
-		if(this->accounts.at(accountNum-1).at(39) == 'D'){
+		if(this->accounts.at(accountNum-1).at(38) == 'D'){
 			sprintf(reason, "Error, account %s does not currently exist and cannot perform any transactions", num.c_str());
-		} else if(this->accounts.at(accountNum-1).at(39) == 'C'){
+		} else if(this->accounts.at(accountNum-1).at(38) == 'C'){
 			sprintf(reason, "Error, account %s cannot perform any transactions for the remainder of the day", num.c_str());
 		} else if(this->accounts.at(accountNum-1).at(26) == 'D'){
 			sprintf(reason, "Error, account %s is currently disabled and cannot perform any transactions", num.c_str());
@@ -204,10 +204,10 @@ class Accounts{
 			printf("Account number %s is too high\n", num.c_str());
 			return;
 		}
-		if(this->accounts.at(accountNum-1).at(39) == 'N'){
-			this->accounts.at(accountNum-1).at(39) = 'S';
+		if(this->accounts.at(accountNum-1).at(38) == 'N'){
+			this->accounts.at(accountNum-1).at(38) = 'S';
 		} else {
-			this->accounts.at(accountNum-1).at(39) = 'N';
+			this->accounts.at(accountNum-1).at(38) = 'N';
 		}
 	}
 

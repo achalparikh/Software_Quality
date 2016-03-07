@@ -88,7 +88,7 @@ class Files{
 				if(accountLine.substr(0, 5).compare("00000") != 0){
 					while(stoi(accountLine.substr(0, 5)) - 1 > i){
 						char temp[50];
-						sprintf(temp, "%05d                      D 00000.00 D", i++);
+						sprintf(temp, "%05d                      D 00000.00 D", ++i);
 						accounts.push_back(string(temp));
 					}
 					accounts.push_back(accountLine);
