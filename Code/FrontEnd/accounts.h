@@ -55,6 +55,9 @@ class Accounts{
 	 */
 	bool validNumber(string num, string holder){
 		string account;
+		if(num.find_first_not_of("0123456789") != string::npos){
+			return false;
+		}
 		for(int i=0; i<this->accounts.size(); i++){
 			account = this->accounts.at(i).substr(0,holder.length()+6);
 			if(account.substr(6).compare(holder) == 0 && 
@@ -145,8 +148,16 @@ class Accounts{
 	 * Marks the account as deleted for future transactions
 	 */
 	void removeAccount(string num){
+		if(num.find_first_not_of("0123456789") != string::npos){
+			printf("Error: %s, not valid number\n", num.c_str());
+			return;
+		}
 		int accountNum = stoi(num);
-		this->accounts.at(accountNum-1).at(39) = 'D';
+		if(this->accounts.size() < accountNum){
+			printf("Account number %s is too high\n", num.c_str());
+		} else {
+			this->accounts.at(accountNum-1).at(39) = 'D';
+		}
 	}
 
 	/**
@@ -157,7 +168,15 @@ class Accounts{
 	 */
 	string available(string num){
 		char reason[200];
+		if(num.find_first_not_of("0123456789") != string::npos){
+			printf("Error: %s, not valid number\n", num.c_str());
+			return "";
+		}
 		int accountNum = stoi(num);
+		if(this->accounts.size() < accountNum){
+			printf("Account number %s is too high\n", num.c_str());
+			return "";
+		}
 		if(this->accounts.at(accountNum-1).at(39) == 'D'){
 			sprintf(reason, "Error, account %s does not currently exist and cannot perform any transactions", num.c_str());
 		} else if(this->accounts.at(accountNum-1).at(39) == 'C'){
@@ -176,7 +195,15 @@ class Accounts{
 	 * Switches Normal plans to Student plans on account provided
 	 */
 	void switchPlan(string num){
+		if(num.find_first_not_of("0123456789") != string::npos){
+			printf("Error: %s, not valid number\n", num.c_str());
+			return;
+		}
 		int accountNum = stoi(num);
+		if(this->accounts.size() < accountNum){
+			printf("Account number %s is too high\n", num.c_str());
+			return;
+		}
 		if(this->accounts.at(accountNum-1).at(39) == 'N'){
 			this->accounts.at(accountNum-1).at(39) = 'S';
 		} else {
@@ -196,7 +223,15 @@ class Accounts{
 	 * switches account to active or disabled
 	 */
 	void switchActive(string num, bool enable){
+		if(num.find_first_not_of("0123456789") != string::npos){
+			printf("Error: %s, not valid number\n", num.c_str());
+			return;
+		}
 		int accountNum = stoi(num);
+		if(this->accounts.size() < accountNum){
+			printf("Account number %s is too high\n", num.c_str());
+			return;
+		}
 		if(enable){
 			this->accounts.at(accountNum-1).at(26) = 'A';
 		} else {

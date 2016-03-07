@@ -6,7 +6,12 @@
 #include "console.h"
 
 int main(int argc, const char* argv[]){
-	Files *file = new Files("currentBankAccountsFile", "transactions.trn");
+	Files *file;
+	if(argc > 2){
+		file = new Files(argv[1], argv[2]);
+	} else {
+		file = new Files("currentBankAccountsFile", "transactions.trn");
+	}
 	Accounts *account = new Accounts(file);
 	string input = "";
 	printf("Login to start:\n");
