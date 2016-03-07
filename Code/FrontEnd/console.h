@@ -36,11 +36,6 @@ class Session{
 	Accounts *account;
 	string payeeList[3] = {"EC","CQ","TV"};
 
-	/**
-	 * handles standard input for transactions
-	 */
-	string standardInput();
-
 	/** 
 	 * Reads in commands to perform transactions
 	 */

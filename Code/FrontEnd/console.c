@@ -49,8 +49,6 @@ string lower(string str){
 	return str;
 }
 
-string Session::standardInput(){return "";}
-
 void Session::input(){
 	printf("Enter a command:\n");
 	getline(cin, command);
@@ -74,6 +72,8 @@ void Session::input(){
 			transfer();
 		} else if(command.compare("changeplan") == 0){
 			changeplan();
+		} else if(command.compare("login") == 0){
+			printf("ERROR: You are currently in an active session. Log out first\n");
 		} else {
 			printf("Error, unrecognized command\n");
 		}
@@ -120,6 +120,12 @@ void Session::deposit(){
 		printf("ERROR: Account number \"%s\" is not valid. Try again\n", num.c_str());
 		return;
 	}
+	string available = account->available(num);
+	if(available.compare("") != 0){
+		printf("%s\n", available.c_str());
+		return;
+	}
+
 	printf("Depositing to \"%s\" - enter amount:\n", num.c_str());
 	/**
 	 * amount of deposit
@@ -178,6 +184,12 @@ void Session::withdraw(){
 		printf("ERROR: Account number \"%s\" is not valid. Try again\n", num.c_str());
 		return;
 	}
+	string available = account->available(num);
+	if(available.compare("") != 0){
+		printf("%s\n", available.c_str());
+		return;
+	}
+
 	printf("Withdrawing from \"%s\" - enter amount:\n", num.c_str());
 	/**
 	 * amount of withdraw
@@ -291,6 +303,12 @@ void Session::enable(){
 			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
 		}
 
+		string available = account->available(num);
+		if(available.find("exist") == 0){
+			printf("%s\n", available.c_str());
+			return;
+		}
+
 		printf("Account \"%s\" enabled\n", num.c_str());
 		account->switchActive(num, true);
 		file->createTransaction("09", name, num, 0.0, "  ");
@@ -316,6 +334,12 @@ void Session::disable(){
 		getline(cin, num);
 		if(!account->validNumber(num, name)){
 			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
+		}
+
+		string available = account->available(num);
+		if(available.find("exist") == 0){
+			printf("%s\n", available.c_str());
+			return;
 		}
 
 		printf("Account \"%s\" disabled\n", num.c_str());
@@ -359,6 +383,12 @@ void Session::paybill(){
 		printf("ERROR: Account number \"%s\" is not valid. Try again\n", num.c_str());
 		return;
 	}
+	string available = account->available(num);
+	if(available.compare("") != 0){
+		printf("%s\n", available.c_str());
+		return;
+	}
+
 	printf("Paying bill from \"%s\" - enter payee:\n", num.c_str());
 
 	/**
@@ -434,11 +464,21 @@ void Session::transfer(){
 		printf("ERROR: Account number \"%s\" is not valid. Try again\n", num1.c_str());
 		return;
 	}
+	string available = account->available(num1);
+	if(available.compare("") != 0){
+		printf("%s\n", available.c_str());
+		return;
+	}
 
 	printf("Transferring from %s - enter TO account number:\n", num1.c_str());
 	getline(cin, num2);
 	if(!account->validNumber(num2, "")){
 		printf("ERROR: Account number \"%s\" is not valid. Try again\n", num1.c_str());
+		return;
+	}
+	available = account->available(num2);
+	if(available.compare("") != 0){
+		printf("%s\n", available.c_str());
 		return;
 	}
 
@@ -493,6 +533,11 @@ void Session::changeplan(){
 		getline(cin, num);
 		if(!account->validNumber(num, name)){
 			printf("Error, account number %s does not match any accounts held by %s\n", num.c_str(), name.c_str());
+		}
+		string available = account->available(num);
+		if(available.compare("") != 0){
+			printf("%s\n", available.c_str());
+			return;
 		}
 
 		printf("Plan changed successfully\n");
