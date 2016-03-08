@@ -183,7 +183,6 @@ class Accounts{
 			printf("Account number %s is too high\n", num.c_str());
 			return "";
 		}
-printf("%d, %s\n", (int) this->accounts.at(accountNum-1).length(), this->accounts.at(accountNum-1).c_str());
 		if(this->accounts.at(accountNum-1).at(38) == 'D'){
 			sprintf(reason, "Error, account %s does not currently exist and cannot perform any transactions", num.c_str());
 		} else if(this->accounts.at(accountNum-1).at(38) == 'C'){
