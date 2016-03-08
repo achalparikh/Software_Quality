@@ -10,8 +10,11 @@
  */
 
 class backEnd {
-	backData data;
-	backFiles files;
+	/**
+	 * objects containing the back end's data and file input/output
+	 */
+	private backData data;
+	private backFiles files;
 
 	/**
 	 * @param backData and backFiles objects

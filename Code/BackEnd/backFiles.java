@@ -5,8 +5,10 @@
  * File input and output of the ATM back end
  */
 
+import java.util.*;
+
 class backFiles {
-	String transactionFile, masterAccountsFile, currentAccountsFile;
+	private String transactionFile, masterAccountsFile, currentAccountsFile;
 
 	/**
 	 * @param strings containing the filenames for input/output
@@ -18,4 +20,21 @@ class backFiles {
 		masterAccountsFile = mAccounts;
 		currentAccountsFile = cAccounts;
 	}
+
+	/**
+	 * @return vector containing the accounts in the masterAccountsFile
+	 * 
+	 * Loads masterAccountsFile into a vector
+	 */
+	public Vector loadAccounts(){
+		Vector accounts = new Vector();
+		return accounts;
+	}
+
+	/**
+	 * @return _____ containing the transactions in transactionFile
+	 * 
+	 * Loads the transactionFile into a _______
+	 */
+	//public ________ loadTransactions(){}
 }
