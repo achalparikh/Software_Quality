@@ -1,0 +1,3108 @@
+Running tests for: Login
+../../Tests/Front_End/Login/000 invalid multiple login
+1,7c1,3
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< ERROR: User "login" does not exist. Try again
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+---
+> You are now logged in
+> ERROR: You are currently in an active session. Log out first
+> You are now logged out
+0a1,2
+> 10                     00000 00000000 S 
+> 00 
+../../Tests/Front_End/Login/001 valid multiple login
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00009 TONY STARK           A 99999.99 N
+6d3
+< Enter a command:
+8,9c5
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+11d6
+< Enter a command:
+13d7
+< Login to start:
+1,6c1,3
+< 10 TONY STARK           00000 00000000 S 
+< 00                      00000 00000000   
+< 10 TONY STARK           00000 00000000 S 
+< 00                      00000 00000000   
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 10 
+> 00 
+../../Tests/Front_End/Login/002 invalid account type
+1,6c1,3
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Error, unrecognized command
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+---
+> Enter user type - "standard" or "admin":
+> ERROR: invalid account type. Enter "standard" or "admin":
+> You are now logged out
+../../Tests/Front_End/Login/003 valid standard account type
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4,5c3
+< ERROR: User "logout" does not exist. Try again
+< Login to start:
+---
+> You are now logged out
+0a1,2
+> 10                  
+> 00 
+../../Tests/Front_End/Login/004 valid admin account type
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6d3
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10                     
+> 00 
+../../Tests/Front_End/Login/005 valid standard account name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6d3
+< Enter a command:
+8d4
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/Login/006 invalid standard account name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+5,7c4
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+---
+> You are now logged out
+../../Tests/Front_End/Login/007 invalid admin account name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4,6c3,7
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> ERROR: no name required for admin user
+> You are now logged out
+> Enter user type - "standard" or "admin":
+> You are now logged in as an admin
+> ERROR: no name required for admin user
+8d8
+< Login to start:
+1,2d0
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+../../Tests/Front_End/Login/008 invalid standard account number
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4,8c3
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< You are now logged in as "ACHAL PARIKH"
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> ERROR: Account number 00002 does not belong to "ACHAL PARIKH"
+10d4
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/Login/009 valid standard account number
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4,8c3
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< You are now logged in as "ACHAL PARIKH"
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> Account 00001 belongs to "ACHAL PARIKH"
+10d4
+< Login to start:
+1,2d0
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+../../Tests/Front_End/Login/010 invalid command before login
+1d0
+< Login to start:
+3d1
+< Login to start:
+5d2
+< Login to start:
+7d3
+< Login to start:
+9d4
+< Login to start:
+11d5
+< Login to start:
+13d6
+< Login to start:
+15d7
+< Login to start:
+17,20c9,10
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Error, unrecognized command
+< Login to start:
+---
+> Enter user type - "standard" or "admin":
+> You are now logged out
+../../Tests/Front_End/Login/011 valid admin commands
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4,23c3,10
+< Enter a command:
+< COMMAND: withdraw - enter user:
+< ERROR: User "transfer" does not exist. Try again
+< Enter a command:
+< COMMAND: paybill - enter user:
+< ERROR: User "deposit" does not exist. Try again
+< Enter a command:
+< Enter an account holder:
+< Enter a balance for the new account:
+< Error: "disable" is not a valid number
+< Enter a command:
+< Enter an account holder:
+< Error, user logout does not match any accounts
+< Enter an account number belonging to the account holder:
+< Error, account number quit does not match any accounts held by logout
+< Error: quit, not valid number
+< Plan changed successfully
+< Error: quit, not valid number
+< Enter a command:
+< End of file, logging out.
+---
+> COMMAND: Withdraw
+> COMMAND: Transfer
+> COMMAND: Paybill
+> COMMAND: Deposit
+> COMMAND: Create
+> COMMAND: Delete
+> COMMAND: Disable
+> COMMAND: Changeplan
+25,26d11
+< Login to start:
+< End of file, terminating console.
+1,3d0
+< 10                      00000 00000000 A 
+< 08 logout               quit 00000000   
+< 00                      00000 00000000   
+Running tests for: Logout
+../../Tests/Front_End/Logout/000_Normal
+6d5
+< Login to start:
+../../Tests/Front_End/Logout/005_Only_Once
+7,8c7
+< ERROR: Not logged in
+< Login to start:
+---
+> Error, cannot logout, there is currently no user logged in
+../../Tests/Front_End/Logout/010_Only_Login_After
+7c7
+< ERROR: Not logged in
+---
+> Error, cannot perform any transactions, there is currently no user logged in
+9c9
+< ERROR: Not logged in
+---
+> Error, cannot perform any transactions, there is currently no user logged in
+11c11
+< ERROR: Not logged in
+---
+> Error, cannot perform any transactions, there is currently no user logged in
+17d16
+< Login to start:
+5,6d4
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+Running tests for: deposit
+../../Tests/Front_End/deposit/000 admin valid name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6d3
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+8,12d4
+< ERROR: Account number "logout" is not valid. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< End of file, logging out.
+14,15d5
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 04 ACHAL PARIKH        00001 00000000 A 
+> 00 
+../../Tests/Front_End/deposit/001 admin valid account number
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6d3
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+8,9c5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Depositing to "00001" - enter amount:
+---
+> Depositing to 00001 - enter amount:
+11d6
+< Enter a command:
+13d7
+< Login to start:
+1,3c1,3
+< 10                      00000 00000000 A 
+< 04 ACHAL PARIKH         00001 0500.00   
+< 00                      00000 00000000   
+---
+> 10 
+> 04 ACHAL PARIKH        00001 00500.00 A 
+> 00 
+../../Tests/Front_End/deposit/002 admin invalid name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+7d4
+< Enter a command:
+9d5
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/deposit/003 admin invalid account number
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6d3
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+8,11c5
+< ERROR: Account number "00002" is not valid. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> ERROR: Account number "00002" does not exist. Try again
+13d6
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/deposit/004 standard valid account name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6d3
+< Enter a command:
+8d4
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/deposit/005 standard invalid account name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+5d3
+< Login to start:
+7,9c5
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+---
+> You are now logged out
+0a1,2
+> 10 
+> 00 
+../../Tests/Front_End/deposit/006 standard valid account number
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin":
+>  Logging in as standard user - enter name:
+6d3
+< Enter a command:
+8,14c5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Depositing to "00001" - enter amount:
+< Error: "logout" is not a valid number
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< End of file, logging out.
+---
+> Depositing to 00001 - enter amount:
+16,17d6
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 04 ACHAL PARIKH        00001 00000000 S 
+> 00 
+../../Tests/Front_End/deposit/007 standard invalid account number
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6d3
+< Enter a command:
+8,9c5,6
+< ERROR: Account number "00002" is not valid. Try again
+< Enter a command:
+---
+> Depositing to "ACHAL PARIKH" - enter account number:
+> ERROR: Account number "00002" does not exist. Try again
+11d7
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/deposit/008 admin maximum balance exceeded
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6d3
+< 39, 00009 TONY STARK           A 99999.99 N
+8,11c5,6
+< 39, 00009 TONY STARK           A 99999.99 N
+< Depositing to "00009" - enter amount:
+< Deposit of 1.00 - complete!
+< Enter a command:
+---
+> Depositing to 00009 - enter amount:
+> ERROR: Maximum balance exceeded. Try again
+13d7
+< Login to start:
+1,3c1,2
+< 10                      00000 00000000 A 
+< 04 TONY STARK           00009 0001.00   
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/deposit/009 standard maximum balance exceeded
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00009 TONY STARK           A 99999.99 N
+6d3
+< Enter a command:
+8,11c5,6
+< 39, 00009 TONY STARK           A 99999.99 N
+< Depositing to "00009" - enter amount:
+< Deposit of 1.00 - complete!
+< Enter a command:
+---
+> Depositing to 00009 - enter amount:
+> ERROR: Maximum balance exceeded. Try again
+13d7
+< Login to start:
+1,3c1,2
+< 10 TONY STARK           00000 00000000 S 
+< 04 TONY STARK           00009 0001.00   
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/deposit/010 standard student valid deposit after fees
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6d3
+< Enter a command:
+8,11c5,7
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Depositing to "00001" - enter amount:
+< Deposit of 5.00 - complete!
+< Enter a command:
+---
+> Depositing to 00001 - enter amount:
+> ALERT: 0.05 student fee will be deducted.
+> Deposit of 4.95 - complete!
+13d8
+< Login to start:
+1,3c1
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 04 ACHAL PARIKH         00001 0005.00   
+< 00                      00000 00000000   
+---
+> 04 ACHAL PARIKH        00001 00004.95 S 
+../../Tests/Front_End/deposit/011 standard non student valid deposit after fees
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00010 THOR ODINSON         A 00500.00 N
+6d3
+< Enter a command:
+8,11c5,7
+< 39, 00010 THOR ODINSON         A 00500.00 N
+< Depositing to "00010" - enter amount:
+< Deposit of 5.00 - complete!
+< Enter a command:
+---
+> Depositing to 00010 - enter amount:
+> ALERT: 0.10 fee will be deducted.
+> Deposit of 4.90 - complete!
+13d8
+< Login to start:
+1,3c1,3
+< 10 THOR ODINSON         00000 00000000 S 
+< 04 THOR ODINSON         00010 0005.00   
+< 00                      00000 00000000   
+---
+> 10 
+> 04 THOR ODINSON        00010 00004.90 S 
+> 00 
+../../Tests/Front_End/deposit/012 admin student valid deposit no fees
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6d3
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+8,9c5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Depositing to "00001" - enter amount:
+---
+> Depositing to 00001 - enter amount:
+11d6
+< Enter a command:
+13d7
+< Login to start:
+1,3c1,3
+< 10                      00000 00000000 A 
+< 04 ACHAL PARIKH         00001 0006.00   
+< 00                      00000 00000000   
+---
+> 10 
+> 04 ACHAL PARIKH        00001 00006.00 A 
+> 00 
+../../Tests/Front_End/deposit/013 admin non student valid deposit no fees
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6d3
+< 39, 00010 THOR ODINSON         A 00500.00 N
+8,9c5
+< 39, 00010 THOR ODINSON         A 00500.00 N
+< Depositing to "00010" - enter amount:
+---
+> Depositing to 00010 - enter amount:
+11d6
+< Enter a command:
+13d7
+< Login to start:
+1,3c1,3
+< 10                      00000 00000000 A 
+< 04 THOR ODINSON         00010 0006.00   
+< 00                      00000 00000000   
+---
+> 10 
+> 04 THOR ODINSON        00010 00006.00 A 
+> 00 
+Running tests for: Withdraw
+../../Tests/Front_End/Withdraw/000 valid_account_name_admin
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6,10c4
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Withdrawing from "ACHAL PARIKH" - enter account number:
+< ERROR: Account number "logout" is not valid. Try again
+< Enter a command:
+< End of file, logging out.
+---
+> Withdrawing from "ACHAL PARIKH" - enter amount:
+12,13d5
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 01 ACHAL PARIKH        00001 00000.00 A 
+> 00 
+../../Tests/Front_End/Withdraw/001 invalid_account_name_admin
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4,5c3
+< Enter a command:
+< COMMAND: withdraw - enter user:
+---
+> COMMAND: withdraw
+7d4
+< Enter a command:
+9,10d5
+< Login to start:
+< End of file, terminating console.
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/Withdraw/003 Invalid_standard_account_name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+5d3
+< Login to start:
+7d4
+< Login to start:
+9,12c6
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< End of file, terminating console.
+---
+> You are now logged out
+0a1,2
+> 10 
+> 00 
+../../Tests/Front_End/Withdraw/004 withdraw_more_than_0_invalid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00006 BLACK WIDOW          A 00001.00 S
+6,9c4,5
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "-1" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ERROR: You cannot withdraw a negative amount. Try again
+11,12d6
+< Login to start:
+< End of file, terminating console.
+1,2c1,2
+< 10 BLACK WIDOW          00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/Withdraw/005 withdraw_more_than_0_invalid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00006 BLACK WIDOW          A 00001.00 S
+6,9c4,5
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "0.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ERROR: You cannot withdraw an amount of zero. Try again
+11,12d6
+< Login to start:
+< End of file, terminating console.
+1,2c1,2
+< 10 BLACK WIDOW          00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/Withdraw/007 amount_divisible_by_5_invalid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00007 STEVE ROGERS         D 05000.00 N
+6,9c4,5
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "122.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ERROR: You cannot withdraw an amount not divisible by 5. Try again
+11,12d6
+< Login to start:
+< End of file, terminating console.
+1,2c1,2
+< 10 STEVE ROGERS         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/Withdraw/008 amount_divisible_by_5_valid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6,9c4,6
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "125.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ALERT: 0.05 non student fee will be deducted.
+> Withdrawal of 125.00 - complete!
+11,12d7
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 01 ACHAL PARIKH        00001 00125.00 S 
+> 00 
+../../Tests/Front_End/Withdraw/009 maximum_amount_validity_valid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6,9c4,6
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "495.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ALERT: 0.05 student fee will be deducted.
+> Withdrawal of 495.00 - complete!
+11,12d7
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 01 ACHAL PARIKH        00001 00495.00 S 
+> 00 
+../../Tests/Front_End/Withdraw/011 maximum_amount_validity_invalid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6,9c4,5
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "505.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ERROR: Withdrawal limit of 500.00 exceeded. Try again
+11,12d6
+< Login to start:
+< End of file, terminating console.
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/Withdraw/012 sufficient_balance_after_transaction_invalid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00006 BLACK WIDOW          A 00001.00 S
+6,9c4,5
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "500.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ERROR: You cannot withdraw that amount as your funds are insufficient. Try again
+11,12d6
+< Login to start:
+< End of file, terminating console.
+1,2c1,2
+< 10 BLACK WIDOW          00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/Withdraw/013 sufficient_balance_after_transaction_valid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00006 BLACK WIDOW          A 00001.00 S
+6,9c4,6
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "25.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ALERT: 0.05 student fee will be deducted.
+> Withdrawal of 25.00 - complete!
+11,12d7
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10 BLACK WIDOW          00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 01 BLACK WIDOW         00006 00025.00 S 
+> 00 
+../../Tests/Front_End/Withdraw/014 mulitple_wtidrawal_valid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00004 BRUCE BANNER         A 40000.00 N
+6,12c4,9
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "250.00" is not valid. Try again
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "245.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ALERT: 0.10 non student fee will be deducted.
+> Withdrawal of 250.00 - complete!
+> COMMAND: withdraw - enter amount:
+> ALERT: 0.10 non student fee will be deducted.
+> Withdrawal of 245.00 - complete!
+14,15d10
+< Login to start:
+< End of file, terminating console.
+1,2c1,4
+< 10 BRUCE BANNER         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 01 BRUCE BANNER        00004 00250.00 S 
+> 01 BRUCE BANNER        00004 00245.00 S 
+> 00 
+../../Tests/Front_End/Withdraw/016 multiple_withdrawal_invalid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00004 BRUCE BANNER         A 40000.00 N
+6,12c4,8
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "250.00" is not valid. Try again
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "280.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ALERT: 0.10 non student fee will be deducted.
+> Withdrawal of 250.00 - complete!
+> COMMAND: withdraw - enter amount:
+> ERROR: Withdrawal limit of 500.00 exceeded. Try again
+14,15d9
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10 BRUCE BANNER         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 01 BRUCE BANNER        00004 00250.00 S 
+> 00 
+../../Tests/Front_End/Withdraw/017 student_fees_for_transaction
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00011 STUDENT              A 00500.00 S
+6,9c4,6
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "25.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ALERT: 0.05 student fee will be deducted.
+> Withdrawal of 25.00 - complete!
+11,12d7
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10 STUDENT              00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 01 STUDENT             00004 00025.00 S 
+> 00 
+../../Tests/Front_End/Withdraw/018 non_student_fees_for_transaction
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00003 JACK                 A 30000.00 N
+6,9c4,6
+< Enter a command:
+< COMMAND: withdraw - enter account number:
+< ERROR: Account number "25.00" is not valid. Try again
+< Enter a command:
+---
+> COMMAND: withdraw - enter amount:
+> ALERT: 0.10 fee will be added.
+> Withdrawal of 25.00 - complete!
+11,12d7
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10 JACK                 00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 01 JACK                00003 01000.00 S 
+> 00 
+../../Tests/Front_End/Withdraw/019 admin_fees_for_non_student_transaction
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6,9c4,10
+< 39, 00003 JACK                 A 30000.00 N
+< Withdrawing from "JACK" - enter account number:
+< ERROR: Account number "25.00" is not valid. Try again
+< Enter a command:
+---
+> Withdrawing from "BLACK WIDOW" - enter amount:
+> ALERT: 0.05 student fee will be deducted.
+> Withdrawal of 25.00 - complete!
+> COMMAND: withdraw - enter user:
+> ALERT: 0.05 student fee will be deducted.
+> Withdrawing from "BLACK WIDOW" - enter amount:
+> Withdrawal of 25.00 - complete!
+11,12d11
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 01 JACK                00003 00025.00 A 
+> 00  
+../../Tests/Front_End/Withdraw/020 admin_fees_for_student_transaction
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6,9c4,6
+< 39, 00011 STUDENT              A 00500.00 S
+< Withdrawing from "STUDENT" - enter account number:
+< ERROR: Account number "50.00" is not valid. Try again
+< Enter a command:
+---
+> Withdrawing from "STUDENT" - enter amount:
+> ALERT: 0.05 student fee will be deducted.
+> Withdrawal of 50.00 - complete!
+11,12d7
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 01 STUDENT             00003 00050.00 A 
+> 00  
+../../Tests/Front_End/Withdraw/021 admin_insufficient_funds_after_transaction_invalid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6,9c4,5
+< 39, 00011 STUDENT              A 00500.00 S
+< Withdrawing from "STUDENT" - enter account number:
+< ERROR: Account number "501.00" is not valid. Try again
+< Enter a command:
+---
+> Withdrawing from "STUDENT" - enter amount:
+> ERROR: Withdrawal limit of 500.00 exceeded. Try again
+11,12d6
+< Login to start:
+< End of file, terminating console.
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/Withdraw/022 admin_insufficient_funds_after_transaction_valid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6,11c4,5
+< 39, 00011 STUDENT              A 00500.00 S
+< Withdrawing from "STUDENT" - enter account number:
+< 39, 00011 STUDENT              A 00500.00 S
+< Withdrawing from "00011" - enter amount:
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> Withdrawing from "STUDENT" - enter amount:
+> Withdrawal of 500.00 - complete!
+13,14d6
+< Login to start:
+< End of file, terminating console.
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+Running tests for: paybill
+../../Tests/Front_End/paybill/000 valid admin account name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6d3
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+8,12d4
+< ERROR: Account number "logout" is not valid. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< End of file, logging out.
+14,15d5
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 ACHAL PARIKH        00001 00000000 A 
+> 00 
+../../Tests/Front_End/paybill/001 normal paybill test
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6d3
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+8,9c5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+---
+> Paying bill from 00001 - enter payee:
+11,12c7
+< ERROR: Maximum amount exceeded. Try again
+< Enter a command:
+---
+> Payment of 100.00 - complete!
+14d8
+< Login to start:
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 ACHAL PARIKH        00001 000100.00 A 
+> 00 
+../../Tests/Front_End/paybill/002 invalid admin account number
+1,6c1,3
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin": 
+> You are now logged in as an admin 
+> COMMAND: paybill - enter user: 
+8,13c5
+< ERROR: Account number "00002" is not valid. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> ERROR: Account number "00002" does not exist. Try again
+15d6
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/paybill/003 invalid admin comapany name
+1,6c1,3
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin": 
+> You are now logged in as an admin 
+> COMMAND: paybill - enter user: 
+8,9c5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+---
+> Paying bill from 00001 - enter payee:
+11,13d6
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+15d7
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/paybill/004 invalid admin maximum amount
+1,6c1,3
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin": 
+> You are now logged in as an admin 
+> COMMAND: paybill - enter user: 
+8,9c5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+---
+> Paying bill from 00001 - enter payee:
+12d7
+< Enter a command:
+14d8
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/paybill/005 valid admin maximum amount
+1,6c1,3
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin": 
+> You are now logged in as an admin 
+> COMMAND: paybill - enter user: 
+8,9c5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+---
+> Paying bill from 00001 - enter payee:
+11,12c7,8
+< ERROR: Maximum amount exceeded. Try again
+< Enter a command:
+---
+> Payment of 2000.00 - complete!
+> ALERT: Maximum payment reached
+14d9
+< Login to start:
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 ACHAL PARIKH        00001 020000.00 A  
+> 00 
+../../Tests/Front_End/paybill/006 valid admin under maximum amount
+1,12c1,7
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill for "ACHAL PARIKH" - enter account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+< Paying bill to "TV" - enter amount:
+< ERROR: Maximum amount exceeded. Try again
+< Enter a command:
+---
+> Enter user type - "standard" or "admin":  
+> You are now logged in as an admin  
+> COMMAND: paybill - enter user:  
+> Paying bill for "ACHAL PARIKH" - enter account number: 
+> Paying bill from 00001 - enter payee: 
+> Paying bill to "TV" - enter amount: 
+> Payment of 1999.00 - complete!
+14d8
+< Login to start:
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 ACHAL PARIKH        00001 01999.00 A  
+> 00 
+../../Tests/Front_End/paybill/007 invalid admin minimum amount
+1,12c1,7
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill for "ACHAL PARIKH" - enter account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+< Paying bill to "TV" - enter amount:
+< Error: "-1.00" is not a valid number
+< Enter a command:
+---
+> Enter user type - "standard" or "admin":  
+> You are now logged in as an admin  
+> COMMAND: paybill - enter user:  
+> Paying bill for "ACHAL PARIKH" - enter account number: 
+> Paying bill from 00001 - enter payee: 
+> Paying bill to "TV" - enter amount: 
+> ERROR: You cannot pay a negative amount. Try again
+14d8
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/paybill/008 valid admin minimum amount
+1,10c1,6
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill for "ACHAL PARIKH" - enter account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+< Paying bill to "TV" - enter amount:
+---
+> Enter user type - "standard" or "admin":  
+> You are now logged in as an admin  
+> COMMAND: paybill - enter user:  
+> Paying bill for "ACHAL PARIKH" - enter account number: 
+> Paying bill from 00001 - enter payee: 
+> Paying bill to "TV" - enter amount: 
+12d7
+< Enter a command:
+14d8
+< Login to start:
+1,3c1,2
+< 10                      00000 00000000 A 
+< 03 ACHAL PARIKH         00001 0000.00   
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/paybill/009 valid admin minimum amount
+1,12c1,7
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill for "ACHAL PARIKH" - enter account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+< Paying bill to "TV" - enter amount:
+< Payment of 1.00 - complete!
+< Enter a command:
+---
+> Enter user type - "standard" or "admin":  
+> You are now logged in as an admin  
+> COMMAND: paybill - enter user:  
+> Paying bill for "ACHAL PARIKH" - enter account number: 
+> Paying bill from 00001 - enter payee: 
+> Paying bill to "TV" - enter amount: 
+> ERROR: You cannot pay this amount to this company. Try again
+14d8
+< Login to start:
+1,3c1,3
+< 10                      00000 00000000 A 
+< 03 ACHAL PARIKH         00001 0001.00   
+< 00                      00000 00000000   
+---
+> 10 
+> 03 ACHAL PARIKH        00001 00001.00 A  
+> 00 
+../../Tests/Front_End/paybill/010 invalid admin account name
+1,5c1,3
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+---
+> Enter user type - "standard" or "admin":  
+> You are now logged in as an admin  
+> COMMAND: paybill - enter user:  
+7,13d4
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+15d5
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/paybill/011 valid standard account number
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6,14c4
+< Enter a command:
+< COMMAND: paybill - enter account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+< ERROR: Company "logout" does not exist. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< End of file, logging out.
+---
+> Account number 00001 exists
+16,17d5
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 ACHAL PARIKH        00001 00000000 S 
+> 00 
+../../Tests/Front_End/paybill/012 invalid standard account number
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6,9c4
+< Enter a command:
+< COMMAND: paybill - enter account number:
+< ERROR: Account number "00002" is not valid. Try again
+< Enter a command:
+---
+> ERROR: Account number 00002 does not exist. Try again
+11d5
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/paybill/013 invalid standard account name
+1,9c1,4
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name:  
+> ERROR: User "BRUCE WAYNE" does not exist. Try again  
+> You are now logged out
+0a1,2
+> 10 
+> 00 
+../../Tests/Front_End/paybill/014 valid standard account name
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name:  
+6d3
+< Enter a command:
+8d4
+< Login to start:
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 ACHAL PARIKH        00001 00000000 S 
+> 00 
+../../Tests/Front_End/paybill/015 valid standard company name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin": 
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6d3
+< Enter a command:
+8,9c5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+---
+> Paying bill from 00001 - enter payee:
+11,12c7
+< ERROR: Maximum amount exceeded. Try again
+< Enter a command:
+---
+> Payment of 100.00 - complete!
+14d8
+< Login to start:
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 ACHAL PARIKH        00001 00100.00 S  
+> 00 
+../../Tests/Front_End/paybill/016 invalid standard company name
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name: 
+6,13c4,6
+< Enter a command:
+< COMMAND: paybill - enter account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+< ERROR: Company "AC" does not exist. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> COMMAND: paybill - enter account number: 
+> Paying bill from 00001 - enter payee: 
+> ERROR: Company "AC" does not exist. Try again 
+15d7
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/paybill/017 valid standard amount
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name: 
+6,12c4,7
+< Enter a command:
+< COMMAND: paybill - enter account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+< Paying bill to "EC" - enter amount:
+< ERROR: Maximum amount exceeded. Try again
+< Enter a command:
+---
+> COMMAND: paybill - enter account number: 
+> Paying bill from 00001 - enter payee: 
+> Paying bill to "EC" - enter amount: 
+> Payment of 1999.00 - complete! 
+14d8
+< Login to start:
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 ACHAL PARIKH        00001 01999.00 S  
+> 00 
+../../Tests/Front_End/paybill/018 invalid standard amount
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name: 
+6,10c4,6
+< Enter a command:
+< COMMAND: paybill - enter account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Paying bill from "00001" - enter payee:
+< Paying bill to "TV" - enter amount:
+---
+> COMMAND: paybill - enter account number: 
+> Paying bill from 00001 - enter payee: 
+> Paying bill to "TV" - enter amount: 
+12d7
+< Enter a command:
+14d8
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/paybill/019 invalid because of student fees
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4,15c3,9
+< ERROR: User "Student" does not exist. Try again
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+---
+> You are now logged in as "Student"
+> COMMAND: paybill - enter account number:
+> Paying bill from 00001 - enter payee: 
+> Paying bill to "TV" - enter amount:
+> ALERT: 5.00 student fee will be added.
+> ERROR: Maximum amount of 50.00 exceeded. Try again
+> You are now logged out
+0a1,2
+> 10 
+> 00 
+../../Tests/Front_End/paybill/020 invalid because of non student fees
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin": 
+4d2
+< 39, 00010 THOR ODINSON         A 00500.00 N
+6d3
+< Enter a command:
+8,12c5,7
+< 39, 00010 THOR ODINSON         A 00500.00 N
+< Paying bill from "00010" - enter payee:
+< Paying bill to "TV" - enter amount:
+< ERROR: Maximum amount exceeded. Try again
+< Enter a command:
+---
+> Paying bill from 00010 - enter payee:  
+> Paying bill to "TV" - enter amount: 
+> Payment of 500.00 - complete!
+14d8
+< Login to start:
+1,2c1,2
+< 10 THOR ODINSON         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/paybill/021 valid no student fees admin
+1,12c1,7
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+< 39, 00010 THOR ODINSON         A 00500.00 N
+< Paying bill for "THOR ODINSON" - enter account number:
+< 39, 00010 THOR ODINSON         A 00500.00 N
+< Paying bill from "00010" - enter payee:
+< Paying bill to "TV" - enter amount:
+< ERROR: Maximum amount exceeded. Try again
+< Enter a command:
+---
+> Enter user type - "standard" or "admin":   
+> You are now logged in as an admin   
+> COMMAND: paybill - enter user:   
+> Paying bill for "THOR ODINSON" - enter account number:  
+> Paying bill from 00010 - enter payee:  
+> Paying bill to "TV" - enter amount:  
+> Payment of 500.00 - complete! 
+14d8
+< Login to start:
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 THOR ODINSON        00010 00500.00 A 
+> 00 
+../../Tests/Front_End/paybill/022 valid no non student fees admin
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+---
+> Enter user type - "standard" or "admin": 
+> You are now logged in as ad m
+6d3
+< 39, 00011 STUDENT              A 00500.00 S
+8,9c5
+< 39, 00011 STUDENT              A 00500.00 S
+< Paying bill from "00011" - enter payee:
+---
+> Paying bill from 00011 - enter payee:
+11,12c7
+< ERROR: Maximum amount exceeded. Try again
+< Enter a command:
+---
+> Payment of 500.00 - complete!
+14d8
+< Login to start:
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 STUDENT             00011 00500.00 A 
+> 00 
+../../Tests/Front_End/paybill/023 valid minimum balance after admin
+1,12c1,8
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: paybill - enter user:
+< 39, 00010 THOR ODINSON         A 00500.00 N
+< Paying bill for "THOR ODINSON" - enter account number:
+< 39, 00010 THOR ODINSON         A 00500.00 N
+< Paying bill from "00010" - enter payee:
+< Paying bill to "TV" - enter amount:
+< ERROR: Maximum amount exceeded. Try again
+< Enter a command:
+---
+> Enter user type - "standard" or "admin":    
+> You are now logged in as an admin    
+> COMMAND: paybill - enter user:    
+> Paying bill for "THOR ODINSON" - enter account number:   
+> Paying bill from 00010 - enter payee:   
+> Paying bill to "TV" - enter amount:   
+> Payment of 500.00 - complete!
+> ALERT: Balance is zero
+14d9
+< Login to start:
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 03 THOR ODINSON        00010 00500.00 A 
+> 00 
+../../Tests/Front_End/paybill/024 valid standard minimum balance 
+1,12c1,8
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00010 THOR ODINSON         A 00500.00 N
+< You are now logged in as "THOR ODINSON"
+< Enter a command:
+< COMMAND: paybill - enter account number:
+< 39, 00010 THOR ODINSON         A 00500.00 N
+< Paying bill from "00010" - enter payee:
+< Paying bill to "TV" - enter amount:
+< Payment of 490.90 - complete!
+< Enter a command:
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name: 
+> You are now logged in as "THOR ODINSON" 
+> COMMAND: paybill - enter account number: 
+> Paying bill from 00010 - enter payee:   
+> Paying bill to "TV" - enter amount:  
+> Payment of 500.00 - complete!
+> ALERT: Balance is zero
+14d9
+< Login to start:
+1,3c1,3
+< 10 THOR ODINSON         00000 00000000 S 
+< 03 THOR ODINSON         00010 0490.90   
+< 00                      00000 00000000   
+---
+> 10 
+> 03 THOR ODINSON        00010 00490.90 S 
+> 00 
+Running tests for: transfer
+../../Tests/Front_End/transfer/000 admin_name_of_account_holder_valid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6,12c4
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Transfering in "ACHAL PARIKH" - enter FROM account number:
+< ERROR: Account number "logout" is not valid. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< End of file, logging out.
+---
+> Transferring in "ACHAL PARIKH" - enter FROM account number:
+14,15d5
+< Login to start:
+< End of file, terminating console.
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/001 admin_name_of_account_holder_invalid
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4,6c3,4
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> COMMAND: transfer - enter user:
+> ERROR: User "lala llaa" does not exist. Try again
+8d5
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/002 valid_account_name_number
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6d3
+< Enter a command:
+8d4
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+10,14d5
+< ERROR: Account number "00001" is not valid. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< End of file, logging out.
+16,17d6
+< Login to start:
+< End of file, terminating console.
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 02 ACHAL PARIKH        00001 00000.00 S  
+> 00 
+../../Tests/Front_End/transfer/003 invalid_account_name_number
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6d3
+< Enter a command:
+8,9c5
+< ERROR: Account number "00002" is not valid. Try again
+< Enter a command:
+---
+> ERROR: Account number "00002" does not exist. Try again
+11d6
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/004 transfer_into_disabled_account
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+6d3
+< Enter a command:
+8d4
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+10,13c6
+< 39, 00007 STEVE ROGERS         D 05000.00 N
+< Transferring to 00007 - enter amount:
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> ERROR: Account number "00007" is disabled. Try again
+15d7
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10  
+> 00 
+../../Tests/Front_End/transfer/005 transfer_into_invalid_account
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin": 
+> Logging in as standard user - enter name: 
+6d3
+< Enter a command:
+8d4
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+10,13c6
+< ERROR: Account number "00001" is not valid. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> ERROR: Account number "00015" does not exist. Try again
+15d7
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10  
+> 00 
+../../Tests/Front_End/transfer/006 transfer_valid_accounts
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin": 
+> Logging in as standard user - enter name: 
+6d3
+< Enter a command:
+8d4
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+10d5
+< 39, 00011 STUDENT              A 00500.00 S
+12,13c7
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> Transfer of 100.00 - complete!
+15d8
+< Login to start:
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 02 ACHAL PARIKH        00001 00100.00 S 
+> 00 
+../../Tests/Front_End/transfer/007 admin_invalid_account_number_for_name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6,9c4,5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Transfering in "ACHAL PARIKH" - enter FROM account number:
+< ERROR: Account number "00002" is not valid. Try again
+< Enter a command:
+---
+> Transferring in "ACHAL PARIKH" - enter FROM account number:
+> ERROR: Account number "00002" does not exist. Try again
+11d6
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/008 admin_valid_account_number_for_name
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6,8c4
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Transfering in "ACHAL PARIKH" - enter FROM account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Transferring in "ACHAL PARIKH" - enter FROM account number:
+10,14d5
+< ERROR: Account number "00001" is not valid. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< End of file, logging out.
+16,17d6
+< Login to start:
+< End of file, terminating console.
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/009 valid_balance_in_first_account
+1,15c1,8
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< ERROR: User "ACHAL PARIKH	" does not exist. Try again
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name:  
+> You are now logged in as "ACHAL PARIKH"
+> COMMAND: transfer - enter FROM account number:
+> Transferring from 00001 - enter TO account number:
+> Transferring to 00011 - enter amount:
+> Transfer of 100.00 - complete!
+> You are now logged out
+0a1,3
+> 10 
+> 02 ACHAL PARIKH        00001 00100.00 S 
+> 00 
+../../Tests/Front_End/transfer/010 invalid_balance_in_first_account
+1,15c1,8
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< ERROR: User "ACHAL PARIKH	" does not exist. Try again
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name:  
+> You are now logged in as "ACHAL PARIKH"
+> COMMAND: transfer - enter FROM account number:
+> Transferring from 00001 - enter TO account number:
+> Transferring to 00011 - enter amount:
+> ERROR: You cannot withdraw that amount as funds are insufficient. Try again
+> You are now logged out
+0a1,2
+> 10 
+> 00 
+../../Tests/Front_End/transfer/011 admin_valid_balance_in_first_account
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6,13c4,7
+< ERROR: User "ACHAL PARIKH	" does not exist. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> Transferring in "ACHAL PARIKH" - enter FROM account number:
+> Transferring from 00001 - enter TO account number:
+> Transferring to 00011 - enter amount:
+> Transfer of 100.00 - complete!
+15d8
+< Login to start:
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 02 ACHAL PARIKH        00001 00000.00 A 
+> 00 
+../../Tests/Front_End/transfer/012 admin_invalid_balance_in_first_account
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin":
+4d2
+< Enter a command:
+6,13c4,7
+< ERROR: User "ACHAL PARIKH	" does not exist. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> Transferring in "ACHAL PARIKH" - enter FROM account number:
+> Transferring from 00001 - enter TO account number:
+> Transferring to 00011 - enter amount:
+> ERROR: You cannot withdraw that amount as funds are insufficient. Try again
+15d8
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/013 invalid_minimum_amount_transffered
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin": 
+> Logging in as standard user - enter name: 
+6d3
+< Enter a command:
+8d4
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+10d5
+< 39, 00002 ANDREW LAW           A 20000.00 S
+12,13c7
+< Error: "-1" is not a valid number
+< Enter a command:
+---
+> ERROR: You cannot transfer a negative amount. Try again
+15d8
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/014 invalid_minimum_amount_transffered
+1,10c1,5
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< You are now logged in as "ACHAL PARIKH"
+< Enter a command:
+< COMMAND: transfer - enter FROM account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Transferring from 00001 - enter TO account number:
+< 39, 00002 ANDREW LAW           A 20000.00 S
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name:  
+> You are now logged in as "ACHAL PARIKH" 
+> COMMAND: transfer - enter FROM account number: 
+> Transferring from 00001 - enter TO account number: 
+12,13c7
+< Transfer of 0.00 - complete!
+< Enter a command:
+---
+> ERROR: You cannot transfer an amount of zero. Try again
+15d8
+< Login to start:
+1,4c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 02 ACHAL PARIKH         00001 0000.00   
+< 02 ACHAL PARIKH         00002 0000.00   
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/015 valid_minimum_amount_transffered
+1,10c1,5
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< You are now logged in as "ACHAL PARIKH"
+< Enter a command:
+< COMMAND: transfer - enter FROM account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Transferring from 00001 - enter TO account number:
+< 39, 00002 ANDREW LAW           A 20000.00 S
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name:  
+> You are now logged in as "ACHAL PARIKH" 
+> COMMAND: transfer - enter FROM account number: 
+> Transferring from 00001 - enter TO account number: 
+12,13c7,8
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> ALEART: a fee of 0.05 will be deducted 
+> Transfer of 1.00 - complete!
+15d9
+< Login to start:
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 02 ACHAL PARIKH        00001 00001.00 S 
+> 00 
+../../Tests/Front_End/transfer/016 invalid_maximum_amount_transffered
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name:  
+6d3
+< Enter a command:
+8,10c5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Transferring from 00001 - enter TO account number:
+< 39, 00002 ANDREW LAW           A 20000.00 S
+---
+> Transferring from 00001 - enter TO account number: 
+12,13c7
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> ERROR: Transfer limit of 1000.00 exceeded. Try again
+15d8
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/017 valid_maximum_amount_transffered
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin":   
+> Logging in as standard user - enter name:   
+6d3
+< Enter a command:
+8,13c5,8
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Transferring from 00001 - enter TO account number:
+< 39, 00002 ANDREW LAW           A 20000.00 S
+< Transferring to 00002 - enter amount:
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> Transferring from 00001 - enter TO account number:  
+> Transferring to 00002 - enter amount: 
+> Transfer of 1000.00 - complete!
+> ALERT: Transfer limit reached
+15d9
+< Login to start:
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 02 ACHAL PARIKH        00001 01000.00 S 
+> 00 
+../../Tests/Front_End/transfer/018 valid_maximum_amount_transffered
+1,4c1,2
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+---
+> Enter user type - "standard" or "admin":   
+> Logging in as standard user - enter name:   
+6d3
+< Enter a command:
+8,10c5
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Transferring from 00001 - enter TO account number:
+< 39, 00002 ANDREW LAW           A 20000.00 S
+---
+> Transferring from 00001 - enter TO account number:  
+12,13c7,8
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> ALEART: a fee of 0.05 will be deducted  
+> Transfer of 999.00 - complete!
+15d9
+< Login to start:
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 02 ACHAL PARIKH        00001 00000.00 S 
+> 00 
+../../Tests/Front_End/transfer/019 invalid_balance_after_student_fees
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin": 
+4d2
+< 39, 00011 STUDENT              A 00500.00 S
+6d3
+< Enter a command:
+8,10c5
+< 39, 00011 STUDENT              A 00500.00 S
+< Transferring from 00011 - enter TO account number:
+< 39, 00002 ANDREW LAW           A 20000.00 S
+---
+> Transferring from 00011 - enter TO account number:  
+12,13c7,8
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> ALERT: 0.05 student fee will be deducted.
+> ERROR: You cannot withdraw that amount as your funds are insufficient. Try again
+15d9
+< Login to start:
+1,2c1,2
+< 10 STUDENT              00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/020 valid_balance_after_student_fees
+1,2c1
+< Login to start:
+< Enter type of account: "standard" or "admin"
+---
+> Enter user type - "standard" or "admin": 
+4d2
+< 39, 00011 STUDENT              A 00500.00 S
+6d3
+< Enter a command:
+8,10c5
+< 39, 00011 STUDENT              A 00500.00 S
+< Transferring from 00011 - enter TO account number:
+< 39, 00002 ANDREW LAW           A 20000.00 S
+---
+> Transferring from 00011 - enter TO account number:  
+11a7
+> ALERT: 0.05 student fee will be deducted.
+13d8
+< Enter a command:
+15d9
+< Login to start:
+1,4c1,3
+< 10 STUDENT              00000 00000000 S 
+< 02 STUDENT              00011 0060.00   
+< 02 STUDENT              00002 0060.00   
+< 00                      00000 00000000   
+---
+> 10 
+> 02 STUDENT             00011 00060.00 S 
+> 00 
+../../Tests/Front_End/transfer/021 admin_invalid_balance_no_fees_in
+1,13c1,7
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: transfer - enter user:
+< 39, 00011 STUDENT              A 00500.00 S
+< Transfering in "STUDENT" - enter FROM account number:
+< 39, 00011 STUDENT              A 00500.00 S
+< Transferring from 00011 - enter TO account number:
+< 39, 00002 ANDREW LAW           A 20000.00 S
+< Transferring to 00002 - enter amount:
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> Enter user type - "standard" or "admin": 
+> You are now logged in as an admin 
+> COMMAND: transfer - enter user: 
+> Transferring in "STUDENT" - enter FROM account number: 
+> Transferring from 00011 - enter TO account number: 
+> Transferring to 00002 - enter amount: 
+> ERROR: You cannot transfer that amount as funds are insufficient. Try again 
+15d8
+< Login to start:
+1,2c1,2
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+../../Tests/Front_End/transfer/022 admin_valid_balance_no_fees
+1,13c1,7
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< You are now logged in as an admin
+< Enter a command:
+< COMMAND: transfer - enter user:
+< 39, 00011 STUDENT              A 00500.00 S
+< Transfering in "STUDENT" - enter FROM account number:
+< 39, 00011 STUDENT              A 00500.00 S
+< Transferring from 00011 - enter TO account number:
+< 39, 00002 ANDREW LAW           A 20000.00 S
+< Transferring to 00002 - enter amount:
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> Enter user type - "standard" or "admin": 
+> You are now logged in as an admin 
+> COMMAND: transfer - enter user: 
+> Transferring in "STUDENT" - enter FROM account number: 
+> Transferring from 00011 - enter TO account number: 
+> Transferring to 00002 - enter amount: 
+> Transfer of 500.00 - complete!
+15d8
+< Login to start:
+1,2c1,3
+< 10                      00000 00000000 A 
+< 00                      00000 00000000   
+---
+> 10 
+> 02 STUDENT             00011 00500.00 A 
+> 00 
+../../Tests/Front_End/transfer/023 invalid_balance_after_non_student_fees
+1,15c1,9
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< ERROR: User "THOR OSDINSON" does not exist. Try again
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+< ERROR: Not logged in
+< Login to start:
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name: 
+> You are now logged in as "THOR ODINSON" 
+> COMMAND transfer - enter FROM account number: 
+> Transferring from 00010 - enter TO account number: 
+> Transferring to 00002 - enter amount:
+> ALERT: 10.00 fee will be deducted.
+> ERROR: You cannot transfer that amount as funds are insufficient. Try again 
+> You are now logged out
+0a1,2
+> 10 
+> 00 
+../../Tests/Front_End/transfer/024 account_with_minimum_balance_after_transfer_valid
+1,10c1,5
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< You are now logged in as "ACHAL PARIKH"
+< Enter a command:
+< COMMAND: transfer - enter FROM account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Transferring from 00001 - enter TO account number:
+< 39, 00011 STUDENT              A 00500.00 S
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name: 
+> You are now logged in as "ACHAL PARIKH" 
+> COMMAND transfer - enter FROM account number: 
+> Transferring from 00001 - enter TO account number: 
+12,13c7,8
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> Transfer of 1000.00 - complete!
+> ALERT: Balance is zero
+15d9
+< Login to start:
+1,2c1,3
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 02 ACHAL PARIKH        00001 01000.00 S 
+> 00 
+../../Tests/Front_End/transfer/025 maximum balance exceed in account
+1,10c1,5
+< Login to start:
+< Enter type of account: "standard" or "admin"
+< Logging in as standard user - enter name:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< You are now logged in as "ACHAL PARIKH"
+< Enter a command:
+< COMMAND: transfer - enter FROM account number:
+< 39, 00001 ACHAL PARIKH         A 01001.01 S
+< Transferring from 00001 - enter TO account number:
+< 39, 00009 TONY STARK           A 99999.99 N
+---
+> Enter user type - "standard" or "admin":  
+> Logging in as standard user - enter name: 
+> You are now logged in as "THOR ODINSON" 
+> COMMAND transfer - enter FROM account number: 
+> Transferring from 00001 - enter TO account number: 
+12,13c7
+< ERROR: Minimum balance exceeded. Try again
+< Enter a command:
+---
+> ERROR: You cannot transfer second account is completely full. Try again 
+15d8
+< Login to start:
+1,2c1,2
+< 10 ACHAL PARIKH         00000 00000000 S 
+< 00                      00000 00000000   
+---
+> 10 
+> 00 
+Running tests for: Changeplan
+../../Tests/Front_End/Changeplan/000_Normal
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+8d6
+< 39, 00012 John Doe             A 00500.05 N
+12d9
+< Login to start:
+../../Tests/Front_End/Changeplan/005_Standard_User
+4d3
+< 39, 00012 John Doe             A 00500.05 N
+9,12c8,9
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> Error, invalid command, please enter a command:
+> Error, invalid command, please enter a command:
+14d10
+< Login to start:
+../../Tests/Front_End/Changeplan/010_Incorrect_Name
+3c3
+< You are now logged in as an admin
+---
+> You are now logged in as "John Doe"
+6,10c6
+< Error, user Jeff Doe does not match any accounts
+< Enter an account number belonging to the account holder:
+< Error, account number 00012 does not match any accounts held by Jeff Doe
+< 39, 00012 John Doe             A 00500.05 N
+< Plan changed successfully
+---
+> Error, user Jeff Doe does not match any accounts.
+11a8
+> Error, invalid command, please enter a command:
+13d9
+< Login to start:
+2d1
+< 08 Jeff Doe             00012 00000000   
+../../Tests/Front_End/Changeplan/015_Incorrect_Number
+3c3
+< You are now logged in as an admin
+---
+> You are now logged in as "John Doe"
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+8,10c7
+< Error, account number 00013 does not match any accounts held by John Doe
+< 39, 00013                      D 00000.00 D
+< Error, account 00013 does not currently exist and cannot perform any transactions
+---
+> Error, account number 00013 does not match any accounts owned by "John Doe"
+13d9
+< Login to start:
+../../Tests/Front_End/Changeplan/020_Fee_Change
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+8d6
+< 39, 00012 John Doe             A 00500.05 N
+15d12
+< 39, 00012 John Doe             A 00500.05 S
+18,21c15,17
+< COMMAND: withdraw - enter account number:
+< 39, 00012 John Doe             A 00500.05 S
+< Withdrawing from "00012" - enter amount:
+< ERROR: Minimum balance exceeded. Try again
+---
+> Enter an account number:
+> Enter the amount to be withdrawn:
+> Withdrawal of $500.00 successful
+24d19
+< Login to start:
+2c2
+< 08 John Doe             00012 00000000   
+---
+> 08 John Doe             00000 00000000   
+4,7c4,5
+< 10                      00000 00000000 A 
+< 08 John Doe             00012 00000000   
+< 00                      00000 00000000   
+< 10 John Doe             00000 00000000 S 
+---
+> 10 John Doe             00000 00000000   
+> 01 John Doe             00000 00500.00 S 
+Running tests for: Create
+../../Tests/Front_End/Create/000_Normal
+7c7
+< Account for "Jeff Doe" with account number 00008 created successfully
+---
+> Account for "Jeff Doe" with account number 00013 created successfully
+10d9
+< Login to start:
+2c2
+< 05 Jeff Doe             00008 0000.00   
+---
+> 05 Jeff Doe             00013 00000.00   
+../../Tests/Front_End/Create/005_Standard_User
+4d3
+< 39, 00012 John Doe             A 00500.05 N
+9,12c8,9
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> Error, invalid command, please enter a command:
+> Error, invalid command, please enter a command:
+14d10
+< Login to start:
+../../Tests/Front_End/Create/010_Existing_Account_Holder
+7c7
+< Account for "John Doe" with account number 00008 created successfully
+---
+> Account for "John Doe" with account number 00013 created successfully
+10d9
+< Login to start:
+2c2
+< 05 John Doe             00008 0000.00   
+---
+> 05 John Doe             00013 00000.00   
+../../Tests/Front_End/Create/015_Account_Unusable_Same_Session
+7c7
+< Account for "Jeff Doe" with account number 00008 created successfully
+---
+> Account for "Jeff Doe" with account number 00013 created successfully
+9,12c9,11
+< COMMAND: deposit - enter user:
+< ERROR: User "00013" does not exist. Try again
+< Enter a command:
+< Error, unrecognized command
+---
+> Enter an account holder:
+> Enter an account number belonging to the account holder:
+> Error, account 00013 cannot perform any transactions for the remainder of the day
+15d13
+< Login to start:
+2c2
+< 05 Jeff Doe             00008 0000.00   
+---
+> 05 Jeff Doe             00013 00000.00   
+../../Tests/Front_End/Create/020_Account_Unusable_Same_Day
+7c7
+< Account for "Jeff Doe" with account number 00008 created successfully
+---
+> Account for "Jeff Doe" with account number 00013 created successfully
+13d12
+< 39, 00008 Jeff Doe             D 00000.00 D
+16,19c15,16
+< COMMAND: deposit - enter account number:
+< ERROR: Account number "00002" is not valid. Try again
+< Enter a command:
+< Error, unrecognized command
+---
+> Enter an account number belonging to the account holder:
+> Error, account 00013 cannot perform any transactions for the remainder of the day
+22d18
+< Login to start:
+2,5c2
+< 05 Jeff Doe             00008 0000.00   
+< 00                      00000 00000000   
+< 10                      00000 00000000 A 
+< 05 Jeff Doe             00008 0000.00   
+---
+> 05 Jeff Doe             00013 00000.00   
+8c5
+< 00                      00000 00000000   
+---
+> 00 Jeff Doe             00000 00000000   
+../../Tests/Front_End/Create/025_Name_too_long
+10d9
+< Login to start:
+../../Tests/Front_End/Create/030_Initial_Balance_too_high
+8,9c8
+< Error, unrecognized command
+< Enter a command:
+---
+> Error, invalid command, please enter a command:
+11d9
+< Login to start:
+Running tests for: Delete
+../../Tests/Front_End/Delete/000_Normal
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+11d9
+< Login to start:
+../../Tests/Front_End/Delete/005_Standard_User
+4d3
+< 39, 00012 John Doe             A 00500.05 N
+9,12c8,9
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> Error, invalid command, enter a command:
+> Error, invalid command, enter a command:
+14d10
+< Login to start:
+2c2
+< 00                      00000 00000000   
+---
+> 00 John Doe             00000 00000000   
+../../Tests/Front_End/Delete/010_Invalid_Name
+7,9d6
+< Enter an account number belonging to the account holder:
+< Error, account number 00012 does not match any accounts held by Jeff Doe
+< Account "00012" deleted
+10a8
+> Error, invalid command, enter a command:
+12d9
+< Login to start:
+2d1
+< 06 Jeff Doe             00012 00000000   
+../../Tests/Front_End/Delete/015_Invalid_Number
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+9d7
+< Account "00013" deleted
+12d9
+< Login to start:
+2d1
+< 06 John Doe             00013 00000000   
+../../Tests/Front_End/Delete/020_Transaction_Standard_User
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+14d12
+< 39, 00012 John Doe             A 00500.05 N
+17,21c15,16
+< COMMAND: deposit - enter account number:
+< 39, 00012 John Doe             A 00500.05 N
+< Depositing to "00012" - enter amount:
+< Deposit of 500.00 - complete!
+< Enter a command:
+---
+> Enter an account number belonging to the account holder:
+> Error, account 00012 does not currently exist and cannot perform any transactions
+23d17
+< Login to start:
+4,6d3
+< 10                      00000 00000000 A 
+< 06 John Doe             00012 00000000   
+< 00                      00000 00000000   
+8d4
+< 04 John Doe             00012 0500.00   
+../../Tests/Front_End/Delete/025_Transaction_Admin
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+10,14c9,11
+< COMMAND: deposit - enter user:
+< ERROR: User "00012" does not exist. Try again
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> Enter an account holder:
+> Enter an account number belonging to the account holder:
+> Error, account 00012 does not currently exist and cannot perform any transactions
+16d12
+< Login to start:
+3c3
+< 00                      00000 00000000   
+---
+> 00                      00000 00000000 A 
+../../Tests/Front_End/Delete/030_Deleted_Last_Account
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+11d9
+< 39, 00012 John Doe             A 00500.05 N
+19,23c17
+< 39, 00012 John Doe             A 00500.05 N
+< You are now logged in as "John Doe"
+< Enter a command:
+< You are now logged out
+< Login to start:
+---
+> ERROR: User "John Doe" does not exist. Try again
+5,10d4
+< 10                      00000 00000000 A 
+< 06 John Doe             00012 00000000   
+< 06 John Doe             00014 00000000   
+< 00                      00000 00000000   
+< 10 John Doe             00000 00000000 S 
+< 00                      00000 00000000   
+Running tests for: Enable
+../../Tests/Front_End/Enable/000_Normal
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+8,9c7
+< 39, 00014 John Doe             D 00500.05 N
+< Account "00014" enabled
+---
+> Account "00012" enabled
+12d9
+< Login to start:
+2c2
+< 09 John Doe             00014 00000000   
+---
+> 09 John Doe             00012 00000000   
+../../Tests/Front_End/Enable/005_Standard_User
+4d3
+< 39, 00012 John Doe             A 00500.05 N
+9,12c8,9
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> Error, invalid command, enter a command:
+> Error, invalid command, enter a command:
+14d10
+< Login to start:
+1c1
+< 10 John Doe             00000 00000000 S 
+---
+> 10 John Doe             00000 00000000 S  
+../../Tests/Front_End/Enable/010_Invalid_Name
+7,10c7
+< Enter an account number belonging to the account holder:
+< Error, account number 00014 does not match any accounts held by Jeff Doe
+< 39, 00014 John Doe             D 00500.05 N
+< Account "00014" enabled
+---
+> Error, invalid command, enter a command:
+13,14d9
+< Login to start:
+< End of file, terminating console.
+2d1
+< 09 Jeff Doe             00014 00000000   
+../../Tests/Front_End/Enable/015_Invalid_Number
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+9,10d7
+< 39, 00013                      D 00000.00 D
+< Account "00013" enabled
+13d9
+< Login to start:
+2d1
+< 09 John Doe             00013 00000000   
+../../Tests/Front_End/Enable/020_Can_use_Standard_user
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+8,9c7
+< 39, 00014 John Doe             D 00500.05 N
+< Account "00014" enabled
+---
+> Account "00012" enabled
+15d12
+< 39, 00012 John Doe             A 00500.05 N
+18,21c15,16
+< COMMAND: deposit - enter account number:
+< 39, 00014 John Doe            AD 00500.05 N
+< Depositing to "00014" - enter amount:
+< Deposit of 500.00 - complete!
+---
+> Enter an account number belongin to the account holder:
+> Deposited $500.00 to account "00012"
+24d18
+< Login to start:
+2,5c2
+< 09 John Doe             00014 00000000   
+< 00                      00000 00000000   
+< 10                      00000 00000000 A 
+< 09 John Doe             00014 00000000   
+---
+> 09 John Doe             00012 00000000   
+8c5
+< 04 John Doe             00014 0500.00   
+---
+> 04 John Doe             00012 00500.00 S 
+../../Tests/Front_End/Enable/025_Can_use_Admin
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+8,9c7
+< 39, 00014 John Doe             D 00500.05 N
+< Account "00014" disabled
+---
+> Account "00012" enabled
+11,17c9,11
+< COMMAND: deposit - enter user:
+< 39, 00012 John Doe             A 00500.05 N
+< Depositing to "John Doe" - enter account number:
+< 39, 00014 John Doe            DD 00500.05 N
+< Error, account 00014 is currently disabled and cannot perform any transactions
+< Enter a command:
+< Error, unrecognized command
+---
+> Enter an account holder:
+> Enter an account number belonging to the account holder:
+> Deposited $500.00 to account "00012"
+20d13
+< Login to start:
+2c2,3
+< 07 John Doe             00014 00000000   
+---
+> 09 John Doe             00012 00000000   
+> 04 John Doe             00012 00500.00 A 
+Running tests for: Disable
+../../Tests/Front_End/Disable/000_Normal
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+8d6
+< 39, 00012 John Doe             A 00500.05 N
+12d9
+< Login to start:
+../../Tests/Front_End/Disable/005_Standard_User
+4d3
+< 39, 00012 John Doe             A 00500.05 N
+9,12c8,9
+< Error, unrecognized command
+< Enter a command:
+< Error, unrecognized command
+< Enter a command:
+---
+> Error, invalid command, enter a command:
+> Error, invalid command, enter a command:
+14d10
+< Login to start:
+../../Tests/Front_End/Disable/010_Invalid_Name
+7,10c7
+< Enter an account number belonging to the account holder:
+< Error, account number 00012 does not match any accounts held by Jeff Doe
+< 39, 00012 John Doe             A 00500.05 N
+< Account "00012" disabled
+---
+> Error, invalid command, enter a command:
+13d9
+< Login to start:
+2d1
+< 07 Jeff Doe             00012 00000000   
+../../Tests/Front_End/Disable/015_Invalid_Number
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+8,10c7
+< Error, account number 00013 does not match any accounts held by John Doe
+< 39, 00013                      D 00000.00 D
+< Account "00013" disabled
+---
+> Error, account number 00002 does not match any accounts held by John Doe
+13d9
+< Login to start:
+2d1
+< 07 John Doe             00013 00000000   
+../../Tests/Front_End/Disable/020_Unusable_Standard_User
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+8d6
+< 39, 00012 John Doe             A 00500.05 N
+15d12
+< 39, 00012 John Doe            DA 00500.05 N
+18,19c15
+< COMMAND: deposit - enter account number:
+< 39, 00012 John Doe            DA 00500.05 N
+---
+> Enter an account number belongin to the account holder:
+22,23d17
+< Error, unrecognized command
+< Enter a command:
+25d18
+< Login to start:
+4,8d3
+< 10                      00000 00000000 A 
+< 07 John Doe             00012 00000000   
+< 00                      00000 00000000   
+< 10 John Doe             00000 00000000 S 
+< 00                      00000 00000000   
+../../Tests/Front_End/Disable/025_Unusable_Admin
+6d5
+< 39, 00012 John Doe             A 00500.05 N
+8d6
+< 39, 00012 John Doe             A 00500.05 N
+11,14c9,10
+< COMMAND: deposit - enter user:
+< 39, 00012 John Doe            DA 00500.05 N
+< Depositing to "John Doe" - enter account number:
+< 39, 00012 John Doe            DA 00500.05 N
+---
+> Enter an account holder:
+> Enter an account number belongin to the account holder:
+17,18d12
+< Error, unrecognized command
+< Enter a command:
+20d13
+< Login to start:
+Running tests for: Misc
+../../Tests/Front_End/Misc/000_Invalid_Command_before_login
+2,3c2
+< ERROR: Not logged in
+< Login to start:
+---
+> Error, unrecognized command
+../../Tests/Front_End/Misc/005_Invalid_Command_after_login
+8d7
+< Login to start:
