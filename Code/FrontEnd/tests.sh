@@ -1,3 +1,5 @@
+touch out.out
+touch transactions.trn
 for t in "Login" "Logout" "deposit" "Withdraw" "paybill" "transfer" "Changeplan" "Create" "Delete" "Enable" "Disable" "Misc"
   do
 	echo "Running tests for: $t"
