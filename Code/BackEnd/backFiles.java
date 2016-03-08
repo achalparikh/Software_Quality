@@ -32,9 +32,12 @@ class backFiles {
 	}
 
 	/**
-	 * @return _____ containing the transactions in transactionFile
+	 * @return queue containing the transactions in transactionFile
 	 * 
-	 * Loads the transactionFile into a _______
+	 * Loads the transactionFile into a queue
 	 */
-	//public ________ loadTransactions(){}
+	public Queue<String> loadTransactions(){
+		Queue<String> transactions = new LinkedList<String>();
+		return transactions;
+	}
 }
