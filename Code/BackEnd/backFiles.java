@@ -6,16 +6,18 @@
  */
 
 import java.util.*;
+import java.io.*;
 
 class backFiles {
-	private String transactionFile, masterAccountsFile, currentAccountsFile;
+	private String masterAccountsFile, currentAccountsFile;
+	private List<String> transactionFile;
 
 	/**
 	 * @param strings containing the filenames for input/output
 	 * 
 	 * Assigns file names for use in input/outputs
 	 */
-	public backFiles(String trnF, String mAccounts, String cAccounts){
+	public backFiles(List<String> trnF, String mAccounts, String cAccounts){
 		transactionFile = trnF;
 		masterAccountsFile = mAccounts;
 		currentAccountsFile = cAccounts;
@@ -26,8 +28,23 @@ class backFiles {
 	 * 
 	 * Loads masterAccountsFile into a vector
 	 */
-	public Vector loadAccounts(){
-		Vector accounts = new Vector();
+	public List<String> loadAccounts(){
+		List<String> accounts = new ArrayList<String>();
+
+		try{
+			String line;
+			for(int i=0; i<transactionFile.size(); i++){
+				BufferedReader reader = new BufferedReader(new FileReader(transactionFile.get(i)));
+				while((line = reader.readLine()) != null){
+					if(!line.equals("00000 END OF FILE          A 00000000 N")){
+						accounts.add(line);
+					}
+				}
+			}
+		} catch(IOException e){
+			System.out.println(e);
+		}
+
 		return accounts;
 	}
 
@@ -38,6 +55,24 @@ class backFiles {
 	 */
 	public Queue<String> loadTransactions(){
 		Queue<String> transactions = new LinkedList<String>();
+
+		try{
+			String line;
+			BufferedReader reader = new BufferedReader(new FileReader(masterAccountsFile));
+			while((line = reader.readLine()) != null){
+				transactions.add(line);
+			}
+		} catch(IOException e){
+			System.out.println(e);
+		}
+
 		return transactions;
 	}
+
+	/**
+	 * @param a list of bank account info
+	 * 
+	 * write the account info to the masterAccountsFile
+	 */
+	public void writeAccounts(List<String> accounts){}
 }
