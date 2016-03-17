@@ -90,22 +90,32 @@ class backEnd {
 					user = "";
 					break;
 				case 1:
+					//data.withdraw(trans.get(0));
 					break;
 				case 2:
+					//data.withdraw(trans.get(0));
+					//data.deposit(trans.get(1));
 					break;
 				case 3:
+					//data.withdraw(trans.get(0));
 					break;
 				case 4:
+					//data.deposit(trans.get(0));
 					break;
 				case 5:
+					//data.create(trans.get(0));
 					break;
 				case 6:
+					// data.delete(trans.get(0));
 					break;
 				case 7:
+					data.enable(trans.get(0), true);
 					break;
 				case 8:
+					data.changeplan(trans.get(0));
 					break;
 				case 9:
+					data.enable(trans.get(0), false);
 					break;
 				case 10:
 					if(trans.get(0).substring(40,41).equals("A")){
