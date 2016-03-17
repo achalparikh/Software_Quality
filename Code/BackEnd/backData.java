@@ -70,18 +70,34 @@ class backData {
 	public String create(String trans){
 		int last = Integer.parseInt(accounts.get(0).substring(0,5));
 		for(int i=1; i<accounts.size(); i++){
-			int current = Integer.parseInt(last.compare(accounts.get(0).substring(0,5)));
+			int current = Integer.parseInt(accounts.get(i).substring(0,5));
 			if(current - last > 1){
-				accounts.add(accounts.get(accounts.size-1));
+				accounts.add(accounts.get(accounts.size()-1));
 				for(int j=accounts.size()-2; j>i; j++){
-					accounts.set(j) = accounts.get(j-1);
+					accounts.set(j, accounts.get(j-1));
 				}
-				accounts.set(i) = String.format("%5d %s A %s N", last+1, trans.substring(3, 23), trans.substring(30,38));
+				accounts.set(i, String.format("%5d %s A %s N", last+1, trans.substring(3, 23), trans.substring(30,38)));
 				return null;
 			}
 		}
 		accounts.add(String.format("%5d %s A %s N", last+1, trans.substring(3, 23), trans.substring(30,38)));
 		return null;
+	}
+
+	/**
+	 * @param string of transaction log
+	 * @return string containing any errors that occur
+	 * 
+	 * deletes account
+	 */
+	public String delete(String trans){
+		int accountNum = find(trans);
+		if(accountNum > 0){
+			accounts.remove(accounts.get(accounts.size()-1));
+			return null;
+		} else {
+			return "ERROR: Account number " + trans.substring(24,29) + " not found.";
+		}
 	}
 
 	/**
@@ -94,9 +110,11 @@ class backData {
 		int accountNum = find(trans);
 		if(accountNum > 0){
 			if(enable){
-				accounts.set(accountNum).substring() = "A";
+				String tmp = accounts.get(accountNum);
+				accounts.set(accountNum, tmp.substring(0,27) + "A" + tmp.substring(28));
 			} else {
-				accounts.set(accountNum).substring() = "D";
+				String tmp = accounts.get(accountNum);
+				accounts.set(accountNum, tmp.substring(0,27) + "D" + tmp.substring(28));
 			}
 			return null;
 		} else {
@@ -113,10 +131,12 @@ class backData {
 	public String changeplan(String trans){
 		int accountNum = find(trans);
 		if(accountNum > 0){
-			if(accounts.set(accountNum).substring(38,39).equals("N")){
-				accounts.set(accountNum).substring(38,39) = "S";
+			if(accounts.get(accountNum).substring(38,39).equals("N")){
+				String tmp = accounts.get(accountNum);
+				accounts.set(accountNum, tmp.substring(0,38) + "S" + tmp.substring(38));
 			} else {
-				accounts.set(accountNum).substring(38,39) = "N";
+				String tmp = accounts.get(accountNum);
+				accounts.set(accountNum, tmp.substring(0,38) + "N" + tmp.substring(38));
 			}
 			return null;
 		} else {

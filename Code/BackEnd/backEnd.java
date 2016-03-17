@@ -84,7 +84,7 @@ class backEnd {
 			}
 
 			int transType = Integer.parseInt(trans.get(0).substring(0,2));
-			String error;
+			String error = "";
 
 			switch (transType) {
 				case 0:
