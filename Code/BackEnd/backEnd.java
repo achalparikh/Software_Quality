@@ -84,38 +84,43 @@ class backEnd {
 			}
 
 			int transType = Integer.parseInt(trans.get(0).substring(0,2));
+			String error;
 
 			switch (transType) {
 				case 0:
 					user = "";
 					break;
 				case 1:
-					//data.withdraw(trans.get(0));
+					//error = data.withdraw(trans.get(0));
 					break;
 				case 2:
-					//data.withdraw(trans.get(0));
-					//data.deposit(trans.get(1));
+					//error = data.withdraw(trans.get(0));
+					if(error != null){
+						System.out.println(error);
+						return;
+					}
+					//error = data.deposit(trans.get(1));
 					break;
 				case 3:
-					//data.withdraw(trans.get(0));
+					//error = data.withdraw(trans.get(0));
 					break;
 				case 4:
-					//data.deposit(trans.get(0));
+					//error = data.deposit(trans.get(0));
 					break;
 				case 5:
-					//data.create(trans.get(0));
+					error = data.create(trans.get(0));
 					break;
 				case 6:
-					// data.delete(trans.get(0));
+					error = data.delete(trans.get(0));
 					break;
 				case 7:
-					data.enable(trans.get(0), true);
+					error = data.enable(trans.get(0), true);
 					break;
 				case 8:
-					data.changeplan(trans.get(0));
+					error = data.changeplan(trans.get(0));
 					break;
 				case 9:
-					data.enable(trans.get(0), false);
+					error = data.enable(trans.get(0), false);
 					break;
 				case 10:
 					if(trans.get(0).substring(40,41).equals("A")){
@@ -124,6 +129,10 @@ class backEnd {
 						user = trans.get(0).substring(3,24);
 					}
 					break;
+				}
+			if(error != null){
+				System.out.println(error);
+				return;
 			}
 		}
 	}

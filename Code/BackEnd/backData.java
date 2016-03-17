@@ -62,7 +62,31 @@ class backData {
 	}
 
 	/**
+	 * @param string of transaction log
+	 * @return string containing any errors that occur
+	 * 
+	 * create new account
+	 */
+	public String create(String trans){
+		int last = Integer.parseInt(accounts.get(0).substring(0,5));
+		for(int i=1; i<accounts.size(); i++){
+			int current = Integer.parseInt(last.compare(accounts.get(0).substring(0,5)));
+			if(current - last > 1){
+				accounts.add(accounts.get(accounts.size-1));
+				for(int j=accounts.size()-2; j>i; j++){
+					accounts.set(j) = accounts.get(j-1);
+				}
+				accounts.set(i) = String.format("%5d %s A %s N", last+1, trans.substring(3, 23), trans.substring(30,38));
+				return null;
+			}
+		}
+		accounts.add(String.format("%5d %s A %s N", last+1, trans.substring(3, 23), trans.substring(30,38)));
+		return null;
+	}
+
+	/**
 	 * @param string of transaction log and boolean enable (disable on false)
+	 * @return string containing any errors that occur
 	 * 
 	 * enables or disables account
 	 */
@@ -70,9 +94,9 @@ class backData {
 		int accountNum = find(trans);
 		if(accountNum > 0){
 			if(enable){
-				accounts.get(accountNum).substring() = "A";
+				accounts.set(accountNum).substring() = "A";
 			} else {
-				accounts.get(accountNum).substring() = "D";
+				accounts.set(accountNum).substring() = "D";
 			}
 			return null;
 		} else {
@@ -82,16 +106,17 @@ class backData {
 
 	/**
 	 * @param string of transaction log
+	 * @return string containing any errors that occur
 	 * 
 	 * switches account plan between Student and Normal
 	 */
 	public String changeplan(String trans){
 		int accountNum = find(trans);
 		if(accountNum > 0){
-			if(accounts(accountNum).substring(38,39).equals("N")){
-				accounts(accountNum).substring(38,39) = "S";
+			if(accounts.set(accountNum).substring(38,39).equals("N")){
+				accounts.set(accountNum).substring(38,39) = "S";
 			} else {
-				accounts(accountNum).substring(38,39) = "N";
+				accounts.set(accountNum).substring(38,39) = "N";
 			}
 			return null;
 		} else {
