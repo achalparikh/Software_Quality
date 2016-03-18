@@ -144,20 +144,18 @@ class backData {
 		}
 	}
 	
-	
-	
 	/**
 	 * @param string of transaction log 
 	 **invalid deposit taken care of in front end*
 	 */
-	public String desposit (String trans)
+	public String deposit (String trans)
 	{
 		int accountNum = find(trans);
 		double balance, deposit;
-		String newBal;
+		String newBal = "";
 		if (accountNum >= 0)
 		{
-			balance = Double.parseDouble(accounts.get(accountNum).subString(30, 37));
+			balance = Double.parseDouble(accounts.get(accountNum).substring(30, 37));
 			deposit = Double.parseDouble(trans.substring(31, 38));
 			balance += deposit;
 			newBal = "" + balance;
@@ -181,14 +179,14 @@ class backData {
 	{
 		int accountNum = find(trans);
 		double balance, withdraw;
-		String newBal;
-		if (accoutNum >= 0)
+		String newBal = "";
+		if (accountNum >= 0)
 		{
 			balance = Double.parseDouble(accounts.get(accountNum).substring(30,37));
-			withdraw = Double.parseDouble(trans.substring(31, 38);
+			withdraw = Double.parseDouble(trans.substring(31, 38));
 			balance -= withdraw;
 			newBal = "" + newBal;
-			while (newBal.length < 8)
+			while (newBal.length() < 8)
 			{
 				newBal = "0" + newBal;
 			}

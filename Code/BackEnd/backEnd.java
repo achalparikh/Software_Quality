@@ -54,12 +54,12 @@ class backEnd {
 		if (args.length > 0) {
 			masterAccountsFile = args[0];
 		} else {
-			masterAccountsFile = "masterBankAccounts.txt";
+			masterAccountsFile = "masterBankAccountsFile";
 		}
 		if (args.length > 1) {
 			currentAccountsFile = args[1];
 		} else {
-			currentAccountsFile = "currectBankAccounts.txt";
+			currentAccountsFile = "currectBankAccounts";
 		}
 
 		files = new backFiles(transactionFile, masterAccountsFile, currentAccountsFile);
@@ -91,21 +91,21 @@ class backEnd {
 					user = "";
 					break;
 				case 1:
-					//error = data.withdraw(trans.get(0));
+					error = data.withdraw(trans.get(0));
 					break;
 				case 2:
-					//error = data.withdraw(trans.get(0));
+					error = data.withdraw(trans.get(0));
 					if(error != null){
 						System.out.println(error);
 						return;
 					}
-					//error = data.deposit(trans.get(1));
+					error = data.deposit(trans.get(1));
 					break;
 				case 3:
-					//error = data.withdraw(trans.get(0));
+					error = data.withdraw(trans.get(0));
 					break;
 				case 4:
-					//error = data.deposit(trans.get(0));
+					error = data.deposit(trans.get(0));
 					break;
 				case 5:
 					error = data.create(trans.get(0));
