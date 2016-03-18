@@ -1,5 +1,5 @@
 /**
- * @author S. Jack Gibson (100514556),
+ * @author S. Jack Gibson (100514556), @author Achal Parikh (100520618)
  * @date 2016-03-08
  * 
  * Data handling for ATM back end
@@ -54,7 +54,7 @@ class backData {
 	 */
 	public int find(String trans){
 		for(int i=0; i<accounts.size(); i++){
-			if(accounts.get(i).substring(0,5).equals(trans.substring(24,29))){
+			if(accounts.get(i).substring(0,5).equals(trans.substring(25,29))){
 				return i;
 			}
 		}
@@ -92,7 +92,7 @@ class backData {
 	 */
 	public String delete(String trans){
 		int accountNum = find(trans);
-		if(accountNum > 0){
+		if(accountNum >= 0){
 			accounts.remove(accounts.get(accounts.size()-1));
 			return null;
 		} else {
@@ -108,7 +108,7 @@ class backData {
 	 */
 	public String enable(String trans,boolean enable){
 		int accountNum = find(trans);
-		if(accountNum > 0){
+		if(accountNum >= 0){
 			if(enable){
 				String tmp = accounts.get(accountNum);
 				accounts.set(accountNum, tmp.substring(0,27) + "A" + tmp.substring(28));
@@ -130,7 +130,7 @@ class backData {
 	 */
 	public String changeplan(String trans){
 		int accountNum = find(trans);
-		if(accountNum > 0){
+		if(accountNum >= 0){
 			if(accounts.get(accountNum).substring(38,39).equals("N")){
 				String tmp = accounts.get(accountNum);
 				accounts.set(accountNum, tmp.substring(0,38) + "S" + tmp.substring(38));
@@ -143,9 +143,67 @@ class backData {
 			return "ERROR: Account number " + trans.substring(24,29) + " not found.";
 		}
 	}
+	
+	
+	
+	/**
+	 * @param string of transaction log 
+	 **invalid deposit taken care of in front end*
+	 */
+	public String desposit (String trans)
+	{
+		int accountNum = find(trans);
+		double balance, deposit;
+		String newBal;
+		if (accountNum >= 0)
+		{
+			balance = Double.parseDouble(accounts.get(accountNum).subString(30, 37));
+			deposit = Double.parseDouble(trans.substring(31, 38));
+			balance += deposit;
+			newBal = "" + balance;
+			while (newBal.length() < 8)
+			{
+				newBal = "0" + newBal;
+			}
+			String tmp = accounts.get(accountNum);
+			accounts.set(accountNum, tmp.substring(0,30) + newBal + tmp.substring(38));
+			return null;
+		}
+		else 
+			return "ERROR: Account number " + trans.substring(25,29) + " not found.";
+	}
+	
+	/**
+	 * @param string of transaction log 
+	 **invalid withdraw taken care of in front end*
+	 */
+	public String withdraw (String trans)
+	{
+		int accountNum = find(trans);
+		double balance, withdraw;
+		String newBal;
+		if (accoutNum >= 0)
+		{
+			balance = Double.parseDouble(accounts.get(accountNum).substring(30,37));
+			withdraw = Double.parseDouble(trans.substring(31, 38);
+			balance -= withdraw;
+			newBal = "" + newBal;
+			while (newBal.length < 8)
+			{
+				newBal = "0" + newBal;
+			}
+			String tmp = accounts.get(accountNum);
+			accounts.set(accountNum, tmp.substring(0, 30) + newBal + tmp.substring(38));
+			return null;
+		}
+		else 
+			return "ERROR: Account number " + trans.substring(25,29) + " not found.";
+			
+	}
 
 	/**
 	 * @return returns bank accounts
 	 */
 	public List<String> getAccounts(){return accounts;}
+	
 }
