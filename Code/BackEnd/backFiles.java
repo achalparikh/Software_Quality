@@ -1,5 +1,5 @@
 /**
- * @author S. Jack Gibson (100514556),
+ * @author S. Jack Gibson (100514556)
  * @date 2016-03-08
  * 
  * File input and output of the ATM back end

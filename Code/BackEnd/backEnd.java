@@ -1,9 +1,9 @@
 /**
- * @author S. Jack Gibson (100514556),
+ * @author S. Jack Gibson (100514556)
  * @date 2016-03-08
  *
- * @arguments takes 3 (optional) file names as arguments
- * 		input transactions file, master bank accounts, and current bank accounts
+ * @arguments takes 3+ (optional) file names as arguments
+ * 		input master bank accounts, current bank accounts, and transactions file(s)
  * @output outputs new master/current bank accounts files
  * 
  * Main functionality of ATM back end
