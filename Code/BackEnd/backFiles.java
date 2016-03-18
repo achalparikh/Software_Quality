@@ -33,12 +33,10 @@ class backFiles {
 
 		try{
 			String line;
-			for(int i=0; i<transactionFile.size(); i++){
-				BufferedReader reader = new BufferedReader(new FileReader(transactionFile.get(i)));
-				while((line = reader.readLine()) != null){
-					if(!line.equals("00000 END OF FILE          A 00000000 N")){
-						accounts.add(line);
-					}
+			BufferedReader reader = new BufferedReader(new FileReader(masterAccountsFile));
+			while((line = reader.readLine()) != null){
+				if(!line.equals("00000 END OF FILE          A 00000000 N")){
+					accounts.add(line);
 				}
 			}
 		} catch(IOException e){
@@ -58,9 +56,11 @@ class backFiles {
 
 		try{
 			String line;
-			BufferedReader reader = new BufferedReader(new FileReader(masterAccountsFile));
-			while((line = reader.readLine()) != null){
-				transactions.add(line);
+			for(int i=0; i<transactionFile.size(); i++){
+				BufferedReader reader = new BufferedReader(new FileReader(transactionFile.get(i)));
+				while((line = reader.readLine()) != null){
+					transactions.add(line);
+				}
 			}
 		} catch(IOException e){
 			System.out.println(e);
@@ -74,5 +74,16 @@ class backFiles {
 	 * 
 	 * write the account info to the masterAccountsFile
 	 */
-	public void writeAccounts(List<String> accounts){}
+	public void writeAccounts(List<String> accounts){
+		try {
+			PrintWriter writer = new PrintWriter(new FileWriter(masterAccountsFile));
+
+			for(int i=0; i<accounts.size(); i++){
+				writer.println(accounts.get(i));
+			}
+			writer.println("00000 END OF FILE          A 00000000 N");
+		} catch (IOException e){
+			System.out.println("ERROR: Could not print to master bank accounts file.");
+		}
+	}
 }
