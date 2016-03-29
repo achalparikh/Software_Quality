@@ -61,6 +61,8 @@ class backData {
 		return -1;
 	}
 
+	public String account(String num){return accounts.get(find(num));}
+
 	/**
 	 * @param string of transaction log
 	 * @return string containing any errors that occur

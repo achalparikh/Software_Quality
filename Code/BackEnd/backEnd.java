@@ -70,7 +70,6 @@ class backEnd {
 	 * Performs and verifies transactions
 	 */
 	private void processTransactions(){
-		String user = "";
 		List<String> trans;
 
 		while(true){
@@ -88,7 +87,6 @@ class backEnd {
 
 			switch (transType) {
 				case 0:
-					user = "";
 					break;
 				case 1:
 					error = data.withdraw(trans.get(0));
@@ -97,7 +95,6 @@ class backEnd {
 					error = data.withdraw(trans.get(0));
 					if(error != null){
 						System.out.println(error);
-						return;
 					}
 					error = data.deposit(trans.get(1));
 					break;
@@ -123,16 +120,10 @@ class backEnd {
 					error = data.enable(trans.get(0), false);
 					break;
 				case 10:
-					if(trans.get(0).substring(40,41).equals("A")){
-						user = "--admin--";
-					} else {
-						user = trans.get(0).substring(3,24);
-					}
 					break;
 				}
 			if(error != null){
 				System.out.println(error);
-				return;
 			}
 		}
 	}
