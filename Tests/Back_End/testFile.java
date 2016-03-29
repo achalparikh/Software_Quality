@@ -75,9 +75,32 @@ public class testFile {
 	}
 	
 	
-	@Test
-	public void testDposit() {
-		String trans = "00                      00001 00001.00   ";
+	//deposit tests 
+		@Test
+		public void testDepositValid() {
+			String trans = "00                      00001 00001.00   ";
+			String result = backData.deposit(trans), expected = null;
+			assertEquals (expected, result);
+		}
 		
-	}
+		@Test
+		public void testDepositInvalid() {
+			String trans = "00                      00020 00001.00   ";
+			String result = backData.deposit(trans), expected = "ERROR: Account number 00020 not found.";
+			assertEquals (expected, result);
+		}
+		
+		//withdraw tests
+		@Test
+		public void testWithdrawValid () {
+			String trans = "00                      00001 00001.00   ";
+			String result = backData.withdraw(trans), expected = null;
+			assertEquals (expected, result);
+		}
+		
+		public void testWithdrawInvalid() {
+			String trans = "00                      00020 00001.00   ";
+			String result = backData.withdraw(trans), expected = "ERROR: Account number 00020 not found";
+			assertEquals (expected, result);
+		}
 }
