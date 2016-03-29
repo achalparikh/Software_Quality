@@ -15,13 +15,14 @@ public class testFile {
 	public backData data;
 
 	public testFile(){
-		trnFiles.add("transactions.trn");
+		trnFiles.add("../../Code/BackEnd/transactions.trn");
 	}
 
 	@Before
 	public void setUpStreams() {
 		testFile tests = new testFile();
-		files = new backFiles(trnFiles,"masterBankAccountsFile", "currentBankAccountsFile");
+		files = new backFiles(trnFiles,"../../Code/BackEnd/masterBankAccountsFile", 
+			"../../Code/BackEnd/currentBankAccountsFile");
 		data = new backData(files.loadAccounts(), files.loadTransactions());
 	}
 
