@@ -37,7 +37,12 @@ public class testFile {
 	}
 
 	@Test
-	public void testFind() {
-		assertFalse(data.find("00                      00001 00000000   ") == -1);
+	public void testFindT() {
+		assertTrue(data.find("00                      00001 00000000   ") != -1);
+	}
+
+	@Test
+	public void testFindF() {
+		assertFalse(data.find("00                      00000 00000000   ") != -1);
 	}
 }
