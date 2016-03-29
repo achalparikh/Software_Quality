@@ -170,7 +170,7 @@ class backData {
 			return null;
 		}
 		else 
-			return "ERROR: Account number " + trans.substring(25,29) + " not found.";
+			return "ERROR: Account number " + trans.substring(24,29) + " not found.";
 	}
 	
 	/**
@@ -197,7 +197,7 @@ class backData {
 			return null;
 		}
 		else 
-			return "ERROR: Account number " + trans.substring(25,29) + " not found.";
+			return "ERROR: Account number " + trans.substring(24,29) + " not found.";
 			
 	}
 
