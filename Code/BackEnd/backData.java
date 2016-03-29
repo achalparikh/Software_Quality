@@ -54,7 +54,7 @@ class backData {
 	 */
 	public int find(String trans){
 		for(int i=0; i<accounts.size(); i++){
-			if(accounts.get(i).substring(0,5).equals(trans.substring(25,29))){
+			if(accounts.get(i).substring(0,5).equals(trans.substring(24,29))){
 				return i;
 			}
 		}
