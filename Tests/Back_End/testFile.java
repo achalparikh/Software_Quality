@@ -45,4 +45,32 @@ public class testFile {
 	public void testFindF() {
 		assertFalse(data.find("00                      00000 00000000   ") != -1);
 	}
+
+	@Test
+	public void testEnable(){
+		data.enable("00                      00014 00000000   ", true);
+		assertTrue(data.account("00                      00014 00000000   "
+			).substring(27,28).equals("A"));
+	}
+
+	@Test
+	public void testDisable(){
+		data.enable("00                      00012 00000000   ", false);
+		assertTrue(data.account("00                      00012 00000000   "
+			).substring(27,28).equals("D"));
+	}
+
+	@Test
+	public void testChangeplanS(){
+		data.changeplan("00                      00012 00000000   ");
+		assertTrue(data.account("00                      00012 00000000   "
+			).substring(38,39).equals("S"));
+	}
+
+	@Test
+	public void testChangeplanN(){
+		data.changeplan("00                      00011 00000000   ");
+		assertTrue(data.account("00                      00011 00000000   "
+			).substring(38,39).equals("N"));
+	}
 }
