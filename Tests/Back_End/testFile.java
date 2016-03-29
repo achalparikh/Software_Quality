@@ -40,4 +40,11 @@ public class testFile {
 	public void testFind() {
 		assertFalse(data.find("00                      00001 00000000   ") == -1);
 	}
+	
+	
+	@Test
+	public void testDposit() {
+		String trans = "00                      00001 00001.00   ";
+		
+	}
 }
